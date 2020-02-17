@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import App_iOS_Hymatik
+@testable import Hymatik
 
 class App_iOS_HymatikTests: XCTestCase {
 
