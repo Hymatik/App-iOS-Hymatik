@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210FFB7C23FA9859000F8297 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210FFB7B23FA9859000F8297 /* Scanner.swift */; };
+		210FFB7E23FA987B000F8297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210FFB7D23FA987B000F8297 /* Main.storyboard */; };
+		210FFB8423FAA3A2000F8297 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210FFB8323FAA3A2000F8297 /* UIKitView.swift */; };
 		2156BA5223FA7E6900C46C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA5123FA7E6900C46C4B /* AppDelegate.swift */; };
 		2156BA5423FA7E6900C46C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA5323FA7E6900C46C4B /* SceneDelegate.swift */; };
 		2156BA5723FA7E6900C46C4B /* App_iOS_Hymatik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA5523FA7E6900C46C4B /* App_iOS_Hymatik.xcdatamodeld */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210FFB7B23FA9859000F8297 /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scanner.swift; path = ../../../../../Desktop/Scanner.swift; sourceTree = "<group>"; };
+		210FFB7D23FA987B000F8297 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		210FFB8323FAA3A2000F8297 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
 		2156BA4E23FA7E6900C46C4B /* Hymatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2156BA5123FA7E6900C46C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2156BA5323FA7E6900C46C4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				2156BA5823FA7E6900C46C4B /* ContentView.swift */,
+				210FFB7D23FA987B000F8297 /* Main.storyboard */,
+				210FFB8323FAA3A2000F8297 /* UIKitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +109,7 @@
 		210FFB7923FA9472000F8297 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				210FFB7B23FA9859000F8297 /* Scanner.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +287,7 @@
 				2156BA6123FA7E6A00C46C4B /* LaunchScreen.storyboard in Resources */,
 				2156BA5E23FA7E6A00C46C4B /* Preview Assets.xcassets in Resources */,
 				2156BA5B23FA7E6A00C46C4B /* Assets.xcassets in Resources */,
+				210FFB7E23FA987B000F8297 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +314,9 @@
 			files = (
 				2156BA5223FA7E6900C46C4B /* AppDelegate.swift in Sources */,
 				2156BA5723FA7E6900C46C4B /* App_iOS_Hymatik.xcdatamodeld in Sources */,
+				210FFB8423FAA3A2000F8297 /* UIKitView.swift in Sources */,
 				2156BA5923FA7E6900C46C4B /* ContentView.swift in Sources */,
+				210FFB7C23FA9859000F8297 /* Scanner.swift in Sources */,
 				2156BA5423FA7E6900C46C4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

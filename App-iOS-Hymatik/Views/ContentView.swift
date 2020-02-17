@@ -9,8 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showScanner = false
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Button("Scanner") {
+                self.showScanner = true
+            }
+        }
+        .sheet(isPresented: $showScanner) {
+            UIKitView()
+        }
+
     }
 }
 
