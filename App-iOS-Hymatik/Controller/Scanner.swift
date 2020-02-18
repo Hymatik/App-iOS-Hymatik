@@ -56,6 +56,18 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
+        
+        //Adding a Rectangle to show a guide.
+        let cgRect = CGRect(x: self.view.bounds.midX-100, y: self.view.bounds.midY-50, width: 200, height: 100)
+        let myView = UIImageView()
+        myView.frame = cgRect
+        myView.backgroundColor = UIColor.clear
+        myView.isOpaque = false
+        myView.layer.cornerRadius = 10
+        myView.layer.borderColor =  UIColor.yellow.cgColor
+        myView.layer.borderWidth = 3
+        myView.layer.masksToBounds = true
+        previewLayer.addSublayer(myView.layer)
 
         captureSession.startRunning()
     }
