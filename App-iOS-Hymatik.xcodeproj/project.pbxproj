@@ -18,7 +18,7 @@
 		2156BA6123FA7E6A00C46C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2156BA5F23FA7E6A00C46C4B /* LaunchScreen.storyboard */; };
 		2156BA6C23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA6B23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift */; };
 		2156BA7723FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA7623FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift */; };
-		2174FDC523FBD9870064D05E /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2174FDC423FBD9870064D05E /* Scanner.swift */; };
+		218A82A423FBE46A008D2545 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A82A323FBE46A008D2545 /* Scanner.swift */; };
 		260C2D449288B0B58A3BE004 /* Pods_App_iOS_Hymatik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104762C5C06D00F1CE5460D1 /* Pods_App_iOS_Hymatik.framework */; };
 		748BA684FFD0BBE40A9C4DB3 /* Pods_App_iOS_HymatikTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE0B3306E3941D911D2F254 /* Pods_App_iOS_HymatikTests.framework */; };
 		D6C835A09EF6A0195E4FA00B /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A7F036936FF00FE12AEBC0 /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework */; };
@@ -60,7 +60,7 @@
 		2156BA7223FA7E6A00C46C4B /* App-iOS-HymatikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-iOS-HymatikUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2156BA7623FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_iOS_HymatikUITests.swift; sourceTree = "<group>"; };
 		2156BA7823FA7E6A00C46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2174FDC423FBD9870064D05E /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scanner.swift; path = ../../../../../Documents/Scanner.swift; sourceTree = "<group>"; };
+		218A82A323FBE46A008D2545 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		460E0952139A41A9615B8475 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig"; path = "Target Support Files/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53A7F036936FF00FE12AEBC0 /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD13988AC300087883063E1C /* Pods-App-iOS-HymatikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-iOS-HymatikTests.release.xcconfig"; path = "Target Support Files/Pods-App-iOS-HymatikTests/Pods-App-iOS-HymatikTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,14 +121,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		210FFB7923FA9472000F8297 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2174FDC423FBD9870064D05E /* Scanner.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		210FFB7A23FA947F000F8297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +154,8 @@
 		2156BA5023FA7E6900C46C4B /* App-iOS-Hymatik */ = {
 			isa = PBXGroup;
 			children = (
+				218A82A223FBE44D008D2545 /* Controller */,
 				210FFB7A23FA947F000F8297 /* Models */,
-				210FFB7923FA9472000F8297 /* Controllers */,
 				210FFB7723FA9436000F8297 /* Resources */,
 				210FFB7823FA9468000F8297 /* Views */,
 				2156BA5C23FA7E6A00C46C4B /* Preview Content */,
@@ -195,6 +187,14 @@
 				2156BA7823FA7E6A00C46C4B /* Info.plist */,
 			);
 			path = "App-iOS-HymatikUITests";
+			sourceTree = "<group>";
+		};
+		218A82A223FBE44D008D2545 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				218A82A323FBE46A008D2545 /* Scanner.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5F7B5EABECC23F70F80544A1 /* Frameworks */ = {
@@ -428,7 +428,7 @@
 				2156BA5723FA7E6900C46C4B /* App_iOS_Hymatik.xcdatamodeld in Sources */,
 				210FFB8423FAA3A2000F8297 /* UIKitView.swift in Sources */,
 				2156BA5923FA7E6900C46C4B /* ContentView.swift in Sources */,
-				2174FDC523FBD9870064D05E /* Scanner.swift in Sources */,
+				218A82A423FBE46A008D2545 /* Scanner.swift in Sources */,
 				2156BA5423FA7E6900C46C4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
