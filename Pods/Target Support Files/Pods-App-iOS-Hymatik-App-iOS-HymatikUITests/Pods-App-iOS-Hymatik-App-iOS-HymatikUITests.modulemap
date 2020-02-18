@@ -1,0 +1,6 @@
+framework module Pods_App_iOS_Hymatik_App_iOS_HymatikUITests {
+  umbrella header "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
