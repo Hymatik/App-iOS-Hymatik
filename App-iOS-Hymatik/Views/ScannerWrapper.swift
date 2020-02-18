@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct UIKitView: UIViewControllerRepresentable {
-    func makeUIViewController(context: UIViewControllerRepresentableContext<UIKitView>) -> Scanner {
+struct ScannerWrapper: UIViewControllerRepresentable {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerWrapper>) -> Scanner {
         let scanner = Scanner()
         return scanner
     }
     
-    func updateUIViewController(_ uiViewController: Scanner, context: UIViewControllerRepresentableContext<UIKitView>) {
+    func updateUIViewController(_ uiViewController: Scanner, context: UIViewControllerRepresentableContext<ScannerWrapper>) {
     }
     
     typealias UIViewControllerType = Scanner
@@ -24,6 +24,6 @@ struct UIKitView: UIViewControllerRepresentable {
 
 struct UIKitView_Previews: PreviewProvider {
     static var previews: some View {
-        UIKitView()
+        ScannerWrapper()
     }
 }

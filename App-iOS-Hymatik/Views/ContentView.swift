@@ -19,7 +19,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showScanner) {
-            UIKitView()
+            ScannerWrapper()
         }
 
     }
@@ -27,6 +27,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ScannerWrapper()
     }
 }
