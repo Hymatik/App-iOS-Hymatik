@@ -8,10 +8,15 @@
 
 import AVFoundation
 import UIKit
+import CoreData
 
 class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,9 +99,22 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     func found(code: String) {
         print(code)
-        //UserDefaults.standard.set(try? Product(barcode: code), forKey: "scannedProduct")
-            }
+        saveProduct(code: code)
+    }
     
+    func saveProduct(code: String) {
+        let newProduct = Product(context: context)
+        newProduct.id = UUID()
+        newProduct.isComplete = false
+        newProduct.name = code
+        newProduct.dateAdded = Date()
+
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
+    }
     
     override var prefersStatusBarHidden: Bool {
         return true
