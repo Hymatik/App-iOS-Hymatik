@@ -17,26 +17,26 @@ struct ProductRow: View {
 }
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var context
-    @State private var productName: String = ""
+//    @Environment(\.managedObjectContext) var context
+//    @State private var productName: String = ""
     @State private var showScanner = false
     
     @FetchRequest(
         entity: Product.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Product.id, ascending: false)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Product.dateAdded, ascending: false)],
         predicate: NSPredicate(format: "isComplete == %@", NSNumber(value: false))
     ) var notCompletedTasks: FetchedResults<Product>
     
     
     var body: some View {
         VStack {
-            Button("Scanner") {
-                self.showScanner = true
-            }
             List{
                 ForEach(notCompletedTasks) { product in
                     ProductRow(product: product)
                 }
+            }
+            Button("Scanner") {
+                self.showScanner = true
             }
         }
         .sheet(isPresented: $showScanner) {

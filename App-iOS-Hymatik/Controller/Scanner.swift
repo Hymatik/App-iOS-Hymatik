@@ -93,7 +93,6 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
         }
-
         dismiss(animated: true)
     }
 
@@ -108,6 +107,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         newProduct.isComplete = false
         newProduct.name = code
         newProduct.dateAdded = Date()
+        newProduct.barcode = code
 
         do {
             try context.save()
