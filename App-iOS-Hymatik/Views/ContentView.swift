@@ -40,7 +40,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showScanner) {
-            ScannerWrapper()
+            ShowScanner()
         }
 
     }
@@ -48,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ScannerWrapper()
+        ShowScanner()
     }
 }

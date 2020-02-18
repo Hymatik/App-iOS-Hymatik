@@ -21,7 +21,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor.white
         captureSession = AVCaptureSession()
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -92,13 +92,22 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
+            
         }
-        dismiss(animated: true)
+        
     }
 
     func found(code: String) {
+        let alert = UIAlertController(title: "Barcode: \"\(code)\" fundet.", message: "Vil du tilføj produktet til din ordre?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ja, tak.", style: .default, handler: { (action) in
+            self.saveProduct(code: code)
+            self.dismiss(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Nej, ikke tilføj den.", style: .default, handler: { (action) in
+            self.captureSession.startRunning()
+        }))
+        self.present(alert, animated: true, completion: nil)
         print(code)
-        saveProduct(code: code)
     }
     
     func saveProduct(code: String) {
