@@ -99,7 +99,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		210FFB7723FA9436000F8297 /* System */ = {
+		210FFB7723FA9436000F8297 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				2156BA5123FA7E6900C46C4B /* AppDelegate.swift */,
@@ -108,7 +108,7 @@
 				2156BA5F23FA7E6A00C46C4B /* LaunchScreen.storyboard */,
 				2156BA6223FA7E6A00C46C4B /* Info.plist */,
 			);
-			path = System;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		210FFB7823FA9468000F8297 /* Views */ = {
@@ -164,7 +164,7 @@
 			children = (
 				210FFB7A23FA947F000F8297 /* Models */,
 				210FFB7923FA9472000F8297 /* Controllers */,
-				210FFB7723FA9436000F8297 /* System */,
+				210FFB7723FA9436000F8297 /* Resources */,
 				210FFB7823FA9468000F8297 /* Views */,
 				2156BA5C23FA7E6A00C46C4B /* Preview Content */,
 			);
@@ -217,7 +217,6 @@
 				FEB423E21C7D0992A1D67F55 /* Pods-App-iOS-HymatikTests.debug.xcconfig */,
 				AD13988AC300087883063E1C /* Pods-App-iOS-HymatikTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -600,7 +599,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App-iOS-Hymatik/Preview Content\"";
 				DEVELOPMENT_TEAM = FBVK276RNH;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "App-iOS-Hymatik/System/Info.plist";
+				INFOPLIST_FILE = "App-iOS-Hymatik/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +620,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App-iOS-Hymatik/Preview Content\"";
 				DEVELOPMENT_TEAM = FBVK276RNH;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "App-iOS-Hymatik/System/Info.plist";
+				INFOPLIST_FILE = "App-iOS-Hymatik/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
