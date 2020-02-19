@@ -8,29 +8,96 @@
 
 import SwiftUI
 
-struct ProductRow: View {
-    var product: Product
 
+
+struct ViewOrdre: View {
+
+    
+    
     var body: some View {
-        Text(product.name ?? "No name given")
+        VStack {
+            Logo()
+            
+            CustomerSelection()
+            
+            SectionDivider()
+            ProductList()
+            SectionDivider()
+            
+            OptionButtons()
+        }
+
     }
 }
 
-struct ViewOrdre: View {
+private struct ProductList: View {
+    @FetchRequest(entity: Product.entity(), sortDescriptors: []
+    ) var products: FetchedResults<Product>
+    
     var body: some View {
-        VStack {
-            List{
-                Text("Content")
+        List{
+            ForEach(products) { product in
+                Text("test")
+            }
+            
+            
+        }
+    }
+}
+
+private struct ProductRow: View {
+    var product: Product
+
+    var body: some View {
+        Text(product.barcode ?? "No name given")
+    }
+}
+
+
+private struct OptionButtons: View {
+    var body: some View {
+        HStack {
+            Button("Slet") {
+                // TODO: Create Logic
+            }
+            Spacer()
+            Button("Tilføj Produkt") {
+                // TODO: Create Logic
+            }
+            Spacer()
+            Button("Send") {
+                // TODO: Create Logic
             }
         }
+        .padding()
+    }
+}
 
+private struct CustomerSelection: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Kunde: ")
+                Button("Test Kunde") {
+                    
+                }
+                Spacer()
+            }
+            .padding()
+            
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
             ViewOrdre()
-        }
     }
 }
+
+
+
+
+
+
+

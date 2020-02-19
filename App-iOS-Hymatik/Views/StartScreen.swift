@@ -31,14 +31,6 @@ struct StartScreen: View {
     }
 }
 
-struct Logo: View {
-    var body: some View {
-        Image("Hymatic-secondary-slogan-2500")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .padding()
-    }
-}
 
 struct StartScreen_Previews: PreviewProvider {
     static var previews: some View {

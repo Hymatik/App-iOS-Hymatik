@@ -11,15 +11,13 @@ import CoreData
 
 
 class Datahandler {
-    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @Environment(\.managedObjectContext) var context
     
     func saveProduct(code: String) {
         let newProduct = Product(context: context)
         newProduct.id = UUID()
-        newProduct.isComplete = false
-        newProduct.name = code
-        newProduct.dateAdded = Date()
         newProduct.barcode = code
 
         do {

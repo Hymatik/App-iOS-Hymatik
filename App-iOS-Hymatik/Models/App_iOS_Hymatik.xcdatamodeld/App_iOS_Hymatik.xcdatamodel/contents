@@ -1,42 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Address" representedClassName="Address" syncable="YES" codeGenerationType="class">
-        <attribute name="cityName" optional="YES" attributeType="String"/>
-        <attribute name="country" optional="YES" attributeType="String"/>
-        <attribute name="postNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="roadName" optional="YES" attributeType="String"/>
-        <attribute name="roadNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="customerDelivery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="addressDelivery" inverseEntity="Customer"/>
-        <relationship name="customerInvoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="addressInvoice" inverseEntity="Customer"/>
-    </entity>
-    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
-        <attribute name="cvr" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="nameCompany" optional="YES" attributeType="String"/>
-        <attribute name="nameFirst" optional="YES" attributeType="String"/>
-        <attribute name="nameLast" optional="YES" attributeType="String"/>
-        <attribute name="nameMiddle" optional="YES" attributeType="String"/>
-        <relationship name="addressDelivery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="customerDelivery" inverseEntity="Address"/>
-        <relationship name="addressInvoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="customerInvoice" inverseEntity="Address"/>
-        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" inverseName="costumers" inverseEntity="Order"/>
-    </entity>
-    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
-        <relationship name="costumers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="orders" inverseEntity="Customer"/>
-        <relationship name="products" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="order" inverseEntity="Product"/>
-    </entity>
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
         <attribute name="barcode" optional="YES" attributeType="String"/>
-        <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
-        <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="products" inverseEntity="Order"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-63" positionY="-18" width="128" height="148"/>
-        <element name="Order" positionX="-54" positionY="36" width="128" height="73"/>
-        <element name="Customer" positionX="-36" positionY="45" width="128" height="178"/>
-        <element name="Address" positionX="-18" positionY="90" width="128" height="148"/>
+        <element name="Product" positionX="-63" positionY="-18" width="128" height="73"/>
     </elements>
 </model>
