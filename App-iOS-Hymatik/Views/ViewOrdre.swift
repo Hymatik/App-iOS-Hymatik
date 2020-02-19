@@ -31,13 +31,13 @@ struct ViewOrdre: View {
 }
 
 private struct ProductList: View {
-    @FetchRequest(entity: Product.entity(), sortDescriptors: []
-    ) var products: FetchedResults<Product>
+    @FetchRequest(entity: Entity.entity(), sortDescriptors: []
+    ) var entitys: FetchedResults<Entity>
     
     var body: some View {
         List{
-            ForEach(products) { product in
-                Text("test")
+            ForEach(entitys, id: \.id) { entity in
+                Text(entity.barcode ?? "Unknown")
             }
             
             
