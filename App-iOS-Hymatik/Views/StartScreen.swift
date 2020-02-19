@@ -15,7 +15,9 @@ struct StartScreen: View {
                 Logo()
         
                 List {
-                    Text("Ordre")
+                    NavigationLink(destination: ViewOrdre()) {
+                        Text("Ordre")
+                    }
                     Text("Ordre historik")
                     NavigationLink(destination: ShowScanner()) {
                         Text("Scan Barcode")
@@ -34,8 +36,7 @@ struct Logo: View {
         Image("Hymatic-secondary-slogan-2500")
             .resizable()
             .aspectRatio(contentMode: .fit)
-        .padding()
-        
+            .padding()
     }
 }
 
