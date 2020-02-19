@@ -16,32 +16,12 @@
 		2156BA5B23FA7E6A00C46C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2156BA5A23FA7E6A00C46C4B /* Assets.xcassets */; };
 		2156BA5E23FA7E6A00C46C4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2156BA5D23FA7E6A00C46C4B /* Preview Assets.xcassets */; };
 		2156BA6123FA7E6A00C46C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2156BA5F23FA7E6A00C46C4B /* LaunchScreen.storyboard */; };
-		2156BA6C23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA6B23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift */; };
-		2156BA7723FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156BA7623FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift */; };
+		2188DA3123FD36A600C542FE /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2188DA3023FD36A600C542FE /* StartScreen.swift */; };
 		218A82A423FBE46A008D2545 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A82A323FBE46A008D2545 /* Scanner.swift */; };
 		218A82D723FC0EE8008D2545 /* Product+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A82D623FC0EE8008D2545 /* Product+Extension.swift */; };
 		218A82DB23FD1A29008D2545 /* Datahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A82DA23FD1A29008D2545 /* Datahandler.swift */; };
 		260C2D449288B0B58A3BE004 /* Pods_App_iOS_Hymatik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104762C5C06D00F1CE5460D1 /* Pods_App_iOS_Hymatik.framework */; };
-		748BA684FFD0BBE40A9C4DB3 /* Pods_App_iOS_HymatikTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE0B3306E3941D911D2F254 /* Pods_App_iOS_HymatikTests.framework */; };
-		D6C835A09EF6A0195E4FA00B /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A7F036936FF00FE12AEBC0 /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2156BA6823FA7E6A00C46C4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2156BA4623FA7E6900C46C4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2156BA4D23FA7E6900C46C4B;
-			remoteInfo = "App-iOS-Hymatik";
-		};
-		2156BA7323FA7E6A00C46C4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2156BA4623FA7E6900C46C4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2156BA4D23FA7E6900C46C4B;
-			remoteInfo = "App-iOS-Hymatik";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		104762C5C06D00F1CE5460D1 /* Pods_App_iOS_Hymatik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_iOS_Hymatik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,12 +36,7 @@
 		2156BA5D23FA7E6A00C46C4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2156BA6023FA7E6A00C46C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2156BA6223FA7E6A00C46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2156BA6723FA7E6A00C46C4B /* App-iOS-HymatikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-iOS-HymatikTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2156BA6B23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_iOS_HymatikTests.swift; sourceTree = "<group>"; };
-		2156BA6D23FA7E6A00C46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2156BA7223FA7E6A00C46C4B /* App-iOS-HymatikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-iOS-HymatikUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2156BA7623FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_iOS_HymatikUITests.swift; sourceTree = "<group>"; };
-		2156BA7823FA7E6A00C46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2188DA3023FD36A600C542FE /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		218A82A323FBE46A008D2545 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		218A82D623FC0EE8008D2545 /* Product+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Extension.swift"; sourceTree = "<group>"; };
 		218A82DA23FD1A29008D2545 /* Datahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datahandler.swift; sourceTree = "<group>"; };
@@ -81,22 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				260C2D449288B0B58A3BE004 /* Pods_App_iOS_Hymatik.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2156BA6423FA7E6A00C46C4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				748BA684FFD0BBE40A9C4DB3 /* Pods_App_iOS_HymatikTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2156BA6F23FA7E6A00C46C4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D6C835A09EF6A0195E4FA00B /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +80,7 @@
 				2156BA5823FA7E6900C46C4B /* ContentView.swift */,
 				210FFB7D23FA987B000F8297 /* Main.storyboard */,
 				210FFB8323FAA3A2000F8297 /* ShowScanner.swift */,
+				2188DA3023FD36A600C542FE /* StartScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,8 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				2156BA5023FA7E6900C46C4B /* App-iOS-Hymatik */,
-				2156BA6A23FA7E6A00C46C4B /* App-iOS-HymatikTests */,
-				2156BA7523FA7E6A00C46C4B /* App-iOS-HymatikUITests */,
 				2156BA4F23FA7E6900C46C4B /* Products */,
 				EFDD9353A6848A8B15C2B491 /* Pods */,
 				5F7B5EABECC23F70F80544A1 /* Frameworks */,
@@ -150,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				2156BA4E23FA7E6900C46C4B /* Hymatik.app */,
-				2156BA6723FA7E6A00C46C4B /* App-iOS-HymatikTests.xctest */,
-				2156BA7223FA7E6A00C46C4B /* App-iOS-HymatikUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,24 +130,6 @@
 				2156BA5D23FA7E6A00C46C4B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2156BA6A23FA7E6A00C46C4B /* App-iOS-HymatikTests */ = {
-			isa = PBXGroup;
-			children = (
-				2156BA6B23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift */,
-				2156BA6D23FA7E6A00C46C4B /* Info.plist */,
-			);
-			path = "App-iOS-HymatikTests";
-			sourceTree = "<group>";
-		};
-		2156BA7523FA7E6A00C46C4B /* App-iOS-HymatikUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2156BA7623FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift */,
-				2156BA7823FA7E6A00C46C4B /* Info.plist */,
-			);
-			path = "App-iOS-HymatikUITests";
 			sourceTree = "<group>";
 		};
 		218A82A223FBE44D008D2545 /* Controller */ = {
@@ -247,44 +185,6 @@
 			productReference = 2156BA4E23FA7E6900C46C4B /* Hymatik.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2156BA6623FA7E6A00C46C4B /* App-iOS-HymatikTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2156BA7E23FA7E6A00C46C4B /* Build configuration list for PBXNativeTarget "App-iOS-HymatikTests" */;
-			buildPhases = (
-				DB4C3959F1D35CF7CF0A07CA /* [CP] Check Pods Manifest.lock */,
-				2156BA6323FA7E6A00C46C4B /* Sources */,
-				2156BA6423FA7E6A00C46C4B /* Frameworks */,
-				2156BA6523FA7E6A00C46C4B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2156BA6923FA7E6A00C46C4B /* PBXTargetDependency */,
-			);
-			name = "App-iOS-HymatikTests";
-			productName = "App-iOS-HymatikTests";
-			productReference = 2156BA6723FA7E6A00C46C4B /* App-iOS-HymatikTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2156BA7123FA7E6A00C46C4B /* App-iOS-HymatikUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2156BA8123FA7E6A00C46C4B /* Build configuration list for PBXNativeTarget "App-iOS-HymatikUITests" */;
-			buildPhases = (
-				202B09175F793B57C71F2158 /* [CP] Check Pods Manifest.lock */,
-				2156BA6E23FA7E6A00C46C4B /* Sources */,
-				2156BA6F23FA7E6A00C46C4B /* Frameworks */,
-				2156BA7023FA7E6A00C46C4B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2156BA7423FA7E6A00C46C4B /* PBXTargetDependency */,
-			);
-			name = "App-iOS-HymatikUITests";
-			productName = "App-iOS-HymatikUITests";
-			productReference = 2156BA7223FA7E6A00C46C4B /* App-iOS-HymatikUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,14 +197,6 @@
 				TargetAttributes = {
 					2156BA4D23FA7E6900C46C4B = {
 						CreatedOnToolsVersion = 11.3.1;
-					};
-					2156BA6623FA7E6A00C46C4B = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 2156BA4D23FA7E6900C46C4B;
-					};
-					2156BA7123FA7E6A00C46C4B = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 2156BA4D23FA7E6900C46C4B;
 					};
 				};
 			};
@@ -322,8 +214,6 @@
 			projectRoot = "";
 			targets = (
 				2156BA4D23FA7E6900C46C4B /* App-iOS-Hymatik */,
-				2156BA6623FA7E6A00C46C4B /* App-iOS-HymatikTests */,
-				2156BA7123FA7E6A00C46C4B /* App-iOS-HymatikUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -340,45 +230,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2156BA6523FA7E6A00C46C4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2156BA7023FA7E6A00C46C4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		202B09175F793B57C71F2158 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B05A1F17FCE3D249682C83DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,28 +255,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB4C3959F1D35CF7CF0A07CA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-App-iOS-HymatikTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -435,42 +267,14 @@
 				210FFB8423FAA3A2000F8297 /* ShowScanner.swift in Sources */,
 				2156BA5923FA7E6900C46C4B /* ContentView.swift in Sources */,
 				218A82D723FC0EE8008D2545 /* Product+Extension.swift in Sources */,
+				2188DA3123FD36A600C542FE /* StartScreen.swift in Sources */,
 				218A82DB23FD1A29008D2545 /* Datahandler.swift in Sources */,
 				218A82A423FBE46A008D2545 /* Scanner.swift in Sources */,
 				2156BA5423FA7E6900C46C4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2156BA6323FA7E6A00C46C4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2156BA6C23FA7E6A00C46C4B /* App_iOS_HymatikTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2156BA6E23FA7E6A00C46C4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2156BA7723FA7E6A00C46C4B /* App_iOS_HymatikUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2156BA6923FA7E6A00C46C4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2156BA4D23FA7E6900C46C4B /* App-iOS-Hymatik */;
-			targetProxy = 2156BA6823FA7E6A00C46C4B /* PBXContainerItemProxy */;
-		};
-		2156BA7423FA7E6A00C46C4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2156BA4D23FA7E6900C46C4B /* App-iOS-Hymatik */;
-			targetProxy = 2156BA7323FA7E6A00C46C4B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2156BA5F23FA7E6A00C46C4B /* LaunchScreen.storyboard */ = {
@@ -518,6 +322,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -541,6 +346,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 			};
 			name = Debug;
 		};
@@ -578,6 +384,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -594,6 +401,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -640,94 +448,6 @@
 			};
 			name = Release;
 		};
-		2156BA7F23FA7E6A00C46C4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEB423E21C7D0992A1D67F55 /* Pods-App-iOS-HymatikTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FBVK276RNH;
-				INFOPLIST_FILE = "App-iOS-HymatikTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hymatik.App-iOS-HymatikTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App-iOS-Hymatik.app/App-iOS-Hymatik";
-			};
-			name = Debug;
-		};
-		2156BA8023FA7E6A00C46C4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD13988AC300087883063E1C /* Pods-App-iOS-HymatikTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FBVK276RNH;
-				INFOPLIST_FILE = "App-iOS-HymatikTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hymatik.App-iOS-HymatikTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App-iOS-Hymatik.app/App-iOS-Hymatik";
-			};
-			name = Release;
-		};
-		2156BA8223FA7E6A00C46C4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFB23456620C500CBF0D69DA /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FBVK276RNH;
-				INFOPLIST_FILE = "App-iOS-HymatikUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hymatik.App-iOS-HymatikUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "App-iOS-Hymatik";
-			};
-			name = Debug;
-		};
-		2156BA8323FA7E6A00C46C4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 460E0952139A41A9615B8475 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FBVK276RNH;
-				INFOPLIST_FILE = "App-iOS-HymatikUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hymatik.App-iOS-HymatikUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "App-iOS-Hymatik";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -745,24 +465,6 @@
 			buildConfigurations = (
 				2156BA7C23FA7E6A00C46C4B /* Debug */,
 				2156BA7D23FA7E6A00C46C4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2156BA7E23FA7E6A00C46C4B /* Build configuration list for PBXNativeTarget "App-iOS-HymatikTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2156BA7F23FA7E6A00C46C4B /* Debug */,
-				2156BA8023FA7E6A00C46C4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2156BA8123FA7E6A00C46C4B /* Build configuration list for PBXNativeTarget "App-iOS-HymatikUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2156BA8223FA7E6A00C46C4B /* Debug */,
-				2156BA8323FA7E6A00C46C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
