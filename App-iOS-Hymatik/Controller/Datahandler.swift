@@ -6,8 +6,7 @@
 //  Copyright © 2020 Hymatik. All rights reserved.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 import CoreData
 
 
