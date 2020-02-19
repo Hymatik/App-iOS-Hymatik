@@ -8,22 +8,50 @@
 
 import AVFoundation
 import UIKit
-import CoreData
 
 class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
+    let supportedBarcodeTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13, .pdf417, .upce, .code128]
+    
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
-    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //Saves found barcodes as products in the database.
+    //Used in found()
+    private let datahandler = Datahandler()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white
+
         captureSession = AVCaptureSession()
 
+        checkVideo()
+        previewLayers()
+
+        captureSession.startRunning()
+    }
+    
+    func previewLayers() {
+        // Background Layer
+        view.backgroundColor = UIColor.white
+        
+        // Video Layer
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = view.layer.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+        
+        
+        // GUI Layer
+        previewLayer.addSublayer(displayGuide().layer)
+    }
+    
+    
+    // Checks the video for barcodes
+    func checkVideo() {
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
         let videoInput: AVCaptureDeviceInput
 
@@ -46,18 +74,18 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             captureSession.addOutput(metadataOutput)
 
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417, .upce, .code128]
+            
+            metadataOutput.metadataObjectTypes = supportedBarcodeTypes
         } else {
             failed()
             return
         }
-
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.layer.bounds
-        previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
+    }
+    
+    
+    // Adding a Rectangle to show a guide.
+    func displayGuide() -> UIImageView {
         
-        //Adding a Rectangle to show a guide.
         let cgRect = CGRect(x: self.view.bounds.midX-100, y: self.view.bounds.midY-50, width: 200, height: 100)
         let myView = UIImageView()
         myView.frame = cgRect
@@ -67,11 +95,11 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         myView.layer.borderColor =  UIColor.yellow.cgColor
         myView.layer.borderWidth = 3
         myView.layer.masksToBounds = true
-        previewLayer.addSublayer(myView.layer)
-
-        captureSession.startRunning()
+        
+        return myView
     }
 
+    // When it failes to start the camera up
     func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -79,6 +107,8 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         captureSession = nil
     }
 
+    
+    // Will start the camera and capturing when the view is shown
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -87,6 +117,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         }
     }
 
+    // Stopes the camera when the view disappears.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
@@ -109,33 +140,23 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         
     }
 
+    
+    // When a barcode is found, it will show a alert box so the user can choose to either save the product or not.
     func found(code: String) {
         let alert = UIAlertController(title: "Barcode: \"\(code)\" fundet.", message: "Vil du tilføj produktet til din ordre?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ja, tak.", style: .default, handler: { (action) in
-            self.saveProduct(code: code)
-            self.dismiss(animated: true)
+            self.datahandler.saveProduct(code: code)
+            self.captureSession.startRunning()
         }))
         alert.addAction(UIAlertAction(title: "Nej, ikke tilføj den.", style: .default, handler: { (action) in
             self.captureSession.startRunning()
         }))
         self.present(alert, animated: true, completion: nil)
-        print(code)
     }
     
-    func saveProduct(code: String) {
-        let newProduct = Product(context: context)
-        newProduct.id = UUID()
-        newProduct.isComplete = false
-        newProduct.name = code
-        newProduct.dateAdded = Date()
-        newProduct.barcode = code
-
-        do {
-            try context.save()
-        } catch {
-            print(error)
-        }
-    }
+    
+    // MARK: View settings
+    
     
     override var prefersStatusBarHidden: Bool {
         return true
