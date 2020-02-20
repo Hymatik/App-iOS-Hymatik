@@ -37,8 +37,8 @@ private struct CustomerSelection: View {
         VStack {
             HStack {
                 Text("Kunde: ")
-                Button("Test Kunde") {
-                    
+                NavigationLink(destination: CustomerList()) {
+                    Text("Test Kunde")
                 }
             }
             .padding()
