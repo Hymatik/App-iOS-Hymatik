@@ -16,7 +16,11 @@ struct ViewOrder: View {
         VStack {
             Logo()
             
-            CustomerSelection()
+            HStack {
+                CustomerSelection()
+                Spacer()
+                OrderSelection()
+            }
             
             SectionDivider()
             ProductList()
@@ -36,7 +40,21 @@ private struct CustomerSelection: View {
                 Button("Test Kunde") {
                     
                 }
-                Spacer()
+            }
+            .padding()
+            
+        }
+    }
+}
+
+private struct OrderSelection: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Ordre: ")
+                Button("Test Ordre") {
+                    
+                }
             }
             .padding()
             
@@ -82,7 +100,7 @@ private struct OptionButtons: View {
             }
             Spacer()
             NavigationLink(destination: ShowScanner()) {
-                Text("Scan Barcode")
+                Text("Scan")
             }
             Spacer()
             Button("Send") {
