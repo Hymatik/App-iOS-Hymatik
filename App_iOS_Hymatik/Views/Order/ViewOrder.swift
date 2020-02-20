@@ -53,8 +53,8 @@ private struct OrderSelection: View {
         VStack {
             HStack {
                 Text("Ordre: ")
-                Button("Test Ordre") {
-                    
+                NavigationLink(destination: OrderList()) {
+                    Text("Test Order")
                 }
             }
             .padding()

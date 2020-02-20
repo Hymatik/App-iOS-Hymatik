@@ -10,6 +10,8 @@
 		2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51423FECE9B0013DD5C /* CustomerList.swift */; };
 		2120B51723FECEEC0013DD5C /* CreateCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51623FECEEC0013DD5C /* CreateCustomer.swift */; };
 		2120B51923FECF9D0013DD5C /* CustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51823FECF9D0013DD5C /* CustomerDetails.swift */; };
+		2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51A23FED5350013DD5C /* CreateOrder.swift */; };
+		2120B51D23FED5560013DD5C /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51C23FED5560013DD5C /* OrderList.swift */; };
 		21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8423FE895100FDA748 /* AppDelegate.swift */; };
 		21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8623FE895100FDA748 /* SceneDelegate.swift */; };
 		21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */; };
@@ -28,6 +30,8 @@
 		2120B51423FECE9B0013DD5C /* CustomerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerList.swift; sourceTree = "<group>"; };
 		2120B51623FECEEC0013DD5C /* CreateCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomer.swift; sourceTree = "<group>"; };
 		2120B51823FECF9D0013DD5C /* CustomerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetails.swift; sourceTree = "<group>"; };
+		2120B51A23FED5350013DD5C /* CreateOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrder.swift; sourceTree = "<group>"; };
+		2120B51C23FED5560013DD5C /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
 		21538C8123FE895100FDA748 /* Hymatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21538C8423FE895100FDA748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21538C8623FE895100FDA748 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				21538CA223FE925700FDA748 /* ViewOrder.swift */,
+				2120B51A23FED5350013DD5C /* CreateOrder.swift */,
+				2120B51C23FED5560013DD5C /* OrderList.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -244,6 +250,8 @@
 				21538CA023FE8FC100FDA748 /* SharedElements.swift in Sources */,
 				21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */,
 				21538CA323FE925700FDA748 /* ViewOrder.swift in Sources */,
+				2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */,
+				2120B51D23FED5560013DD5C /* OrderList.swift in Sources */,
 				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
 				2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */,
 				21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */,
