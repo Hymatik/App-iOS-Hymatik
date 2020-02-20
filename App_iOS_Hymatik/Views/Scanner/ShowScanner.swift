@@ -8,17 +8,25 @@
 
 import SwiftUI
 
-struct ShowScanner: UIViewControllerRepresentable {
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ShowScanner>) -> Scanner {
+struct ShowScanner: View {
+    var body: some View {
+        VStack {
+            ScannerToView()
+        }
+    .navigationBarTitle(Text("Scanner"))
+    }
+}
+
+private struct ScannerToView: UIViewControllerRepresentable {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerToView>) -> Scanner {
         let scanner = Scanner()
         return scanner
     }
     
-    func updateUIViewController(_ uiViewController: Scanner, context: UIViewControllerRepresentableContext<ShowScanner>) {
+    func updateUIViewController(_ uiViewController: Scanner, context: UIViewControllerRepresentableContext<ScannerToView>) {
     }
     
     typealias UIViewControllerType = Scanner
-    
     
 }
 

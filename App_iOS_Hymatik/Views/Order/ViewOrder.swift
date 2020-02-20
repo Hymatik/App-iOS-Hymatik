@@ -28,6 +28,7 @@ struct ViewOrder: View {
             
             OptionButtons()
         }
+    .navigationBarTitle(Text("Aktuelle Ordre"))
         
     }
 }

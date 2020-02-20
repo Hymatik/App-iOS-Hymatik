@@ -23,6 +23,7 @@ struct CustomerList: View {
             }
             
         }
+        .navigationBarTitle(Text("Kunde liste"))
     }
 }
 
