@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21538C8123FE895100FDA748 /* App_iOS_Hymatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_iOS_Hymatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21538C8123FE895100FDA748 /* Hymatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21538C8423FE895100FDA748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21538C8623FE895100FDA748 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		21538C8923FE895100FDA748 /* App_iOS_Hymatik.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App_iOS_Hymatik.xcdatamodel; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		21538C8223FE895100FDA748 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21538C8123FE895100FDA748 /* App_iOS_Hymatik.app */,
+				21538C8123FE895100FDA748 /* Hymatik.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			);
 			name = App_iOS_Hymatik;
 			productName = App_iOS_Hymatik;
-			productReference = 21538C8123FE895100FDA748 /* App_iOS_Hymatik.app */;
+			productReference = 21538C8123FE895100FDA748 /* Hymatik.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hymatik.App-iOS-Hymatik";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hymatik;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hymatik.App-iOS-Hymatik";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hymatik;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
