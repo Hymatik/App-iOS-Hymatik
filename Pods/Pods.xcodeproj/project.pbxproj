@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F5724D694B979A26B0673ADCE7ABED7 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B00951ABC100AF763119C2B2CE3B7B18 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-dummy.m */; };
+		24BFD1DBA4E4427BCCB75A2BE65C6996 /* Pods-App-iOS-HymatikTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28EBB8BFD09EAD8368A24B14E32FEB93 /* Pods-App-iOS-HymatikTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46A4D6DB13BEEE5845AE01A892A53F18 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 724B9F5149FD6DAE7873B346C077E8E6 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5498B86262F8F59578C7974186F0ED83 /* Pods-App-iOS-Hymatik-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F06A185BE2DC9DF2AE1CA136093610 /* Pods-App-iOS-Hymatik-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5E001E478873C04E6FC4C447726B22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		85A57D5A774108F3B3D3D760C8396F0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CCC582318E498E6111DA7C84A04A515C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D222A3242F722E0CF079A5D8C849BE63 /* Pods-App-iOS-HymatikTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4065F75968C85C112761DA469F41D7 /* Pods-App-iOS-HymatikTests-dummy.m */; };
+		DBDC9A123238F5D7B6DE5FAA6AB0829B /* Pods-App-iOS-Hymatik-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D67FEDD7513341A8F3A24C92308828 /* Pods-App-iOS-Hymatik-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6D6BCD1117212AA5824B76CB3AE5126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F911D03CDBCE0057EA65B8B1AB85375;
+			remoteInfo = "Pods-App-iOS-Hymatik";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00C021AC967677E7BF54360FC294AE84 /* Pods-App-iOS-Hymatik-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-App-iOS-Hymatik-Info.plist"; sourceTree = "<group>"; };
+		0CA25949214B1BAA428B0BAB4AF77A30 /* Pods-App-iOS-HymatikTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-App-iOS-HymatikTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F68C283BAA4FF5F3E7441CB265396F6 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2276F07787BF636A8818226017BAA982 /* Pods-App-iOS-Hymatik-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-App-iOS-Hymatik-acknowledgements.plist"; sourceTree = "<group>"; };
+		26F64B011A6A3AD6FF49928791E9C9CD /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		28EBB8BFD09EAD8368A24B14E32FEB93 /* Pods-App-iOS-HymatikTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-App-iOS-HymatikTests-umbrella.h"; sourceTree = "<group>"; };
+		2C3994EF38A9E70A835D40C6DFD9F5C0 /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E26AAA2DF31D684AADE990C652A6DEB /* Pods-App-iOS-Hymatik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-App-iOS-Hymatik.debug.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		322CD7A1871AC875E7259B36DFC77074 /* Pods-App-iOS-HymatikTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-App-iOS-HymatikTests.modulemap"; sourceTree = "<group>"; };
+		41FEA8F551EF4E220909BF5CD7B37C5F /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.modulemap"; sourceTree = "<group>"; };
+		4C92B0AAB047A035E09298DE09FD8111 /* Pods-App-iOS-HymatikTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-App-iOS-HymatikTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4E4065F75968C85C112761DA469F41D7 /* Pods-App-iOS-HymatikTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-App-iOS-HymatikTests-dummy.m"; sourceTree = "<group>"; };
+		526FC294D201F6B42D6E3F8E6A28AE67 /* Pods_App_iOS_Hymatik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_App_iOS_Hymatik.framework; path = "Pods-App-iOS-Hymatik.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D67FEDD7513341A8F3A24C92308828 /* Pods-App-iOS-Hymatik-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-App-iOS-Hymatik-dummy.m"; sourceTree = "<group>"; };
+		724B9F5149FD6DAE7873B346C077E8E6 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h"; sourceTree = "<group>"; };
+		76F54E18FCA49A18397942F1805921FF /* Pods-App-iOS-HymatikTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-App-iOS-HymatikTests-Info.plist"; sourceTree = "<group>"; };
+		9832E2C0E91FF5032002C265FFA0D9E2 /* Pods-App-iOS-HymatikTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-App-iOS-HymatikTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A8B7A024AC456CC1412A61DFFE767FEE /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B00951ABC100AF763119C2B2CE3B7B18 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-dummy.m"; sourceTree = "<group>"; };
+		B3307B01243007C0CE9B95934DF772DE /* Pods-App-iOS-Hymatik-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-App-iOS-Hymatik-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B5F06A185BE2DC9DF2AE1CA136093610 /* Pods-App-iOS-Hymatik-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-App-iOS-Hymatik-umbrella.h"; sourceTree = "<group>"; };
+		C9FCBBBFDE8D739F55F826D1E9802741 /* Pods-App-iOS-Hymatik.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-App-iOS-Hymatik.modulemap"; sourceTree = "<group>"; };
+		CC694E2EF5D42070C803800A5EE3B9CF /* Pods-App-iOS-HymatikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-App-iOS-HymatikTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7A4D772EC1131D5F822224D9E20E605 /* Pods_App_iOS_HymatikTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_App_iOS_HymatikTests.framework; path = "Pods-App-iOS-HymatikTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC8F8BABFF994BC59601BAF609EC576 /* Pods-App-iOS-Hymatik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-App-iOS-Hymatik.release.xcconfig"; sourceTree = "<group>"; };
+		DF3CCB50E056A405B3862E170254A39D /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-Info.plist"; sourceTree = "<group>"; };
+		F1EB5D4C182CF6A40FC037AE88C97775 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B5812245FA0036C5EB688FE9B0BDF15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC582318E498E6111DA7C84A04A515C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90941D2CA1F01A5FD224620B20D427EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5E001E478873C04E6FC4C447726B22 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92427DA64D8E99D20202B735684E33DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85A57D5A774108F3B3D3D760C8396F0A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		053854232E6CB1D285214B4484099A07 /* Pods-App-iOS-Hymatik */ = {
+			isa = PBXGroup;
+			children = (
+				C9FCBBBFDE8D739F55F826D1E9802741 /* Pods-App-iOS-Hymatik.modulemap */,
+				B3307B01243007C0CE9B95934DF772DE /* Pods-App-iOS-Hymatik-acknowledgements.markdown */,
+				2276F07787BF636A8818226017BAA982 /* Pods-App-iOS-Hymatik-acknowledgements.plist */,
+				57D67FEDD7513341A8F3A24C92308828 /* Pods-App-iOS-Hymatik-dummy.m */,
+				00C021AC967677E7BF54360FC294AE84 /* Pods-App-iOS-Hymatik-Info.plist */,
+				B5F06A185BE2DC9DF2AE1CA136093610 /* Pods-App-iOS-Hymatik-umbrella.h */,
+				2E26AAA2DF31D684AADE990C652A6DEB /* Pods-App-iOS-Hymatik.debug.xcconfig */,
+				DDC8F8BABFF994BC59601BAF609EC576 /* Pods-App-iOS-Hymatik.release.xcconfig */,
+			);
+			name = "Pods-App-iOS-Hymatik";
+			path = "Target Support Files/Pods-App-iOS-Hymatik";
+			sourceTree = "<group>";
+		};
+		5018EBB92D6EFD81CF9ED604AA8A7898 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests */ = {
+			isa = PBXGroup;
+			children = (
+				41FEA8F551EF4E220909BF5CD7B37C5F /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.modulemap */,
+				26F64B011A6A3AD6FF49928791E9C9CD /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-acknowledgements.markdown */,
+				F1EB5D4C182CF6A40FC037AE88C97775 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-acknowledgements.plist */,
+				B00951ABC100AF763119C2B2CE3B7B18 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-dummy.m */,
+				DF3CCB50E056A405B3862E170254A39D /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-Info.plist */,
+				724B9F5149FD6DAE7873B346C077E8E6 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h */,
+				A8B7A024AC456CC1412A61DFFE767FEE /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.debug.xcconfig */,
+				0F68C283BAA4FF5F3E7441CB265396F6 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig */,
+			);
+			name = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests";
+			path = "Target Support Files/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests";
+			sourceTree = "<group>";
+		};
+		59A9A6A69B8731C945827D6AB84C546F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				053854232E6CB1D285214B4484099A07 /* Pods-App-iOS-Hymatik */,
+				5018EBB92D6EFD81CF9ED604AA8A7898 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests */,
+				F45B97F05FE9E102C4F2629776166D56 /* Pods-App-iOS-HymatikTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DED1B4AF8F443E1C25DD643699B00809 /* Products */,
+				59A9A6A69B8731C945827D6AB84C546F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DED1B4AF8F443E1C25DD643699B00809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				526FC294D201F6B42D6E3F8E6A28AE67 /* Pods_App_iOS_Hymatik.framework */,
+				2C3994EF38A9E70A835D40C6DFD9F5C0 /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework */,
+				D7A4D772EC1131D5F822224D9E20E605 /* Pods_App_iOS_HymatikTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F45B97F05FE9E102C4F2629776166D56 /* Pods-App-iOS-HymatikTests */ = {
+			isa = PBXGroup;
+			children = (
+				322CD7A1871AC875E7259B36DFC77074 /* Pods-App-iOS-HymatikTests.modulemap */,
+				9832E2C0E91FF5032002C265FFA0D9E2 /* Pods-App-iOS-HymatikTests-acknowledgements.markdown */,
+				4C92B0AAB047A035E09298DE09FD8111 /* Pods-App-iOS-HymatikTests-acknowledgements.plist */,
+				4E4065F75968C85C112761DA469F41D7 /* Pods-App-iOS-HymatikTests-dummy.m */,
+				76F54E18FCA49A18397942F1805921FF /* Pods-App-iOS-HymatikTests-Info.plist */,
+				28EBB8BFD09EAD8368A24B14E32FEB93 /* Pods-App-iOS-HymatikTests-umbrella.h */,
+				0CA25949214B1BAA428B0BAB4AF77A30 /* Pods-App-iOS-HymatikTests.debug.xcconfig */,
+				CC694E2EF5D42070C803800A5EE3B9CF /* Pods-App-iOS-HymatikTests.release.xcconfig */,
+			);
+			name = "Pods-App-iOS-HymatikTests";
+			path = "Target Support Files/Pods-App-iOS-HymatikTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07587E3CEB2468F4E9677AEBC418EF40 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5498B86262F8F59578C7974186F0ED83 /* Pods-App-iOS-Hymatik-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DC798E934DDB7BD618D317114CDD6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A4D6DB13BEEE5845AE01A892A53F18 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70558DD3796394F7C1ADDCF44FF621A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24BFD1DBA4E4427BCCB75A2BE65C6996 /* Pods-App-iOS-HymatikTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B48758FDD66CA56898251148CF28B79 /* Pods-App-iOS-HymatikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6814BF5D9BDDDAE533342E3929BE6C /* Build configuration list for PBXNativeTarget "Pods-App-iOS-HymatikTests" */;
+			buildPhases = (
+				A70558DD3796394F7C1ADDCF44FF621A /* Headers */,
+				C51FA93C15A7DF8A1387FBAA203093C3 /* Sources */,
+				90941D2CA1F01A5FD224620B20D427EA /* Frameworks */,
+				8D57BCAA3D169834A8981C38EDF58943 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E370B73C3C36459087858CA895D8D55 /* PBXTargetDependency */,
+			);
+			name = "Pods-App-iOS-HymatikTests";
+			productName = "Pods-App-iOS-HymatikTests";
+			productReference = D7A4D772EC1131D5F822224D9E20E605 /* Pods_App_iOS_HymatikTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		986F1643728DC095BB7A557957A04911 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E2D32AFD3AC168E6125F4EEAD9DFE7 /* Build configuration list for PBXNativeTarget "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests" */;
+			buildPhases = (
+				82DC798E934DDB7BD618D317114CDD6F /* Headers */,
+				0C2583D5CAD3DBC26410315793C43413 /* Sources */,
+				0B5812245FA0036C5EB688FE9B0BDF15 /* Frameworks */,
+				C63871564DE02CF4C7D5D825A4F3DDE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests";
+			productName = "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests";
+			productReference = 2C3994EF38A9E70A835D40C6DFD9F5C0 /* Pods_App_iOS_Hymatik_App_iOS_HymatikUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F911D03CDBCE0057EA65B8B1AB85375 /* Pods-App-iOS-Hymatik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D3F02892F4090152FDA85020BA1166C /* Build configuration list for PBXNativeTarget "Pods-App-iOS-Hymatik" */;
+			buildPhases = (
+				07587E3CEB2468F4E9677AEBC418EF40 /* Headers */,
+				F1D5D76E265F34B96C9952CDB0E84BD5 /* Sources */,
+				92427DA64D8E99D20202B735684E33DC /* Frameworks */,
+				67409DB4A5C967FC9F0F01C8DBAFA7DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-App-iOS-Hymatik";
+			productName = "Pods-App-iOS-Hymatik";
+			productReference = 526FC294D201F6B42D6E3F8E6A28AE67 /* Pods_App_iOS_Hymatik.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DED1B4AF8F443E1C25DD643699B00809 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F911D03CDBCE0057EA65B8B1AB85375 /* Pods-App-iOS-Hymatik */,
+				986F1643728DC095BB7A557957A04911 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests */,
+				4B48758FDD66CA56898251148CF28B79 /* Pods-App-iOS-HymatikTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67409DB4A5C967FC9F0F01C8DBAFA7DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D57BCAA3D169834A8981C38EDF58943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C63871564DE02CF4C7D5D825A4F3DDE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C2583D5CAD3DBC26410315793C43413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5724D694B979A26B0673ADCE7ABED7 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51FA93C15A7DF8A1387FBAA203093C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D222A3242F722E0CF079A5D8C849BE63 /* Pods-App-iOS-HymatikTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D5D76E265F34B96C9952CDB0E84BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBDC9A123238F5D7B6DE5FAA6AB0829B /* Pods-App-iOS-Hymatik-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E370B73C3C36459087858CA895D8D55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-App-iOS-Hymatik";
+			target = 9F911D03CDBCE0057EA65B8B1AB85375 /* Pods-App-iOS-Hymatik */;
+			targetProxy = B6D6BCD1117212AA5824B76CB3AE5126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21379A87067A63C9FBC38D1EE6800EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B7A024AC456CC1412A61DFFE767FEE /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A57DF78608A3EE0E68D34487C613EC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E26AAA2DF31D684AADE990C652A6DEB /* Pods-App-iOS-Hymatik.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-App-iOS-Hymatik/Pods-App-iOS-Hymatik-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-App-iOS-Hymatik/Pods-App-iOS-Hymatik.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		96BAA5B88C80B69F6F30AA4852856946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CA25949214B1BAA428B0BAB4AF77A30 /* Pods-App-iOS-HymatikTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-App-iOS-HymatikTests/Pods-App-iOS-HymatikTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-App-iOS-HymatikTests/Pods-App-iOS-HymatikTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF649AEC30BC48DDD8D0383F98DD6A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F68C283BAA4FF5F3E7441CB265396F6 /* Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests/Pods-App-iOS-Hymatik-App-iOS-HymatikUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E90D38D161F0C3099B0F9E97AAC65F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC694E2EF5D42070C803800A5EE3B9CF /* Pods-App-iOS-HymatikTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-App-iOS-HymatikTests/Pods-App-iOS-HymatikTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-App-iOS-HymatikTests/Pods-App-iOS-HymatikTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EECF45AD9D3EF67870DBC980F315C285 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC8F8BABFF994BC59601BAF609EC576 /* Pods-App-iOS-Hymatik.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-App-iOS-Hymatik/Pods-App-iOS-Hymatik-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-App-iOS-Hymatik/Pods-App-iOS-Hymatik.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D3F02892F4090152FDA85020BA1166C /* Build configuration list for PBXNativeTarget "Pods-App-iOS-Hymatik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A57DF78608A3EE0E68D34487C613EC9 /* Debug */,
+				EECF45AD9D3EF67870DBC980F315C285 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E2D32AFD3AC168E6125F4EEAD9DFE7 /* Build configuration list for PBXNativeTarget "Pods-App-iOS-Hymatik-App-iOS-HymatikUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21379A87067A63C9FBC38D1EE6800EEA /* Debug */,
+				BF649AEC30BC48DDD8D0383F98DD6A7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6814BF5D9BDDDAE533342E3929BE6C /* Build configuration list for PBXNativeTarget "Pods-App-iOS-HymatikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96BAA5B88C80B69F6F30AA4852856946 /* Debug */,
+				E90D38D161F0C3099B0F9E97AAC65F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
