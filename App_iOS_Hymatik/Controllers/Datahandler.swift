@@ -26,4 +26,43 @@ class Datahandler {
             print(error)
         }
     }
+    
+    func emptyCurrentOrder(){
+        // Initialize Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ScannedBarcode")
+
+        // Configure Fetch Request
+        fetchRequest.includesPropertyValues = false
+
+        do {
+            let items = try context.fetch(fetchRequest) as! [NSManagedObject]
+
+            for item in items {
+                context.delete(item)
+            }
+
+            // Save Changes
+            try context.save()
+
+        } catch {
+            print(error)
+        }
+    }
+    
+    func batchDelteEntities(entityName: String){
+        // Initialize Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+
+        // Create Batch Delete Request
+        let batchDelete = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try context.execute(batchDelete)
+
+        } catch {
+            print(error)
+        }
+    }
+    
+    
 }

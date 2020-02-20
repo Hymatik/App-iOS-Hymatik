@@ -45,7 +45,11 @@ private struct CustomerSelection: View {
 }
 
 private struct ProductList: View {
-   @FetchRequest(entity: ScannedBarcode.entity(), sortDescriptors: []) var codes: FetchedResults<ScannedBarcode>
+    
+   @FetchRequest(
+        entity: ScannedBarcode.entity(),
+        sortDescriptors: []
+    ) var codes: FetchedResults<ScannedBarcode>
    
    @Environment(\.managedObjectContext) var context
     
@@ -72,7 +76,9 @@ private struct OptionButtons: View {
     var body: some View {
         HStack {
             Button("Slet") {
-                // TODO: Create Logic
+                let datahandler = Datahandler()
+                datahandler.emptyCurrentOrder()
+                
             }
             Spacer()
             NavigationLink(destination: ShowScanner()) {
