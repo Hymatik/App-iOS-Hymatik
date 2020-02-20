@@ -10,10 +10,15 @@
 		21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8423FE895100FDA748 /* AppDelegate.swift */; };
 		21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8623FE895100FDA748 /* SceneDelegate.swift */; };
 		21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */; };
-		21538C8C23FE895100FDA748 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8B23FE895100FDA748 /* ContentView.swift */; };
+		21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8B23FE895100FDA748 /* StartScreen.swift */; };
 		21538C8E23FE895100FDA748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21538C8D23FE895100FDA748 /* Assets.xcassets */; };
 		21538C9123FE895100FDA748 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21538C9023FE895100FDA748 /* Preview Assets.xcassets */; };
 		21538C9423FE895100FDA748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21538C9223FE895100FDA748 /* LaunchScreen.storyboard */; };
+		21538CA023FE8FC100FDA748 /* SharedElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C9F23FE8FC100FDA748 /* SharedElements.swift */; };
+		21538CA323FE925700FDA748 /* ViewOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CA223FE925700FDA748 /* ViewOrder.swift */; };
+		21538CA623FE95C000FDA748 /* ShowScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CA523FE95C000FDA748 /* ShowScanner.swift */; };
+		21538CA923FE961B00FDA748 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CA823FE961B00FDA748 /* Scanner.swift */; };
+		21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CAA23FE964F00FDA748 /* Datahandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +26,16 @@
 		21538C8423FE895100FDA748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21538C8623FE895100FDA748 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		21538C8923FE895100FDA748 /* App_iOS_Hymatik.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App_iOS_Hymatik.xcdatamodel; sourceTree = "<group>"; };
-		21538C8B23FE895100FDA748 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		21538C8B23FE895100FDA748 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		21538C8D23FE895100FDA748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21538C9023FE895100FDA748 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21538C9323FE895100FDA748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21538C9523FE895100FDA748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21538C9F23FE8FC100FDA748 /* SharedElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedElements.swift; sourceTree = "<group>"; };
+		21538CA223FE925700FDA748 /* ViewOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOrder.swift; sourceTree = "<group>"; };
+		21538CA523FE95C000FDA748 /* ShowScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowScanner.swift; sourceTree = "<group>"; };
+		21538CA823FE961B00FDA748 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		21538CAA23FE964F00FDA748 /* Datahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datahandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,10 @@
 		21538C8323FE895100FDA748 /* App_iOS_Hymatik */ = {
 			isa = PBXGroup;
 			children = (
-				21538C8423FE895100FDA748 /* AppDelegate.swift */,
-				21538C8623FE895100FDA748 /* SceneDelegate.swift */,
-				21538C8B23FE895100FDA748 /* ContentView.swift */,
-				21538C8D23FE895100FDA748 /* Assets.xcassets */,
-				21538C9223FE895100FDA748 /* LaunchScreen.storyboard */,
-				21538C9523FE895100FDA748 /* Info.plist */,
-				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
+				21538CA723FE960000FDA748 /* Controllers */,
+				21538C9D23FE8F0200FDA748 /* Resources */,
+				21538C9C23FE8EF500FDA748 /* Views */,
+				21538C9B23FE8EEB00FDA748 /* Models */,
 				21538C8F23FE895100FDA748 /* Preview Content */,
 			);
 			path = App_iOS_Hymatik;
@@ -76,6 +83,70 @@
 				21538C9023FE895100FDA748 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		21538C9B23FE8EEB00FDA748 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21538C9C23FE8EF500FDA748 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21538CA423FE95B100FDA748 /* Scanner */,
+				21538CA123FE924A00FDA748 /* Order */,
+				21538C9E23FE8FA900FDA748 /* Shared */,
+				21538C8B23FE895100FDA748 /* StartScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21538C9D23FE8F0200FDA748 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21538C8423FE895100FDA748 /* AppDelegate.swift */,
+				21538C8623FE895100FDA748 /* SceneDelegate.swift */,
+				21538C8D23FE895100FDA748 /* Assets.xcassets */,
+				21538C9223FE895100FDA748 /* LaunchScreen.storyboard */,
+				21538C9523FE895100FDA748 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21538C9E23FE8FA900FDA748 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				21538C9F23FE8FC100FDA748 /* SharedElements.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		21538CA123FE924A00FDA748 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				21538CA223FE925700FDA748 /* ViewOrder.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		21538CA423FE95B100FDA748 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				21538CA523FE95C000FDA748 /* ShowScanner.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		21538CA723FE960000FDA748 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21538CA823FE961B00FDA748 /* Scanner.swift */,
+				21538CAA23FE964F00FDA748 /* Datahandler.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */,
+				21538CA623FE95C000FDA748 /* ShowScanner.swift in Sources */,
+				21538CA923FE961B00FDA748 /* Scanner.swift in Sources */,
+				21538CA023FE8FC100FDA748 /* SharedElements.swift in Sources */,
 				21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */,
-				21538C8C23FE895100FDA748 /* ContentView.swift in Sources */,
+				21538CA323FE925700FDA748 /* ViewOrder.swift in Sources */,
+				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
+				21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */,
 				21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +368,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App_iOS_Hymatik/Preview Content\"";
 				DEVELOPMENT_TEAM = FBVK276RNH;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = App_iOS_Hymatik/Info.plist;
+				INFOPLIST_FILE = App_iOS_Hymatik/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +388,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App_iOS_Hymatik/Preview Content\"";
 				DEVELOPMENT_TEAM = FBVK276RNH;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = App_iOS_Hymatik/Info.plist;
+				INFOPLIST_FILE = App_iOS_Hymatik/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
