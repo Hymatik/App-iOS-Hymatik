@@ -14,10 +14,10 @@ class Datahandler {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func saveScannedBarcode(code: String) {
-        let newCode = ScannedBarcode(context: context)
+    func saveBarcode(code: String) {
+        let newCode = Barcode(context: context)
         newCode.id = UUID()
-        newCode.barcode = code
+        newCode.code = code
 
         do {
             try context.save()
@@ -29,7 +29,7 @@ class Datahandler {
     
     func emptyCurrentOrder(){
         // Initialize Fetch Request
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ScannedBarcode")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Barcode")
 
         // Configure Fetch Request
         fetchRequest.includesPropertyValues = false

@@ -47,9 +47,9 @@ private struct CustomerSelection: View {
 private struct ProductList: View {
     
    @FetchRequest(
-        entity: ScannedBarcode.entity(),
+        entity: Barcode.entity(),
         sortDescriptors: []
-    ) var codes: FetchedResults<ScannedBarcode>
+    ) var codes: FetchedResults<Barcode>
    
    @Environment(\.managedObjectContext) var context
     
@@ -57,7 +57,7 @@ private struct ProductList: View {
         VStack {
             List{
                 ForEach(codes, id: \.id) {code in
-                    BarcodeRow(code: code)
+                    BarcodeRow(barcode: code)
                 }
             }
         }
@@ -65,10 +65,10 @@ private struct ProductList: View {
 }
 
 private struct BarcodeRow: View {
-    var code: ScannedBarcode
+    var barcode: Barcode
 
     var body: some View {
-        Text(code.barcode ?? "Error: No Barcode found!")
+        Text(barcode.code ?? "Error: No Barcode found!")
     }
 }
 

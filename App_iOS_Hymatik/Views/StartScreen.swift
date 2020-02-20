@@ -9,10 +9,6 @@
 import SwiftUI
 
 struct StartScreen: View {
-    @FetchRequest(entity: ScannedBarcode.entity(), sortDescriptors: []) var scannedBarcodes: FetchedResults<ScannedBarcode>
-    
-    @Environment(\.managedObjectContext) var context
-    
     var body: some View {
         NavigationView {
             VStack {

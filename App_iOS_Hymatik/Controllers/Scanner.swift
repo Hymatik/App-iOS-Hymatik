@@ -67,7 +67,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     func found(code: String) {
         let alert = UIAlertController(title: "Barcode: \"\(code)\" fundet.", message: "Vil du tilføj produktet til din ordre?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ja, tak.", style: .default, handler: { (action) in
-            self.datahandler.saveScannedBarcode(code: code)
+            self.datahandler.saveBarcode(code: code)
             self.captureSession.startRunning()
         }))
         alert.addAction(UIAlertAction(title: "Nej, ikke tilføj den.", style: .default, handler: { (action) in
