@@ -81,14 +81,6 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
-		2120B52123FFC89F0013DD5C /* WebViews */ = {
-			isa = PBXGroup;
-			children = (
-				2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */,
-			);
-			path = WebViews;
-			sourceTree = "<group>";
-		};
 		21538C7823FE895100FDA748 = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +128,6 @@
 		21538C9C23FE8EF500FDA748 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2120B52123FFC89F0013DD5C /* WebViews */,
 				2120B51E23FFB82B0013DD5C /* Product */,
 				2120B51323FECE800013DD5C /* Customer */,
 				21538CA423FE95B100FDA748 /* Scanner */,
@@ -162,6 +153,7 @@
 		21538C9E23FE8FA900FDA748 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */,
 				21538C9F23FE8FC100FDA748 /* SharedElements.swift */,
 			);
 			path = Shared;

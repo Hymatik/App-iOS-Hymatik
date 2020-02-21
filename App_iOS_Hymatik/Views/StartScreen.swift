@@ -17,17 +17,7 @@ struct StartScreen: View {
                 List {
                     
                     NavigationLink(destination: ViewOrder()) {
-                        Text("Ordre")
-                    }
-                    NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/kontakt")) {
-                        Text("Kontakt os")
-                    }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/om-os/om-hymatik")) {
-                        Text("Om Hymatik")
+                        Text("Order")
                     }
                     NavigationLink(
                     destination: ShowWebsite(
@@ -39,6 +29,34 @@ struct StartScreen: View {
                         urlString: "https://hymatik.com/services")) {
                         Text("Services")
                     }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/viden-data/produkter")) {
+                        Text("Produkter")
+                    }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/viden-data/guides")) {
+                        Text("Guides")
+                    }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/viden-data/kataloger")) {
+                        Text("Kataloger")
+                    }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/om-os/om-hymatik")) {
+                        Text("Om Hymatik")
+                    }
+                    NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/kontakt")) {
+                        Text("Kontakt os")
+                    }
+
+
+
                 }
             }
             .navigationBarTitle("Menu")
