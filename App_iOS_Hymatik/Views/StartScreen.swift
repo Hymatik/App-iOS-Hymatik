@@ -15,11 +15,29 @@ struct StartScreen: View {
                 Logo()
         
                 List {
-                    NavigationLink(destination: ShowScanner()) {
-                        Text("Scan Barcode")
-                    }
+                    
                     NavigationLink(destination: ViewOrder()) {
                         Text("Ordre")
+                    }
+                    NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/kontakt")) {
+                        Text("Kontakt os")
+                    }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/om-os/om-hymatik")) {
+                        Text("Om Hymatik")
+                    }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/alle-produkter/g/3457")) {
+                        Text("Webshop")
+                    }
+                    NavigationLink(
+                    destination: ShowWebsite(
+                        urlString: "https://hymatik.com/services")) {
+                        Text("Services")
                     }
                 }
             }
