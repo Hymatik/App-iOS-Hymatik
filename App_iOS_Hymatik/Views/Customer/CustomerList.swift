@@ -22,7 +22,7 @@ struct CustomerList: View {
         VStack {
             List {
                 ForEach(customers) { customer in
-                    Text(customer.nameCompany!)
+                    CustomerRow(customer: customer)
                 }
             }
             HStack {
@@ -37,6 +37,28 @@ struct CustomerList: View {
     }
 }
 
+private struct CustomerRow: View {
+    var customer: Customer
+
+    var body: some View {
+        HStack {
+            NavigationLink(destination: CreateCustomer(nameCompany: (customer.nameCompany ?? ""), nameFirst: (customer.nameFirst ?? ""), nameMiddle: (customer.nameMiddle ?? ""), nameLast: (customer.nameLast ?? ""), cvr: (String(customer.cvr) ), customerNumber: (customer.customerNumber ?? ""))) {
+                VStack {
+                    Text(customer.nameCompany ?? "")
+                    .bold()
+                    .frame(alignment: .leading)
+                    HStack {
+                        Text(customer.nameFirst ?? "")
+                        Text(customer.nameMiddle ?? "")
+                        Text(customer.nameLast ?? "")
+                    }
+                .padding()
+                .padding(EdgeInsets(top: 0, leading:100, bottom: 0, trailing: 0))
+                }
+            }
+        }
+    }
+}
 
 struct CustomerList_Previews: PreviewProvider {
     static var previews: some View {

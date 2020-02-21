@@ -7,7 +7,7 @@
     </entity>
     <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
         <attribute name="customerNumber" optional="YES" attributeType="String"/>
-        <attribute name="cvr" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cvr" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nameCompany" optional="YES" attributeType="String"/>
         <attribute name="nameFirst" optional="YES" attributeType="String"/>

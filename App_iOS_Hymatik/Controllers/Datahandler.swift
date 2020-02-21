@@ -37,7 +37,7 @@ class Datahandler {
         let newCustomer = Customer(context: context)
         newCustomer.id = UUID()
         newCustomer.customerNumber = customerNumber
-        newCustomer.cvr = Int16(CVR)
+        newCustomer.cvr = Int32(CVR)
         newCustomer.nameCompany = nameCompany
         newCustomer.nameFirst = nameFirst
         newCustomer.nameMiddle = nameMiddle
