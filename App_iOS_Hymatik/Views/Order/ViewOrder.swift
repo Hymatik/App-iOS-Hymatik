@@ -78,16 +78,48 @@ private struct ProductList: View {
                 ForEach(codes, id: \.id) {code in
                     BarcodeRow(barcode: code)
                 }
+                
             }
+            lastProductRow()
         }
     }
 }
 
 private struct BarcodeRow: View {
     var barcode: Barcode
+    var amount = "1"
 
     var body: some View {
-        Text(barcode.code ?? "Error: No Barcode found!")
+        HStack {
+            NavigationLink(destination: CreateProduct()) {
+                Text(barcode.code ?? "Error: No Barcode found!")
+                Spacer()
+                Text(amount)
+            }
+        }
+        
+    }
+}
+
+private struct lastProductRow: View {
+    var body: some View {
+        HStack {
+            Spacer()
+            NavigationLink(
+                destination: CreateProduct()) {
+                Text("Tilføj Vare")
+                    .foregroundColor(.accentColor)
+            }
+            Spacer()
+
+            NavigationLink(
+                destination: ShowScanner()) {
+                Text("Scan")
+                    .foregroundColor(.accentColor)
+            }
+            Spacer()
+            
+        }
     }
 }
 
@@ -100,8 +132,8 @@ private struct OptionButtons: View {
                 
             }
             Spacer()
-            NavigationLink(destination: ShowScanner()) {
-                Text("Scan")
+            Button("Gem") {
+                self.saveOrder()
             }
             Spacer()
             Button("Send") {
@@ -109,6 +141,10 @@ private struct OptionButtons: View {
             }
         }
         .padding()
+    }
+    
+    private func saveOrder() {
+        
     }
 }
 
