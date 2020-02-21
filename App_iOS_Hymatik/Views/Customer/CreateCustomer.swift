@@ -45,7 +45,7 @@ struct CreateCustomer: View {
                 }
                 Spacer()
                 Button("Gem") {
-                    self.datahandler.saveCustomer()
+                    self.saveCustomer()
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
@@ -54,6 +54,16 @@ struct CreateCustomer: View {
         }
         .navigationBarTitle(Text("Opret Kunde"))
     .padding()
+    }
+    
+    private func saveCustomer() {
+        datahandler.saveCustomer(
+            customerNumber: customerNumber,
+            CVR: Int(cvr) ?? 0,
+            nameCompany: nameCompany,
+            nameFirst: nameFirst,
+            nameMiddle: nameMiddle,
+            nameLast: nameLast)
     }
     
 }

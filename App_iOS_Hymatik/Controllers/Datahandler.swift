@@ -27,8 +27,27 @@ class Datahandler {
         }
     }
     
-    func saveCustomer() {
+    func saveCustomer(
+            customerNumber: String,
+            CVR: Int,
+            nameCompany: String,
+            nameFirst: String,
+            nameMiddle: String,
+            nameLast: String) {
+        let newCustomer = Customer(context: context)
+        newCustomer.id = UUID()
+        newCustomer.customerNumber = customerNumber
+        newCustomer.cvr = Int16(CVR)
+        newCustomer.nameCompany = nameCompany
+        newCustomer.nameFirst = nameFirst
+        newCustomer.nameMiddle = nameMiddle
+        newCustomer.nameLast = nameLast
         
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
     }
     
     func emptyCurrentOrder(){

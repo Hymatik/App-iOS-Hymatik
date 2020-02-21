@@ -9,11 +9,21 @@
 import SwiftUI
 
 struct CustomerList: View {
+    
+    @FetchRequest(
+         entity: Customer.entity(),
+         sortDescriptors: []
+     ) var customers: FetchedResults<Customer>
+    
+    @Environment(\.managedObjectContext) var context
+     
     var body: some View {
         
         VStack {
             List {
-                Text("")
+                ForEach(customers) { customer in
+                    Text(customer.nameCompany!)
+                }
             }
             HStack {
                 NavigationLink(destination: CreateCustomer()) {
@@ -26,6 +36,7 @@ struct CustomerList: View {
         .navigationBarTitle(Text("Kunde liste"))
     }
 }
+
 
 struct CustomerList_Previews: PreviewProvider {
     static var previews: some View {
