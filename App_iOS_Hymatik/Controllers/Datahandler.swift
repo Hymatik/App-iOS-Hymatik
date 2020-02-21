@@ -27,6 +27,10 @@ class Datahandler {
         }
     }
     
+    func saveCustomer() {
+        
+    }
+    
     func emptyCurrentOrder(){
         // Initialize Fetch Request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Barcode")

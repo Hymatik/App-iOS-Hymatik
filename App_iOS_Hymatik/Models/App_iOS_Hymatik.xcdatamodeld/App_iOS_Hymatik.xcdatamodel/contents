@@ -6,6 +6,7 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="customerNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="cvr" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nameCompany" optional="YES" attributeType="String"/>
@@ -13,7 +14,10 @@
         <attribute name="nameLast" optional="YES" attributeType="String"/>
         <attribute name="nameMiddle" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class"/>
+    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
+        <attribute name="deliverDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+    </entity>
     <entity name="OrderItem" representedClassName="OrderItem" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -27,8 +31,8 @@
     <elements>
         <element name="Address" positionX="18" positionY="72" width="128" height="43"/>
         <element name="Barcode" positionX="-9" positionY="81" width="128" height="73"/>
-        <element name="Customer" positionX="0" positionY="63" width="128" height="133"/>
-        <element name="Order" positionX="-18" positionY="36" width="128" height="43"/>
+        <element name="Customer" positionX="0" positionY="63" width="128" height="148"/>
+        <element name="Order" positionX="-18" positionY="36" width="128" height="73"/>
         <element name="OrderItem" positionX="-36" positionY="27" width="128" height="88"/>
         <element name="Product" positionX="-45" positionY="18" width="128" height="88"/>
     </elements>
