@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Address" representedClassName="Address" syncable="YES" codeGenerationType="class"/>
+    <entity name="Address" representedClassName="Address" syncable="YES" codeGenerationType="class">
+        <attribute name="cityName" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="postNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="roadName" optional="YES" attributeType="String"/>
+        <attribute name="roadNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="addressDelivery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="addressDelivery" inverseEntity="Customer"/>
+        <relationship name="addressInvoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="addressInvoice" inverseEntity="Customer"/>
+    </entity>
     <entity name="Barcode" representedClassName="Barcode" syncable="YES" codeGenerationType="class">
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -13,6 +23,8 @@
         <attribute name="nameFirst" optional="YES" attributeType="String"/>
         <attribute name="nameLast" optional="YES" attributeType="String"/>
         <attribute name="nameMiddle" optional="YES" attributeType="String"/>
+        <relationship name="addressDelivery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="addressDelivery" inverseEntity="Address"/>
+        <relationship name="addressInvoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="addressInvoice" inverseEntity="Address"/>
     </entity>
     <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
         <attribute name="deliverDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -29,9 +41,9 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Address" positionX="18" positionY="72" width="128" height="43"/>
+        <element name="Address" positionX="18" positionY="72" width="128" height="178"/>
         <element name="Barcode" positionX="-9" positionY="81" width="128" height="73"/>
-        <element name="Customer" positionX="0" positionY="63" width="128" height="148"/>
+        <element name="Customer" positionX="0" positionY="63" width="128" height="178"/>
         <element name="Order" positionX="-18" positionY="36" width="128" height="73"/>
         <element name="OrderItem" positionX="-36" positionY="27" width="128" height="88"/>
         <element name="Product" positionX="-45" positionY="18" width="128" height="88"/>

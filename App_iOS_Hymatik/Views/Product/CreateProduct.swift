@@ -9,10 +9,47 @@
 import SwiftUI
 
 struct CreateProduct: View {
+    @State var barcode = ""
+    @State var amount = ""
+    
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            
+            HStack {
+                Text("Stregcode: ")
+                Spacer()
+                TextField("Stregcode", text: $barcode)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 250, alignment: .trailing)
+            }
+            HStack {
+                Text("Antal: ")
+                Spacer()
+                TextField("Antal", text: $amount)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 250, alignment: .trailing)
+                    .keyboardType(.numberPad)
+            }
+            Spacer()
+            HStack{
+                Button("Tilbage") {
+                    
+                }
+                Spacer()
+                Button("Gem"){
+                    
+                }
+            }
+        .padding()
+        }
+    .padding()
     }
 }
+
+
 
 struct CreateProduct_Previews: PreviewProvider {
     static var previews: some View {
