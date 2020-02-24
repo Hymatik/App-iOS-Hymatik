@@ -62,6 +62,6 @@ private struct CustomerRow: View {
 
 struct CustomerList_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerList()
+       CustomerList()
     }
 }

@@ -68,15 +68,15 @@ private struct ProductList: View {
    @FetchRequest(
         entity: Barcode.entity(),
         sortDescriptors: []
-    ) var codes: FetchedResults<Barcode>
+    ) var barcodes: FetchedResults<Barcode>
    
    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack {
             List{
-                ForEach(codes, id: \.id) {code in
-                    BarcodeRow(barcode: code)
+                ForEach(barcodes, id: \.id) {barcode in
+                    BarcodeRow(barcode: barcode)
                 }
                 
             }
@@ -87,14 +87,13 @@ private struct ProductList: View {
 
 private struct BarcodeRow: View {
     var barcode: Barcode
-    var amount = "1"
 
     var body: some View {
         HStack {
-            NavigationLink(destination: CreateProduct()) {
+            NavigationLink(destination: CreateProduct(barcode: barcode.code!, amount: String(barcode.amount))) {
                 Text(barcode.code ?? "Error: No Barcode found!")
                 Spacer()
-                Text(amount)
+                Text(String(barcode.amount) )
             }
         }
         

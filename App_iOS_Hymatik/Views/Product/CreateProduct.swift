@@ -12,12 +12,13 @@ struct CreateProduct: View {
     @State var barcode = ""
     @State var amount = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    var datahandler = Datahandler()
+    
     
     
     var body: some View {
         VStack {
-            Spacer()
-            
             HStack {
                 Text("Stregcode: ")
                 Spacer()
@@ -33,14 +34,14 @@ struct CreateProduct: View {
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
             }
-            Spacer()
             HStack{
                 Button("Tilbage") {
-                    
+                    self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
                 Button("Gem"){
-                    
+                    self.datahandler.saveBarcode(code: self.barcode, amount: Int(self.amount)!)
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             }
         .padding()

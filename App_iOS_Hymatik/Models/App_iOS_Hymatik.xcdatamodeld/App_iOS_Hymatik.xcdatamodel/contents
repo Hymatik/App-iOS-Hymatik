@@ -12,6 +12,7 @@
         <relationship name="addressInvoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="addressInvoice" inverseEntity="Customer"/>
     </entity>
     <entity name="Barcode" representedClassName="Barcode" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 32" defaultValueString="1" usesScalarValueType="YES"/>
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
@@ -42,7 +43,7 @@
     </entity>
     <elements>
         <element name="Address" positionX="18" positionY="72" width="128" height="178"/>
-        <element name="Barcode" positionX="-9" positionY="81" width="128" height="73"/>
+        <element name="Barcode" positionX="-9" positionY="81" width="128" height="88"/>
         <element name="Customer" positionX="0" positionY="63" width="128" height="178"/>
         <element name="Order" positionX="-18" positionY="36" width="128" height="73"/>
         <element name="OrderItem" positionX="-36" positionY="27" width="128" height="88"/>
