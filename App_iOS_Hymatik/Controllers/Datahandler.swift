@@ -14,11 +14,13 @@ class Datahandler {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func saveBarcode(code: String, amount: Int) {
+
+    
+    func saveBarcode(code: String, amount: String) {
         let newCode = Barcode(context: context)
         newCode.id = UUID()
         newCode.code = code
-        newCode.amount = Int32(amount)
+        newCode.amount = "1"
 
         do {
             try context.save()
@@ -28,6 +30,8 @@ class Datahandler {
         }
     }
     
+
+ 
     func saveCustomer(
             customerNumber: String,
             CVR: Int,

@@ -78,7 +78,12 @@ private struct ProductList: View {
                 ForEach(barcodes, id: \.id) {barcode in
                     BarcodeRow(barcode: barcode)
                 }
-                
+            .onDelete { indexSet in
+                for index in indexSet {
+                    self.context.delete(self.barcodes[index])
+                    try? self.context.save()
+                }
+            }
             }
             lastProductRow()
         }
@@ -89,11 +94,16 @@ private struct BarcodeRow: View {
     var barcode: Barcode
 
     var body: some View {
-        HStack {
-            NavigationLink(destination: CreateProduct(barcode: barcode.code!, amount: String(barcode.amount))) {
+        VStack {
+//            NavigationLink(destination: CreateProduct(barcode: barcode.code!, amount: String(barcode.amount))) {
+//                Text(barcode.code ?? "Error: No Barcode found!")
+//                Spacer()
+//                Text(String(barcode.amount) )
+//            }
+            NavigationLink(destination: ProductDetail(barcode: barcode)) {
                 Text(barcode.code ?? "Error: No Barcode found!")
                 Spacer()
-                Text(String(barcode.amount) )
+                Text(barcode.amount ?? "1")
             }
         }
         

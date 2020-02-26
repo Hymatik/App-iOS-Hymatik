@@ -1,28 +1,35 @@
 //
-//  CreateProduct.swift
+//  ProductDetail.swift
 //  App_iOS_Hymatik
 //
-//  Created by Glenn Drescher on 21/02/2020.
+//  Created by Glenn Drescher on 24/02/2020.
 //  Copyright © 2020 Hymatik. All rights reserved.
 //
 
 import SwiftUI
 
-struct CreateProduct: View {
-    @State var barcode = ""
+struct ProductDetail: View {
+    //var barcode: Barcode
+    
+    @State var code = ""
     @State var amount = ""
     
+    init(barcode: Barcode) {
+        code = barcode.code!
+        amount = barcode.amount!
+        
+    }
+    
     @Environment(\.presentationMode) var presentationMode
-    var datahandler = Datahandler()
-    
-    
+    let datahandler = Datahandler()
+
     
     var body: some View {
         VStack {
             HStack {
                 Text("Stregcode: ")
                 Spacer()
-                TextField("Stregcode", text: $barcode)
+                TextField("Stregcode", text: $code )
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
             }
@@ -40,7 +47,7 @@ struct CreateProduct: View {
                 }
                 Spacer()
                 Button("Gem"){
-                    self.datahandler.saveBarcode(code: self.barcode, amount: self.amount)
+                    //self.datahandler.updateBarcode(barcode: self.object)
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
@@ -49,11 +56,12 @@ struct CreateProduct: View {
     .padding()
     }
 }
+    
+    
 
 
-
-struct CreateProduct_Previews: PreviewProvider {
+struct ProductDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CreateProduct()
+        ProductDetail(barcode: Barcode())
     }
 }
