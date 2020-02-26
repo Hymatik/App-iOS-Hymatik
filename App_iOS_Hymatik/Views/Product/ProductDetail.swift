@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ProductDetail: View {
-    @State var barcode: Barcode
+    @ObservedObject var barcode: Barcode
     
     @Environment(\.presentationMode) var presentationMode
-    @Environment(\.managedObjectContext) var context
+
     let datahandler = Datahandler()
 
     
@@ -40,8 +40,7 @@ struct ProductDetail: View {
                 }
                 Spacer()
                 Button("Gem"){
-                    self.datahandler.saveBarcode(code: self.barcode.code!, amount: self.barcode.amount!)
-                    //self.editBarcode(barcode: self.barcode)
+                    self.datahandler.editBarcode(barcode: self.barcode)
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
@@ -50,12 +49,7 @@ struct ProductDetail: View {
     .padding()
     }
     
-//    func editBarcode(barcode: Barcode) {
-//        @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "self.id IN %@", barcode.id)) var results: FetchedResults<Barcode>
-//        results.first?.amount = barcode.amount
-//        results.first?.code = barcode.code
-//        try? context.save()
-//    }
+    
 }
     
     

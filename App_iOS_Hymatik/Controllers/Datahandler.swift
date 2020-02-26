@@ -30,7 +30,10 @@ class Datahandler {
         }
     }
     
-
+    func editBarcode(barcode: Barcode) {
+        context.insert(barcode)
+        try? context.save()
+    }
  
     func saveCustomer(
             customerNumber: String,

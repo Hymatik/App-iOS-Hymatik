@@ -12,7 +12,6 @@
 		2120B51923FECF9D0013DD5C /* CustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51823FECF9D0013DD5C /* CustomerDetails.swift */; };
 		2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51A23FED5350013DD5C /* CreateOrder.swift */; };
 		2120B51D23FED5560013DD5C /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51C23FED5560013DD5C /* OrderList.swift */; };
-		2120B52023FFB8410013DD5C /* CreateProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51F23FFB8410013DD5C /* CreateProduct.swift */; };
 		2120B52B23FFCDF00013DD5C /* ShowWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */; };
 		21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8423FE895100FDA748 /* AppDelegate.swift */; };
 		21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8623FE895100FDA748 /* SceneDelegate.swift */; };
@@ -39,7 +38,6 @@
 		2120B51823FECF9D0013DD5C /* CustomerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetails.swift; sourceTree = "<group>"; };
 		2120B51A23FED5350013DD5C /* CreateOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrder.swift; sourceTree = "<group>"; };
 		2120B51C23FED5560013DD5C /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
-		2120B51F23FFB8410013DD5C /* CreateProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProduct.swift; sourceTree = "<group>"; };
 		2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWebsite.swift; sourceTree = "<group>"; };
 		21538C8123FE895100FDA748 /* Hymatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21538C8423FE895100FDA748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 		2120B51E23FFB82B0013DD5C /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				2120B51F23FFB8410013DD5C /* CreateProduct.swift */,
 				216781F02404165D005C1C55 /* ProductDetail.swift */,
 			);
 			path = Product;
@@ -300,7 +297,6 @@
 				21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */,
 				21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */,
 				2120B51723FECEEC0013DD5C /* CreateCustomer.swift in Sources */,
-				2120B52023FFB8410013DD5C /* CreateProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

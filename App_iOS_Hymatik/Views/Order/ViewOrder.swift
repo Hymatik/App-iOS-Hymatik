@@ -91,15 +91,10 @@ private struct ProductList: View {
 }
 
 private struct BarcodeRow: View {
-    var barcode: Barcode
+    @ObservedObject var barcode: Barcode
 
     var body: some View {
         VStack {
-//            NavigationLink(destination: CreateProduct(barcode: barcode.code!, amount: String(barcode.amount))) {
-//                Text(barcode.code ?? "Error: No Barcode found!")
-//                Spacer()
-//                Text(String(barcode.amount) )
-//            }
             NavigationLink(destination: ProductDetail(barcode: barcode)) {
                 Text(barcode.code ?? "Error: No Barcode found!")
                 Spacer()
@@ -114,11 +109,11 @@ private struct lastProductRow: View {
     var body: some View {
         HStack {
             Spacer()
-            NavigationLink(
-                destination: CreateProduct()) {
-                Text("Tilføj Vare")
-                    .foregroundColor(.accentColor)
-            }
+//            NavigationLink(
+//                destination: ProductDetail(barcode: Barcode())) {
+//                Text("Tilføj Vare")
+//                    .foregroundColor(.accentColor)
+//            }
             Spacer()
 
             NavigationLink(
