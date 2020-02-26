@@ -11,7 +11,6 @@ import SwiftUI
 struct ViewOrder: View {
     
     
-    
     var body: some View {
         VStack {
             Logo()

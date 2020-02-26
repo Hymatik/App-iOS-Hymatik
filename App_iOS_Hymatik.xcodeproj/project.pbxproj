@@ -56,6 +56,7 @@
 		21538CAA23FE964F00FDA748 /* Datahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datahandler.swift; sourceTree = "<group>"; };
 		2161A93F24065FCF00DD0DF5 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		2161A9412406A4D900DD0DF5 /* CreateNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewProduct.swift; sourceTree = "<group>"; };
+		2161A9432406B4B100DD0DF5 /* App_iOS_Hymatik 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "App_iOS_Hymatik 2.xcdatamodel"; sourceTree = "<group>"; };
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
@@ -499,6 +500,7 @@
 		21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2161A9432406B4B100DD0DF5 /* App_iOS_Hymatik 2.xcdatamodel */,
 				21538C8923FE895100FDA748 /* App_iOS_Hymatik.xcdatamodel */,
 			);
 			currentVersion = 21538C8923FE895100FDA748 /* App_iOS_Hymatik.xcdatamodel */;

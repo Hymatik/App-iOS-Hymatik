@@ -38,11 +38,11 @@ struct CustomerList: View {
 }
 
 private struct CustomerRow: View {
-    var customer: Customer
-
+    @ObservedObject var customer: Customer
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         HStack {
-            NavigationLink(destination: CreateCustomer(nameCompany: (customer.nameCompany ?? ""), nameFirst: (customer.nameFirst ?? ""), nameMiddle: (customer.nameMiddle ?? ""), nameLast: (customer.nameLast ?? ""), cvr: (String(customer.cvr) ), customerNumber: (customer.customerNumber ?? ""))) {
+            NavigationLink(destination: CustomerDetails(customer: customer)) {
                 VStack {
                     Text(customer.nameCompany ?? "")
                     .bold()

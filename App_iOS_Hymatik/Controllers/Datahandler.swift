@@ -34,10 +34,15 @@ class Datahandler {
         context.insert(barcode)
         try? context.save()
     }
+    
+    func editCustomer(customer: Customer) {
+        context.insert(customer)
+        try? context.save()
+    }
  
     func saveCustomer(
             customerNumber: String,
-            CVR: Int,
+            CVR: String,
             nameCompany: String,
             nameFirst: String,
             nameMiddle: String,
@@ -45,7 +50,7 @@ class Datahandler {
         let newCustomer = Customer(context: context)
         newCustomer.id = UUID()
         newCustomer.customerNumber = customerNumber
-        newCustomer.cvr = Int32(CVR)
+        newCustomer.cvr = CVR
         newCustomer.nameCompany = nameCompany
         newCustomer.nameFirst = nameFirst
         newCustomer.nameMiddle = nameMiddle

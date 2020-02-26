@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CreateCustomer: View {
+    
     @State var nameCompany: String = ""
     @State var nameFirst: String = ""
     @State var nameMiddle: String = ""
@@ -59,7 +60,7 @@ struct CreateCustomer: View {
     private func saveCustomer() {
         datahandler.saveCustomer(
             customerNumber: customerNumber,
-            CVR: Int(cvr) ?? 0,
+            CVR: cvr,
             nameCompany: nameCompany,
             nameFirst: nameFirst,
             nameMiddle: nameMiddle,
@@ -68,8 +69,8 @@ struct CreateCustomer: View {
     
 }
 
-struct CreateCustomer_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateCustomer()
-    }
-}
+//struct CreateCustomer_Previews: PreviewProvider {
+//    static var previews: some View {
+//       CreateCustomer()
+//    }
+//}
