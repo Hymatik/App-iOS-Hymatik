@@ -1,16 +1,17 @@
 //
-//  ProductDetail.swift
+//  createNewProduct.swift
 //  App_iOS_Hymatik
 //
-//  Created by Glenn Drescher on 24/02/2020.
+//  Created by Glenn Drescher on 26/02/2020.
 //  Copyright © 2020 Hymatik. All rights reserved.
 //
 
 import SwiftUI
 
-struct ProductDetail: View {
-    @ObservedObject var barcode: Barcode
-    
+struct CreateNewProduct: View {
+    @State var code = ""
+    @State var amount = "1"
+        
     @Environment(\.presentationMode) var presentationMode
 
     let datahandler = Datahandler()
@@ -23,14 +24,14 @@ struct ProductDetail: View {
             HStack {
                 Text("Stregcode: ")
                 Spacer()
-                TextField("Stregcode", text: Binding($barcode.code, ""))
+                TextField("Stregcode", text: $code)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
             }
             HStack {
                 Text("Antal: ")
                 Spacer()
-                TextField("Antal", text: Binding($barcode.amount, ""))
+                TextField("Antal", text: $amount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
@@ -41,7 +42,7 @@ struct ProductDetail: View {
                 }
                 Spacer()
                 Button("Gem"){
-                    self.datahandler.editBarcode(barcode: self.barcode)
+                    self.datahandler.saveBarcode(code: self.code, amount: self.amount)
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
@@ -53,12 +54,9 @@ struct ProductDetail: View {
     
     
 }
-    
-    
 
-
-struct ProductDetail_Previews: PreviewProvider {
+struct createNewProduct_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetail(barcode: Barcode())
+        CreateNewProduct()
     }
 }

@@ -106,14 +106,16 @@ private struct BarcodeRow: View {
 }
 
 private struct lastProductRow: View {
+    
     var body: some View {
         HStack {
             Spacer()
-//            NavigationLink(
-//                destination: ProductDetail(barcode: Barcode())) {
-//                Text("Tilføj Vare")
-//                    .foregroundColor(.accentColor)
-//            }
+            NavigationLink(
+                destination: CreateNewProduct()) {
+                    
+                    Text("Tilføj Vare")
+                    .foregroundColor(.accentColor)
+            }
             Spacer()
 
             NavigationLink(
