@@ -9,34 +9,27 @@
 import SwiftUI
 
 struct ProductDetail: View {
-    //var barcode: Barcode
-    
-    @State var code = ""
-    @State var amount = ""
-    
-    init(barcode: Barcode) {
-        code = barcode.code!
-        amount = barcode.amount!
-        
-    }
+    @State var barcode: Barcode
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var context
     let datahandler = Datahandler()
 
+    
     
     var body: some View {
         VStack {
             HStack {
                 Text("Stregcode: ")
                 Spacer()
-                TextField("Stregcode", text: $code )
+                TextField("Stregcode", text: Binding($barcode.code, ""))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
             }
             HStack {
                 Text("Antal: ")
                 Spacer()
-                TextField("Antal", text: $amount)
+                TextField("Antal", text: Binding($barcode.amount, ""))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
@@ -47,7 +40,8 @@ struct ProductDetail: View {
                 }
                 Spacer()
                 Button("Gem"){
-                    //self.datahandler.updateBarcode(barcode: self.object)
+                    self.datahandler.saveBarcode(code: self.barcode.code!, amount: self.barcode.amount!)
+                    //self.editBarcode(barcode: self.barcode)
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
@@ -55,6 +49,13 @@ struct ProductDetail: View {
         }
     .padding()
     }
+    
+//    func editBarcode(barcode: Barcode) {
+//        @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "self.id IN %@", barcode.id)) var results: FetchedResults<Barcode>
+//        results.first?.amount = barcode.amount
+//        results.first?.code = barcode.code
+//        try? context.save()
+//    }
 }
     
     
