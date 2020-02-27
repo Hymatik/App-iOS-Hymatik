@@ -26,6 +26,7 @@
 		21538CA923FE961B00FDA748 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CA823FE961B00FDA748 /* Scanner.swift */; };
 		21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CAA23FE964F00FDA748 /* Datahandler.swift */; };
 		2161A9452407E20600DD0DF5 /* CreateNewCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */; };
+		2161A9492407FE2000DD0DF5 /* AmountChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A9482407FE2000DD0DF5 /* AmountChooser.swift */; };
 		2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167819D2403CD99005C1C55 /* AddressDetail.swift */; };
 		216781F12404165D005C1C55 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F02404165D005C1C55 /* ProductDetail.swift */; };
 		216781F424041976005C1C55 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F324041976005C1C55 /* Binding+Extension.swift */; };
@@ -55,6 +56,8 @@
 		2161A9432406B4B100DD0DF5 /* App_iOS_Hymatik 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "App_iOS_Hymatik 2.xcdatamodel"; sourceTree = "<group>"; };
 		2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCustomer.swift; sourceTree = "<group>"; };
 		2161A9462407F0F100DD0DF5 /* App_iOS_Hymatik 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "App_iOS_Hymatik 3.xcdatamodel"; sourceTree = "<group>"; };
+		2161A9472407F51400DD0DF5 /* AddedOrder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddedOrder.xcdatamodel; sourceTree = "<group>"; };
+		2161A9482407FE2000DD0DF5 /* AmountChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountChooser.swift; sourceTree = "<group>"; };
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			children = (
 				216781F02404165D005C1C55 /* ProductDetail.swift */,
 				2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */,
+				2161A9482407FE2000DD0DF5 /* AmountChooser.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 				21538CA623FE95C000FDA748 /* ShowScanner.swift in Sources */,
 				21538CA923FE961B00FDA748 /* Scanner.swift in Sources */,
 				21538CA023FE8FC100FDA748 /* SharedElements.swift in Sources */,
+				2161A9492407FE2000DD0DF5 /* AmountChooser.swift in Sources */,
 				216781F424041976005C1C55 /* Binding+Extension.swift in Sources */,
 				21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */,
 				21538CA323FE925700FDA748 /* ViewOrder.swift in Sources */,
@@ -493,11 +498,12 @@
 		21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2161A9472407F51400DD0DF5 /* AddedOrder.xcdatamodel */,
 				2161A9462407F0F100DD0DF5 /* App_iOS_Hymatik 3.xcdatamodel */,
 				2161A9432406B4B100DD0DF5 /* App_iOS_Hymatik 2.xcdatamodel */,
 				21538C8923FE895100FDA748 /* App_iOS_Hymatik.xcdatamodel */,
 			);
-			currentVersion = 2161A9462407F0F100DD0DF5 /* App_iOS_Hymatik 3.xcdatamodel */;
+			currentVersion = 2161A9472407F51400DD0DF5 /* AddedOrder.xcdatamodel */;
 			path = App_iOS_Hymatik.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

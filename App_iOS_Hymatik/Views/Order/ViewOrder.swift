@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ViewOrder: View {
+    
+    
     var body: some View {
         VStack {
             Logo_Hymatic()
@@ -91,13 +93,20 @@ private struct ProductList: View {
 
 private struct BarcodeRow: View {
     @ObservedObject var barcode: Barcode
+    @State private var isAmountChooserPresented = false
 
     var body: some View {
         VStack {
             NavigationLink(destination: ProductDetail(barcode: barcode)) {
                 Text(barcode.code ?? "Error: No Barcode found!")
                 Spacer()
-                Text(barcode.amount ?? "1")
+                Button(barcode.amount ?? "1") {
+                    self.isAmountChooserPresented.toggle()
+                }
+                .sheet(isPresented: $isAmountChooserPresented) {
+                    AmountChooser(barcode: self.barcode)
+                }
+                .buttonStyle(BorderlessButtonStyle())
             }
         } 
     }
