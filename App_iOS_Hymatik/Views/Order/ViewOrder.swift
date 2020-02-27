@@ -9,11 +9,9 @@
 import SwiftUI
 
 struct ViewOrder: View {
-    
-    
     var body: some View {
         VStack {
-            Logo()
+            Logo_Hymatic()
             
             HStack {
                 CustomerSelection()
@@ -28,7 +26,6 @@ struct ViewOrder: View {
             OptionButtons()
         }
     .navigationBarTitle(Text("Aktuelle Ordre"))
-        
     }
 }
 

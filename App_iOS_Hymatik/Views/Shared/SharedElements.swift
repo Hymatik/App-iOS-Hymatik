@@ -16,7 +16,7 @@ struct SectionDivider: View {
     }
 }
 
-struct Logo: View {
+struct Logo_Hymatic: View {
     var body: some View {
         Image("Hymatic-secondary-slogan-2500")
             .resizable()
@@ -30,7 +30,7 @@ struct SharedElements_Previews: PreviewProvider {
     static var previews: some View {
         List {
             SectionDivider()
-            Logo()
+            Logo_Hymatic()
         }
     }
 }

@@ -12,7 +12,7 @@ struct StartScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-                Logo()
+                Logo_Hymatic()
         
                 List {
                     Section {
