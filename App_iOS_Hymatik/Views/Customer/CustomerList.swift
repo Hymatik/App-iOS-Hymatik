@@ -40,6 +40,8 @@ struct CustomerList: View {
 private struct CustomerRow: View {
     @ObservedObject var customer: Customer
     @Environment(\.presentationMode) var presentationMode
+    
+    
     var body: some View {
         HStack {
             Button(action: {

@@ -15,49 +15,53 @@ struct StartScreen: View {
                 Logo()
         
                 List {
+                    Section {
                     
-                    NavigationLink(destination: ViewOrder()) {
-                        Text("Order")
+                        NavigationLink(destination: ViewOrder()) {
+                            Text("Order")
+                        }
                     }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/alle-produkter/g/3457")) {
-                        Text("Webshop")
-                    }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/services")) {
-                        Text("Services")
-                    }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/viden-data/produkter")) {
-                        Text("Produkter")
-                    }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/viden-data/guides")) {
-                        Text("Guides")
-                    }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/viden-data/kataloger")) {
-                        Text("Kataloger")
-                    }
-                    NavigationLink(
-                    destination: ShowWebsite(
-                        urlString: "https://hymatik.com/om-os/om-hymatik")) {
-                        Text("Om Hymatik")
-                    }
-                    NavigationLink(
+                    Section {
+                        NavigationLink(
                         destination: ShowWebsite(
-                            urlString: "https://hymatik.com/kontakt")) {
-                        Text("Kontakt os")
+                            urlString: "https://hymatik.com/alle-produkter/g/3457")) {
+                            Text("Webshop")
+                        }
+                        NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/services")) {
+                            Text("Services")
+                        }
+                        NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/viden-data/produkter")) {
+                            Text("Produkter")
+                        }
+                        NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/viden-data/guides")) {
+                            Text("Guides")
+                        }
+                        NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/viden-data/kataloger")) {
+                            Text("Kataloger")
+                        }
+                        NavigationLink(
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/om-os/om-hymatik")) {
+                            Text("Om Hymatik")
+                        }
+                        NavigationLink(
+                            destination: ShowWebsite(
+                                urlString: "https://hymatik.com/kontakt")) {
+                            Text("Kontakt os")
+                        }
+                        
                     }
-
-
-
+                
                 }
+                .listStyle(GroupedListStyle())
             }
             .navigationBarTitle("Menu")
         }
