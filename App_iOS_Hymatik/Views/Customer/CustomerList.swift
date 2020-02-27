@@ -42,7 +42,18 @@ private struct CustomerRow: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         HStack {
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                HStack {
+                    Text("Vælge").foregroundColor(.blue)
+                }
+            })
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(.horizontal, 20)
+            
             VStack {
+  
                 HStack {
                     Text(customer.nameCompany ?? "")
                         .font(.headline)
@@ -56,20 +67,12 @@ private struct CustomerRow: View {
                         .font(.body)
                 }
             }
-            Spacer()
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }, label: {
-                Text("Vælge").foregroundColor(.blue)
-            })
-                .buttonStyle(BorderlessButtonStyle())
-                .padding(.horizontal, 20)
-            Button(action: {
-                CustomerDetails(customer: self.customer)
-            }, label: {
-                Text("Ændre").foregroundColor(.blue)
-            })
-            .buttonStyle(BorderlessButtonStyle())
+            NavigationLink(destination: CustomerDetails(customer: customer)) {
+                Text("")
+                    .foregroundColor(.blue)
+            }
+            
+            
         }
     }
 }
