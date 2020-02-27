@@ -11,7 +11,7 @@ import SwiftUI
 struct CustomerDetails: View {
     @ObservedObject var customer: Customer
     
-    let datahandler = Datahandler()
+    @EnvironmentObject var datahandler: Datahandler
 
     
     @Environment(\.presentationMode) var presentationMode
@@ -42,6 +42,7 @@ struct CustomerDetails: View {
                 }
                 Spacer()
                 Button("Vælge") {
+                    self.datahandler.currentCustomer = self.customer
                     self.presentationMode.wrappedValue.dismiss()
                     self.presentationMode.wrappedValue.dismiss()
                 }

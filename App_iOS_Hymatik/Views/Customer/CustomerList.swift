@@ -17,11 +17,13 @@ struct CustomerList: View {
     
     @Environment(\.managedObjectContext) var context
      
+    
+    
     var body: some View {
         
         VStack {
             List {
-                ForEach(customers) { customer in
+                ForEach(customers, id: \.id) { customer in
                     CustomerRow(customer: customer)
                 }
             }
@@ -39,29 +41,51 @@ struct CustomerList: View {
 
 private struct CustomerRow: View {
     @ObservedObject var customer: Customer
+    @EnvironmentObject var datahandler: Datahandler
     @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
+        
         HStack {
-            NavigationLink(destination: CustomerDetails(customer: customer)) {
-                VStack {
+            Button(action: {
+                self.datahandler.currentCustomer = self.customer
+                self.presentationMode.wrappedValue.dismiss()
+                
+            }, label: {
+                HStack {
+                    Text("Vælge").foregroundColor(.blue)
+                }
+            })
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(.horizontal, 20)
+            
+            VStack {
+  
+                HStack {
                     Text(customer.nameCompany ?? "")
-                    .bold()
-                    .frame(alignment: .leading)
-                    HStack {
-                        Text(customer.nameFirst ?? "")
-                        Text(customer.nameMiddle ?? "")
-                        Text(customer.nameLast ?? "")
-                    }
-                .padding()
-                .padding(EdgeInsets(top: 0, leading:100, bottom: 0, trailing: 0))
+                        .font(.headline)
+                }
+                HStack {
+                    Text(customer.nameFirst ?? "")
+                        .font(.body)
+                    Text(customer.nameMiddle ?? "")
+                        .font(.body)
+                    Text(customer.nameLast ?? "")
+                        .font(.body)
                 }
             }
+            NavigationLink(destination: CustomerDetails(customer: customer)) {
+                Text("")
+                    .foregroundColor(.blue)
+            }
+            
+            
         }
     }
 }
 
-struct CustomerList_Previews: PreviewProvider {
-    static var previews: some View {
-       CustomerList()
-    }
-}
+//struct CustomerList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CustomerList()
+//    }
+//}

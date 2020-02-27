@@ -25,12 +25,10 @@
 		21538CA623FE95C000FDA748 /* ShowScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CA523FE95C000FDA748 /* ShowScanner.swift */; };
 		21538CA923FE961B00FDA748 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CA823FE961B00FDA748 /* Scanner.swift */; };
 		21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CAA23FE964F00FDA748 /* Datahandler.swift */; };
-		2161A94024065FCF00DD0DF5 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A93F24065FCF00DD0DF5 /* OrderItem.swift */; };
-		2161A9422406A4D900DD0DF5 /* CreateNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A9412406A4D900DD0DF5 /* CreateNewProduct.swift */; };
+		2161A9452407E20600DD0DF5 /* CreateNewCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */; };
 		2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167819D2403CD99005C1C55 /* AddressDetail.swift */; };
 		216781F12404165D005C1C55 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F02404165D005C1C55 /* ProductDetail.swift */; };
 		216781F424041976005C1C55 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F324041976005C1C55 /* Binding+Extension.swift */; };
-		21C9ED8923FFF466001F7ABA /* Customer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C9ED8823FFF466001F7ABA /* Customer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,13 +52,11 @@
 		21538CA523FE95C000FDA748 /* ShowScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowScanner.swift; sourceTree = "<group>"; };
 		21538CA823FE961B00FDA748 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		21538CAA23FE964F00FDA748 /* Datahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datahandler.swift; sourceTree = "<group>"; };
-		2161A93F24065FCF00DD0DF5 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
-		2161A9412406A4D900DD0DF5 /* CreateNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewProduct.swift; sourceTree = "<group>"; };
 		2161A9432406B4B100DD0DF5 /* App_iOS_Hymatik 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "App_iOS_Hymatik 2.xcdatamodel"; sourceTree = "<group>"; };
+		2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCustomer.swift; sourceTree = "<group>"; };
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
-		21C9ED8823FFF466001F7ABA /* Customer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				216781F02404165D005C1C55 /* ProductDetail.swift */,
-				2161A9412406A4D900DD0DF5 /* CreateNewProduct.swift */,
+				2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -135,8 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
-				21C9ED8823FFF466001F7ABA /* Customer+Extension.swift */,
-				2161A93F24065FCF00DD0DF5 /* OrderItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,9 +277,8 @@
 			files = (
 				216781F12404165D005C1C55 /* ProductDetail.swift in Sources */,
 				2120B51923FECF9D0013DD5C /* CustomerDetails.swift in Sources */,
-				2161A94024065FCF00DD0DF5 /* OrderItem.swift in Sources */,
+				2161A9452407E20600DD0DF5 /* CreateNewCustomer.swift in Sources */,
 				2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */,
-				21C9ED8923FFF466001F7ABA /* Customer+Extension.swift in Sources */,
 				2120B52B23FFCDF00013DD5C /* ShowWebsite.swift in Sources */,
 				21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */,
 				21538CA623FE95C000FDA748 /* ShowScanner.swift in Sources */,
@@ -298,7 +291,6 @@
 				2120B51D23FED5560013DD5C /* OrderList.swift in Sources */,
 				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
 				2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */,
-				2161A9422406A4D900DD0DF5 /* CreateNewProduct.swift in Sources */,
 				21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */,
 				21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */,
 				2120B51723FECEEC0013DD5C /* CreateCustomer.swift in Sources */,
