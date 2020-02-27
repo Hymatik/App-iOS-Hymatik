@@ -42,20 +42,34 @@ private struct CustomerRow: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         HStack {
-            NavigationLink(destination: CustomerDetails(customer: customer)) {
-                VStack {
+            VStack {
+                HStack {
                     Text(customer.nameCompany ?? "")
-                    .bold()
-                    .frame(alignment: .leading)
-                    HStack {
-                        Text(customer.nameFirst ?? "")
-                        Text(customer.nameMiddle ?? "")
-                        Text(customer.nameLast ?? "")
-                    }
-                .padding()
-                .padding(EdgeInsets(top: 0, leading:100, bottom: 0, trailing: 0))
+                        .font(.headline)
+                }
+                HStack {
+                    Text(customer.nameFirst ?? "")
+                        .font(.body)
+                    Text(customer.nameMiddle ?? "")
+                        .font(.body)
+                    Text(customer.nameLast ?? "")
+                        .font(.body)
                 }
             }
+            Spacer()
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Vælge").foregroundColor(.blue)
+            })
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(.horizontal, 20)
+            Button(action: {
+                CustomerDetails(customer: self.customer)
+            }, label: {
+                Text("Ændre").foregroundColor(.blue)
+            })
+            .buttonStyle(BorderlessButtonStyle())
         }
     }
 }

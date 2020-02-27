@@ -99,8 +99,7 @@ private struct BarcodeRow: View {
                 Spacer()
                 Text(barcode.amount ?? "1")
             }
-        }
-        
+        } 
     }
 }
 
