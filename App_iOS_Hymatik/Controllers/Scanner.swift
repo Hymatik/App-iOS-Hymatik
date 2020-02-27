@@ -10,6 +10,7 @@
 import AVFoundation
 import UIKit
 import CoreData
+import SwiftUI
 
 class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -23,9 +24,8 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     //Saves found barcodes as products in the database.
     //Used in found()
-    private let datahandler = Datahandler()
+    @EnvironmentObject var datahandler: Datahandler
     
-
     
     // MARK: View Handler
     

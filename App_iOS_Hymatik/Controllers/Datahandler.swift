@@ -10,9 +10,11 @@ import SwiftUI
 import CoreData
 
 
-class Datahandler {
+class Datahandler: ObservableObject {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @Published var currentCustomer: Customer?
+    
     
 
     

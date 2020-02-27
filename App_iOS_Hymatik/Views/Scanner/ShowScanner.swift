@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ShowScanner: View {
+    
+    
     var body: some View {
         VStack {
             ScannerToView()
@@ -18,6 +20,8 @@ struct ShowScanner: View {
 }
 
 private struct ScannerToView: UIViewControllerRepresentable {
+
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerToView>) -> Scanner {
         let scanner = Scanner()
         return scanner

@@ -14,7 +14,7 @@ struct CreateNewProduct: View {
         
     @Environment(\.presentationMode) var presentationMode
 
-    let datahandler = Datahandler()
+    @EnvironmentObject var datahandler: Datahandler
 
     
     

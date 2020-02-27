@@ -17,11 +17,13 @@ struct CustomerList: View {
     
     @Environment(\.managedObjectContext) var context
      
+    
+    
     var body: some View {
         
         VStack {
             List {
-                ForEach(customers) { customer in
+                ForEach(customers, id: \.id) { customer in
                     CustomerRow(customer: customer)
                 }
             }
@@ -39,13 +41,16 @@ struct CustomerList: View {
 
 private struct CustomerRow: View {
     @ObservedObject var customer: Customer
+    @EnvironmentObject var datahandler: Datahandler
     @Environment(\.presentationMode) var presentationMode
     
-    
     var body: some View {
+        
         HStack {
             Button(action: {
+                self.datahandler.currentCustomer = self.customer
                 self.presentationMode.wrappedValue.dismiss()
+                
             }, label: {
                 HStack {
                     Text("Vælge").foregroundColor(.blue)
@@ -79,8 +84,8 @@ private struct CustomerRow: View {
     }
 }
 
-struct CustomerList_Previews: PreviewProvider {
-    static var previews: some View {
-       CustomerList()
-    }
-}
+//struct CustomerList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CustomerList()
+//    }
+//}

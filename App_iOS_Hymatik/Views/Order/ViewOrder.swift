@@ -33,12 +33,15 @@ struct ViewOrder: View {
 }
 
 private struct CustomerSelection: View {
+    @EnvironmentObject var datahandler: Datahandler
+    private let noCustomer = "Ingen Kunde"
+    
     var body: some View {
         VStack {
             HStack {
                 Text("Kunde: ")
                 NavigationLink(destination: CustomerList()) {
-                    Text("Test Kunde")
+                    Text("\(datahandler.currentCustomer?.nameCompany ?? noCustomer)")
                 }
             }
             .padding()

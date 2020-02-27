@@ -18,7 +18,7 @@ struct CreateCustomer: View {
     @State var customerNumber: String = ""
     
     @Environment(\.presentationMode) var presentationMode
-    var datahandler = Datahandler()
+    @EnvironmentObject var datahandler: Datahandler
     
     
     
