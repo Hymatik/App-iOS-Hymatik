@@ -38,18 +38,18 @@ struct ViewOrder: View {
             
             OptionButtons()
         }
-    .navigationBarTitle(Text("Aktuelle Ordre"))
+    .navigationBarTitle(Text("Current Order"))
     }
 }
 
 private struct CustomerSelection: View {
     @EnvironmentObject var datahandler: Datahandler
-    private let noCustomer = "Ingen Kunde"
+    private let noCustomer = "No Customer"
     
     var body: some View {
         VStack {
             HStack {
-                Text("Kunde: ")
+                Text("Customer: ")
                 NavigationLink(destination: CustomerList()) {
                     Text("\(datahandler.currentCustomer?.nameCompany ?? noCustomer)")
                 }
@@ -64,9 +64,9 @@ private struct OrderSelection: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Ordre: ")
+                Text("Order: ")
                 NavigationLink(destination: OrderList()) {
-                    Text("Test Order")
+                    Text("No Order")
                 }
             }
             .padding()
@@ -132,7 +132,7 @@ private struct lastProductRow: View {
             NavigationLink(
                 destination: CreateNewProduct()) {
                     
-                    Text("Tilføj Vare")
+                    Text("Add Product")
                     .foregroundColor(.accentColor)
             }
             Spacer()
@@ -151,13 +151,13 @@ private struct lastProductRow: View {
 private struct OptionButtons: View {
     var body: some View {
         HStack {
-            Button("Slet") {
+            Button("Delete") {
                 let datahandler = Datahandler()
                 datahandler.emptyCurrentOrder()
                 
             }
             Spacer()
-            Button("Gem") {
+            Button("Save") {
                 self.saveOrder()
             }
             Spacer()

@@ -65,12 +65,12 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     // When a barcode is found, it will show a alert box so the user can choose to either save the product or not.
     func found(code: String) {
-        let alert = UIAlertController(title: "Barcode: \"\(code)\" fundet.", message: "Vil du tilføj produktet til din ordre?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ja, tak.", style: .default, handler: { (action) in
+        let alert = UIAlertController(title: "Barcode: \"\(code)\" found.", message: "Do you want to add this product to your current order?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes, please.", style: .default, handler: { (action) in
             self.datahandler.saveBarcode(code: code, amount: "1")
             self.captureSession.startRunning()
         }))
-        alert.addAction(UIAlertAction(title: "Nej, ikke tilføj den.", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "No, thank you.", style: .default, handler: { (action) in
             self.captureSession.startRunning()
         }))
         self.present(alert, animated: true, completion: nil)
@@ -78,7 +78,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     // When it failes to start the camera up
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Scanning not supported", message: "Error: Couldn't scan", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
         captureSession = nil

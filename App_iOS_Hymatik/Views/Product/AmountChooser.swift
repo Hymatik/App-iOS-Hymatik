@@ -17,7 +17,7 @@ struct AmountChooser: View {
         VStack {
             Spacer()
             HStack {
-                TextField("Antal", text: Binding($barcode.amount, "1"))
+                TextField("Amount: ", text: Binding($barcode.amount, "1"))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     .frame(width: CGFloat(100))
@@ -25,11 +25,11 @@ struct AmountChooser: View {
             }
             HStack {
                 Spacer()
-                Button("Tilbage"){
+                Button("Back"){
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Gem") {
+                Button("Save") {
                     self.datahandler.editBarcode(barcode: self.barcode)
                     self.presentationMode.wrappedValue.dismiss()
                 }

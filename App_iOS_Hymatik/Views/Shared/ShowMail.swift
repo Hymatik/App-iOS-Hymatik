@@ -46,7 +46,7 @@ struct ShowMail: View {
     private func mailView(content: MailContent) -> some View {
         MFMailComposeViewController.canSendMail() ?
             AnyView(SendMail(content: content, isShowing: $isShowingMailView, result: $result)) :
-            AnyView(Text("Fejl: Der er sandsynlighvis ikke set et email op på denne maskine."))
+            AnyView(Text("Error: Can't SendMail"))
     }
 }
 

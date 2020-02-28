@@ -17,31 +17,31 @@ struct CustomerDetails: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
-            Text("Kunde information")
-            TextField("Kundenummer", text: Binding($customer.customerNumber, ""))
+            Text("Customer information")
+            TextField("Customer number", text: Binding($customer.customerNumber, ""))
                 .padding()
             VStack {
-                TextField("Firma navn", text: Binding($customer.nameCompany, ""))
-                TextField("CVR nummer", text:  Binding($customer.nameCompany, ""))
+                TextField("Company name", text: Binding($customer.nameCompany, ""))
+                TextField("CVR number", text:  Binding($customer.nameCompany, ""))
             }
             .padding()
             VStack {
-                TextField("Første navn", text: Binding($customer.nameFirst, ""))
-                TextField("Mellem navn", text: Binding($customer.nameMiddle, ""))
-                TextField("Familie navn", text: Binding($customer.nameLast, ""))
+                TextField("First name", text: Binding($customer.nameFirst, ""))
+                TextField("Middle name", text: Binding($customer.nameMiddle, ""))
+                TextField("Surname", text: Binding($customer.nameLast, ""))
             }
             .padding()
             HStack {
-                Button("Tilbage") {
+                Button("Back") {
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Gem") {
+                Button("Save") {
                     self.datahandler.editCustomer(customer: self.customer)
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Vælge") {
+                Button("Choose") {
                     self.datahandler.currentCustomer = self.customer
                     self.presentationMode.wrappedValue.dismiss()
                     self.presentationMode.wrappedValue.dismiss()

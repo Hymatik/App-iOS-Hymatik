@@ -29,13 +29,13 @@ struct CustomerList: View {
             }
             HStack {
                 NavigationLink(destination: CreateCustomer()) {
-                    Text("Opret ny kunde")
+                    Text("Create new Customer")
                 }
                 
             }
             
         }
-        .navigationBarTitle(Text("Kunde liste"))
+        .navigationBarTitle(Text("Customer list"))
     }
 }
 
@@ -53,7 +53,7 @@ private struct CustomerRow: View {
                 
             }, label: {
                 HStack {
-                    Text("Vælge").foregroundColor(.blue)
+                    Text("Choose").foregroundColor(.blue)
                 }
             })
                 .buttonStyle(BorderlessButtonStyle())

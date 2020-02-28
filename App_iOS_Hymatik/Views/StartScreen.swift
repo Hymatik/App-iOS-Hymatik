@@ -39,7 +39,7 @@ struct StartScreen: View {
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/viden-data/produkter")) {
-                            Text("Produkter")
+                            Text("Products")
                         }
                         NavigationLink(
                         destination: ShowWebsite(
@@ -49,17 +49,17 @@ struct StartScreen: View {
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/viden-data/kataloger")) {
-                            Text("Kataloger")
+                            Text("Catalogs")
                         }
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/om-os/om-hymatik")) {
-                            Text("Om Hymatik")
+                            Text("About Hymatik")
                         }
                         NavigationLink(
                             destination: ShowWebsite(
                                 urlString: "https://hymatik.com/kontakt")) {
-                            Text("Kontakt os")
+                            Text("Contact us")
                         }
                         
                     }
