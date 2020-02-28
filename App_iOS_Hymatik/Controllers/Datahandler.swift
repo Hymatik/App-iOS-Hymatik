@@ -16,7 +16,6 @@ class Datahandler: ObservableObject {
     @Published var currentCustomer: Customer?
     
     
-
     
     func saveBarcode(code: String, amount: String) {
         let newCode = Barcode(context: context)

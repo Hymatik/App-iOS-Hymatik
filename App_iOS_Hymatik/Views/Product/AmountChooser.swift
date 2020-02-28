@@ -40,6 +40,7 @@ struct AmountChooser: View {
             Spacer()
         }
     }
+
 }
 
 //struct AmountChooser_Previews: PreviewProvider {

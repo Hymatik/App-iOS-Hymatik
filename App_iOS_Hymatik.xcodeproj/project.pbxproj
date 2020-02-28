@@ -27,6 +27,9 @@
 		21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538CAA23FE964F00FDA748 /* Datahandler.swift */; };
 		2161A9452407E20600DD0DF5 /* CreateNewCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A9442407E20600DD0DF5 /* CreateNewCustomer.swift */; };
 		2161A9492407FE2000DD0DF5 /* AmountChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A9482407FE2000DD0DF5 /* AmountChooser.swift */; };
+		2161A94B2408F07400DD0DF5 /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A94A2408F07400DD0DF5 /* SendMail.swift */; };
+		2161A94D2408F51100DD0DF5 /* MailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A94C2408F51100DD0DF5 /* MailContent.swift */; };
+		2161A94F2408F65600DD0DF5 /* ShowMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A94E2408F65600DD0DF5 /* ShowMail.swift */; };
 		2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167819D2403CD99005C1C55 /* AddressDetail.swift */; };
 		216781F12404165D005C1C55 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F02404165D005C1C55 /* ProductDetail.swift */; };
 		216781F424041976005C1C55 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F324041976005C1C55 /* Binding+Extension.swift */; };
@@ -58,6 +61,9 @@
 		2161A9462407F0F100DD0DF5 /* App_iOS_Hymatik 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "App_iOS_Hymatik 3.xcdatamodel"; sourceTree = "<group>"; };
 		2161A9472407F51400DD0DF5 /* AddedOrder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddedOrder.xcdatamodel; sourceTree = "<group>"; };
 		2161A9482407FE2000DD0DF5 /* AmountChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountChooser.swift; sourceTree = "<group>"; };
+		2161A94A2408F07400DD0DF5 /* SendMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
+		2161A94C2408F51100DD0DF5 /* MailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailContent.swift; sourceTree = "<group>"; };
+		2161A94E2408F65600DD0DF5 /* ShowMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMail.swift; sourceTree = "<group>"; };
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
+				2161A94C2408F51100DD0DF5 /* MailContent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,7 +152,6 @@
 			children = (
 				2120B51E23FFB82B0013DD5C /* Product */,
 				2120B51323FECE800013DD5C /* Customer */,
-				21538CA423FE95B100FDA748 /* Scanner */,
 				21538CA123FE924A00FDA748 /* Order */,
 				21538C9E23FE8FA900FDA748 /* Shared */,
 				21538C8B23FE895100FDA748 /* StartScreen.swift */,
@@ -168,6 +174,8 @@
 		21538C9E23FE8FA900FDA748 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				21538CA523FE95C000FDA748 /* ShowScanner.swift */,
+				2161A94E2408F65600DD0DF5 /* ShowMail.swift */,
 				2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */,
 				21538C9F23FE8FC100FDA748 /* SharedElements.swift */,
 			);
@@ -184,19 +192,12 @@
 			path = Order;
 			sourceTree = "<group>";
 		};
-		21538CA423FE95B100FDA748 /* Scanner */ = {
-			isa = PBXGroup;
-			children = (
-				21538CA523FE95C000FDA748 /* ShowScanner.swift */,
-			);
-			path = Scanner;
-			sourceTree = "<group>";
-		};
 		21538CA723FE960000FDA748 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				21538CA823FE961B00FDA748 /* Scanner.swift */,
 				21538CAA23FE964F00FDA748 /* Datahandler.swift */,
+				2161A94A2408F07400DD0DF5 /* SendMail.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +287,7 @@
 				2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */,
 				2120B52B23FFCDF00013DD5C /* ShowWebsite.swift in Sources */,
 				21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */,
+				2161A94B2408F07400DD0DF5 /* SendMail.swift in Sources */,
 				21538CA623FE95C000FDA748 /* ShowScanner.swift in Sources */,
 				21538CA923FE961B00FDA748 /* Scanner.swift in Sources */,
 				21538CA023FE8FC100FDA748 /* SharedElements.swift in Sources */,
@@ -296,7 +298,9 @@
 				2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */,
 				2120B51D23FED5560013DD5C /* OrderList.swift in Sources */,
 				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
+				2161A94F2408F65600DD0DF5 /* ShowMail.swift in Sources */,
 				2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */,
+				2161A94D2408F51100DD0DF5 /* MailContent.swift in Sources */,
 				21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */,
 				21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */,
 				2120B51723FECEEC0013DD5C /* CreateCustomer.swift in Sources */,

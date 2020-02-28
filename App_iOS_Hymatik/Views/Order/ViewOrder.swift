@@ -149,9 +149,11 @@ private struct OptionButtons: View {
                 self.saveOrder()
             }
             Spacer()
-            Button("Send") {
-                // TODO: Create Logic
+            
+            NavigationLink(destination: ShowMail()){
+                Text("Send")
             }
+            
         }
         .padding()
     }
