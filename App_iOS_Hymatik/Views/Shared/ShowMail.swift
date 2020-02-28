@@ -17,11 +17,8 @@ struct ShowMail: View {
          entity: Barcode.entity(),
          sortDescriptors: []
      ) var barcodes: FetchedResults<Barcode>
-    
-    @Environment(\.managedObjectContext) var context
-    @ObservedObject var datahandler: Datahandler
-    
-    lazy var content: MailContent = createMailContent(barcodes: barcodes)
+
+    @EnvironmentObject var datahandler: Datahandler
     
     var body: some View {
         ZStack {
@@ -30,7 +27,8 @@ struct ShowMail: View {
                     Text("Result: \(String(describing: result))")
                     .lineLimit(nil)
                 } else {
-                    mailView()
+//                    content = createMailContent(barcodes: barcodes)
+                    mailView(content: createMailContent(barcodes: barcodes))
                 }
             }
         }
@@ -45,7 +43,7 @@ struct ShowMail: View {
         return content
     }
 
-    private func mailView() -> some View {
+    private func mailView(content: MailContent) -> some View {
         MFMailComposeViewController.canSendMail() ?
             AnyView(SendMail(content: content, isShowing: $isShowingMailView, result: $result)) :
             AnyView(Text("Fejl: Der er sandsynlighvis ikke set et email op på denne maskine."))

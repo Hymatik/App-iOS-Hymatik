@@ -21,7 +21,14 @@ struct Logo_Hymatic: View {
         Image("Hymatic-secondary-slogan-2500")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .padding()
+    }
+}
+
+struct Logo_ParkerStore: View {
+    var body: some View {
+        Image("ParkerStore-logo-Main")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
@@ -31,6 +38,7 @@ struct SharedElements_Previews: PreviewProvider {
         List {
             SectionDivider()
             Logo_Hymatic()
+            Logo_ParkerStore()
         }
     }
 }

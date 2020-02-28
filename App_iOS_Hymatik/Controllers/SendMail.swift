@@ -48,9 +48,9 @@ struct SendMail: UIViewControllerRepresentable {
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<SendMail>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
-        vc.setToRecipients(mail.recipients)
-        vc.setSubject(mail.subject)
-        vc.setMessageBody(mail.body, isHTML: true)
+        vc.setToRecipients(content.recipients)
+        vc.setSubject(content.subject)
+        vc.setMessageBody(content.body, isHTML: true)
         
         vc.mailComposeDelegate = context.coordinator
         return vc

@@ -13,6 +13,10 @@ struct StartScreen: View {
         NavigationView {
             VStack {
                 Logo_Hymatic()
+                    .padding(.trailing, 20)
+                    .padding(.leading, 20)
+                Logo_ParkerStore()
+                    .frame(width: 200)
         
                 List {
                     Section {

@@ -30,6 +30,7 @@
 		2161A94B2408F07400DD0DF5 /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A94A2408F07400DD0DF5 /* SendMail.swift */; };
 		2161A94D2408F51100DD0DF5 /* MailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A94C2408F51100DD0DF5 /* MailContent.swift */; };
 		2161A94F2408F65600DD0DF5 /* ShowMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A94E2408F65600DD0DF5 /* ShowMail.swift */; };
+		2161A95324090B6300DD0DF5 /* GeneratePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A95224090B6300DD0DF5 /* GeneratePDF.swift */; };
 		2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167819D2403CD99005C1C55 /* AddressDetail.swift */; };
 		216781F12404165D005C1C55 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F02404165D005C1C55 /* ProductDetail.swift */; };
 		216781F424041976005C1C55 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F324041976005C1C55 /* Binding+Extension.swift */; };
@@ -64,6 +65,7 @@
 		2161A94A2408F07400DD0DF5 /* SendMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
 		2161A94C2408F51100DD0DF5 /* MailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailContent.swift; sourceTree = "<group>"; };
 		2161A94E2408F65600DD0DF5 /* ShowMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMail.swift; sourceTree = "<group>"; };
+		2161A95224090B6300DD0DF5 /* GeneratePDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePDF.swift; sourceTree = "<group>"; };
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
@@ -141,8 +143,8 @@
 		21538C9B23FE8EEB00FDA748 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
 				2161A94C2408F51100DD0DF5 /* MailContent.swift */,
+				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +200,7 @@
 				21538CA823FE961B00FDA748 /* Scanner.swift */,
 				21538CAA23FE964F00FDA748 /* Datahandler.swift */,
 				2161A94A2408F07400DD0DF5 /* SendMail.swift */,
+				2161A95224090B6300DD0DF5 /* GeneratePDF.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */,
 				2120B51D23FED5560013DD5C /* OrderList.swift in Sources */,
 				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
+				2161A95324090B6300DD0DF5 /* GeneratePDF.swift in Sources */,
 				2161A94F2408F65600DD0DF5 /* ShowMail.swift in Sources */,
 				2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */,
 				2161A94D2408F51100DD0DF5 /* MailContent.swift in Sources */,

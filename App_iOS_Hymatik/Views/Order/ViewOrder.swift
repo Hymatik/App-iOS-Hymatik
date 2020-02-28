@@ -8,12 +8,23 @@
 
 import SwiftUI
 
+
+
+
+
+// Shows the current order with the current Customer, Order and all the items
+// The user can click on the customer to select or create a different user
+// the user can click on the order name to see a list of saved Orders
+// The user can click on "slet" to empty the list or swipe on items
+// The user can save the order or send it per mail
 struct ViewOrder: View {
     
     
     var body: some View {
         VStack {
             Logo_Hymatic()
+            .padding(.trailing, 20)
+            .padding(.leading, 20)
             
             HStack {
                 CustomerSelection()
@@ -79,11 +90,12 @@ private struct ProductList: View {
                 ForEach(barcodes, id: \.id) {barcode in
                     BarcodeRow(barcode: barcode)
                 }
-            .onDelete { indexSet in
-                for index in indexSet {
-                    self.context.delete(self.barcodes[index])
-                    try? self.context.save()
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        self.context.delete(self.barcodes[index])
+                        try? self.context.save()
                 }
+                
             }
             }
             lastProductRow()
