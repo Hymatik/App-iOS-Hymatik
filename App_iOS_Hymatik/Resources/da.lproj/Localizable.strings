@@ -6,7 +6,6 @@
   Copyright © 2020 Hymatik. All rights reserved.
 */
 
-
 //General Navigation and Buttons
 "Back" = "Tilbage";
 "Save" = "Gem";
@@ -64,7 +63,7 @@
 "Order: " = "Ordre: ";
 "No Order" = "Ingen Ordre vælgt";
 
-"Add Product" = "Tilføj Produkt;";
+"Add Product" = "Tilføj Produkt";
 
 
 // Create Order

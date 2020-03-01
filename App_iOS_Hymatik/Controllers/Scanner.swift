@@ -16,6 +16,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     
     
+    
     // Those types are the barcodes the video is checked for.
     let supportedBarcodeTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13, .pdf417, .upce, .code128]
     
