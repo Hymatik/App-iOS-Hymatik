@@ -108,21 +108,46 @@ private struct ProductList: View {
 private struct BarcodeRow: View {
     @ObservedObject var barcode: Barcode
     @State private var isAmountChooserPresented = false
+    @State private var textfield = "Textfield"
+    @EnvironmentObject var datahandler: Datahandler
+    
 
     var body: some View {
-        VStack {
-            NavigationLink(destination: ProductDetail(barcode: barcode)) {
-                Text(barcode.code ?? NSLocalizedString("Error: No Barcode found!", comment: ""))
-                Spacer()
-                Button(barcode.amount ?? "1") {
-                    self.isAmountChooserPresented.toggle()
-                }
-                .sheet(isPresented: $isAmountChooserPresented) {
-                    AmountChooser(barcode: self.barcode)
-                }
+        ZStack {
+            if (isAmountChooserPresented) {
+                HStack {
+                    Spacer()
+                    Button(NSLocalizedString("Back", comment: "")){
+                        self.isAmountChooserPresented.toggle()
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
+                    
+                    TextField(NSLocalizedString("Amount: ", comment: ""), text: Binding($barcode.amount, "1"))
+                    
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    .frame(width: CGFloat(100))
+                        
+                
+                    Button(NSLocalizedString("Save", comment: "")) {
+                        self.datahandler.editBarcode(barcode: self.barcode)
+                        self.isAmountChooserPresented.toggle()
+                    }
                 .buttonStyle(BorderlessButtonStyle())
+                }
+            } else {
+                NavigationLink(destination: ProductDetail(barcode: barcode)) {
+                    Text(barcode.code ?? NSLocalizedString("Error: No Barcode found!", comment: ""))
+                    Spacer()
+                    ZStack {
+                        Button(barcode.amount ?? "1") {
+                            self.isAmountChooserPresented.toggle()
+                        }
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
+                }
             }
-        } 
+        }
     }
 }
 
