@@ -85,7 +85,8 @@
 "https://hymatik.com" = "https://hymatik.com";
 
 // MARK: Scanner
-"Barcode: \"\(code)\" found." = "Stregkode: \"\(code)\" fundet.";
+"Barcode:" = "Stregkode:";
+" found." = " fundet.";
 
 "Do you want to add this product to your current order?" = "Vil du tilføje dette product til din nuværende Ordre?";
 

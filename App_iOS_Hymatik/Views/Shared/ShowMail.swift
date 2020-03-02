@@ -24,7 +24,7 @@ struct ShowMail: View {
         ZStack {
             VStack {
                 if result != nil {
-                    Text("Result: \(String(describing: result))")
+                    Text("Result: " + String(describing: result))
                     .lineLimit(nil)
                 } else {
 //                    content = createMailContent(barcodes: barcodes)
@@ -46,7 +46,7 @@ struct ShowMail: View {
     private func mailView(content: MailContent) -> some View {
         MFMailComposeViewController.canSendMail() ?
             AnyView(SendMail(content: content, isShowing: $isShowingMailView, result: $result)) :
-            AnyView(Text("Error: Can't SendMail"))
+            AnyView(Text(NSLocalizedString("Error: Can't SendMail", comment: "")))
     }
 }
 

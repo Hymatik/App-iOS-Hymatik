@@ -16,7 +16,7 @@ struct ShowScanner: View {
         VStack {
             ScannerToView().environmentObject(datahandler)
         }
-    .navigationBarTitle(Text("Scanner"))
+        .navigationBarTitle(Text(NSLocalizedString("Scanner", comment: "")))
     }
 }
 

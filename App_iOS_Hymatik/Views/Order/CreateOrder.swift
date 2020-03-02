@@ -11,9 +11,9 @@ import SwiftUI
 struct CreateOrder: View {
     var body: some View {
         VStack {
-            Text("Hello, World!")
+            Text(NSLocalizedString("Hello, World!", comment: ""))
         }
-    .navigationBarTitle(Text("Create Order"))
+        .navigationBarTitle(Text(NSLocalizedString("Create Order", comment: "")))
     }
 }
 

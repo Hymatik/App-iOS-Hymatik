@@ -10,7 +10,7 @@ import SwiftUI
 import WebKit
 
 struct ShowWebsite: View {
-    var urlString = "https://hymatik.com"
+    var urlString = NSLocalizedString("https://hymatik.com", comment: "Provide the translated website link to the user.")
     
     var body: some View {
             WebView(request: URLRequest(url: URL(string: urlString)!))

@@ -38,18 +38,18 @@ struct ViewOrder: View {
             
             OptionButtons()
         }
-    .navigationBarTitle(Text("Current Order"))
+        .navigationBarTitle(Text(NSLocalizedString("Current Order", comment: "")))
     }
 }
 
 private struct CustomerSelection: View {
     @EnvironmentObject var datahandler: Datahandler
-    private let noCustomer = "No Customer"
+    private let noCustomer = NSLocalizedString("No Customer", comment: "")
     
     var body: some View {
         VStack {
             HStack {
-                Text("Customer: ")
+                Text(NSLocalizedString("Customer: ", comment: ""))
                 NavigationLink(destination: CustomerList()) {
                     Text("\(datahandler.currentCustomer?.nameCompany ?? noCustomer)")
                 }
@@ -66,9 +66,9 @@ private struct OrderSelection: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Order: ")
+                Text(NSLocalizedString("Order: ", comment: ""))
                 NavigationLink(destination: OrderList()) {
-                    Text("No Order")
+                    Text(NSLocalizedString("No Order", comment: ""))
                 }
             }
             .padding()
@@ -112,7 +112,7 @@ private struct BarcodeRow: View {
     var body: some View {
         VStack {
             NavigationLink(destination: ProductDetail(barcode: barcode)) {
-                Text(barcode.code ?? "Error: No Barcode found!")
+                Text(barcode.code ?? NSLocalizedString("Error: No Barcode found!", comment: ""))
                 Spacer()
                 Button(barcode.amount ?? "1") {
                     self.isAmountChooserPresented.toggle()
@@ -134,14 +134,14 @@ private struct lastProductRow: View {
             NavigationLink(
                 destination: CreateNewProduct()) {
                     
-                    Text("Add Product")
+                    Text(NSLocalizedString("Add Product", comment: ""))
                     .foregroundColor(.accentColor)
             }
             Spacer()
 
             NavigationLink(
                 destination: ShowScanner()) {
-                Text("Scan")
+                    Text(NSLocalizedString("Scan", comment: ""))
                     .foregroundColor(.accentColor)
             }
             Spacer()
@@ -153,19 +153,19 @@ private struct lastProductRow: View {
 private struct OptionButtons: View {
     var body: some View {
         HStack {
-            Button("Delete") {
+            Button(NSLocalizedString("Delete", comment: "")) {
                 let datahandler = Datahandler()
                 datahandler.emptyCurrentOrder()
                 
             }
             Spacer()
-            Button("Save") {
+            Button(NSLocalizedString("Save", comment: "")) {
                 self.saveOrder()
             }
             Spacer()
             
             NavigationLink(destination: ShowMail()){
-                Text("Send")
+                Text(NSLocalizedString("Send", comment: ""))
             }
             
         }

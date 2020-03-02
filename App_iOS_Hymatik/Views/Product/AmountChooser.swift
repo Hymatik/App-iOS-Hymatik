@@ -17,7 +17,7 @@ struct AmountChooser: View {
         VStack {
             Spacer()
             HStack {
-                TextField("Amount: ", text: Binding($barcode.amount, "1"))
+                TextField(NSLocalizedString("Amount: ", comment: ""), text: Binding($barcode.amount, "1"))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     .frame(width: CGFloat(100))
@@ -25,11 +25,11 @@ struct AmountChooser: View {
             }
             HStack {
                 Spacer()
-                Button("Back"){
+                Button(NSLocalizedString("Back", comment: "")){
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Save") {
+                Button(NSLocalizedString("Save", comment: "")) {
                     self.datahandler.editBarcode(barcode: self.barcode)
                     self.presentationMode.wrappedValue.dismiss()
                 }

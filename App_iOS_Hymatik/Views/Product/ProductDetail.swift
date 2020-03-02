@@ -19,28 +19,28 @@ struct ProductDetail: View {
     
     var body: some View {
         VStack {
-            Text("Product information")
+            Text(NSLocalizedString("Product information", comment: ""))
             HStack {
-                Text("Barcode: ")
+                Text(NSLocalizedString("Barcode: ", comment: ""))
                 Spacer()
-                TextField("Barcode: ", text: Binding($barcode.code, ""))
+                TextField(NSLocalizedString("Barcode: ", comment: ""), text: Binding($barcode.code, ""))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
             }
             HStack {
-                Text("Amount: ")
+                Text(NSLocalizedString("Amount: ", comment: ""))
                 Spacer()
-                TextField("Amount: ", text: Binding($barcode.amount, ""))
+                TextField(NSLocalizedString("Amount: ", comment: ""), text: Binding($barcode.amount, ""))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
             }
             HStack{
-                Button("Back") {
+                Button(NSLocalizedString("Back", comment: "")) {
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Save"){
+                Button(NSLocalizedString("Save", comment: "")){
                     self.datahandler.editBarcode(barcode: self.barcode)
                     self.presentationMode.wrappedValue.dismiss()
                 }

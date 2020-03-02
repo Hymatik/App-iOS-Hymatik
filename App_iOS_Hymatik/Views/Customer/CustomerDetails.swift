@@ -17,31 +17,31 @@ struct CustomerDetails: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
-            Text("Customer information")
-            TextField("Customer number", text: Binding($customer.customerNumber, ""))
+            Text(NSLocalizedString("Customer information", comment: ""))
+            TextField(NSLocalizedString("Customer number", comment: ""), text: Binding($customer.customerNumber, ""))
                 .padding()
             VStack {
-                TextField("Company name", text: Binding($customer.nameCompany, ""))
-                TextField("CVR number", text:  Binding($customer.nameCompany, ""))
+                TextField(NSLocalizedString("Company name", comment: ""), text: Binding($customer.nameCompany, ""))
+                TextField(NSLocalizedString("CVR number", comment: ""), text:  Binding($customer.nameCompany, ""))
             }
             .padding()
             VStack {
-                TextField("First name", text: Binding($customer.nameFirst, ""))
-                TextField("Middle name", text: Binding($customer.nameMiddle, ""))
-                TextField("Surname", text: Binding($customer.nameLast, ""))
+                TextField(NSLocalizedString("First name", comment: ""), text: Binding($customer.nameFirst, ""))
+                TextField(NSLocalizedString("Middle name", comment: ""), text: Binding($customer.nameMiddle, ""))
+                TextField(NSLocalizedString("Surname", comment: ""), text: Binding($customer.nameLast, ""))
             }
             .padding()
             HStack {
-                Button("Back") {
+                Button(NSLocalizedString("Back", comment: "")) {
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Save") {
+                Button(NSLocalizedString("Save", comment: "")) {
                     self.datahandler.editCustomer(customer: self.customer)
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Choose") {
+                Button(NSLocalizedString("Choose", comment: "")) {
                     self.datahandler.currentCustomer = self.customer
                     self.presentationMode.wrappedValue.dismiss()
                     self.presentationMode.wrappedValue.dismiss()

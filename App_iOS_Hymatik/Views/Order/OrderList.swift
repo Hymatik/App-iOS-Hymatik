@@ -16,13 +16,13 @@ struct OrderList: View {
             }
             HStack {
                 NavigationLink(destination: CreateOrder()) {
-                    Text("Create new Order")
+                    Text(NSLocalizedString("Create new Order", comment: ""))
                 }
                 
             }
             
         }
-        .navigationBarTitle(Text("Order list"))
+        .navigationBarTitle(Text(NSLocalizedString("Order list", comment: "")))
     }
 }
 

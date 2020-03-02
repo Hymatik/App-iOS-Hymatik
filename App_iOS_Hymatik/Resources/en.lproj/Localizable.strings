@@ -84,7 +84,8 @@
 "https://hymatik.com" = "https://hymatik.com";
 
 // MARK: Scanner
-"Barcode: \"\(code)\" found." = "Barcode: \"\(code)\" found.";
+"Barcode:" = "Barcode:";
+" found." = " found.";
 
 "Do you want to add this product to your current order?" = "Do you want to add this product to your current order?";
 

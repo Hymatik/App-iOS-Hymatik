@@ -29,13 +29,13 @@ struct CustomerList: View {
             }
             HStack {
                 NavigationLink(destination: CreateCustomer()) {
-                    Text("Create new Customer")
+                    Text(NSLocalizedString("Create new Customer", comment: ""))
                 }
                 
             }
             
         }
-        .navigationBarTitle(Text("Customer list"))
+        .navigationBarTitle(Text(NSLocalizedString("Customer list", comment: "")))
     }
 }
 
@@ -53,7 +53,7 @@ private struct CustomerRow: View {
                 
             }, label: {
                 HStack {
-                    Text("Choose").foregroundColor(.blue)
+                    Text(NSLocalizedString("Choose", comment: "")).foregroundColor(.blue)
                 }
             })
                 .buttonStyle(BorderlessButtonStyle())
