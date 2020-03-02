@@ -15,8 +15,7 @@ struct StartScreen: View {
                 Logo_Hymatic()
                     .padding(.trailing, 20)
                     .padding(.leading, 20)
-                Logo_ParkerStore()
-                    .frame(width: 200)
+                
         
                 List {
                     Section {
@@ -63,9 +62,13 @@ struct StartScreen: View {
                         }
                         
                     }
-                
+
                 }
                 .listStyle(GroupedListStyle())
+                
+                
+                Logo_ParkerStore()
+                .frame(width: 200)
             }
             .navigationBarTitle(NSLocalizedString("Menu", comment: ""))
         }

@@ -9,11 +9,22 @@
 import SwiftUI
 
 struct OrderList: View {
+    @EnvironmentObject var datahandler: Datahandler
+    @FetchRequest(
+        entity: Order.entity(),
+        sortDescriptors: []
+    ) var orders: FetchedResults<Order>
+    
+    @Environment(\.managedObjectContext) var context
+    
+    
     var body: some View {
         VStack {
-            List {
-                Text("")
-            }
+//            List {
+//                ForEach(orders, id: \.self) { order in
+////                    OrderRow(order: order)
+//                }
+//            }
             HStack {
                 NavigationLink(destination: CreateOrder()) {
                     Text(NSLocalizedString("Create new Order", comment: ""))
@@ -25,6 +36,13 @@ struct OrderList: View {
         .navigationBarTitle(Text(NSLocalizedString("Order list", comment: "")))
     }
 }
+
+//private struct OrderRow {
+//    @ObservedObject
+//    var body: some View {
+//        
+//    }
+//}
 
 struct OrderList_Previews: PreviewProvider {
     static var previews: some View {

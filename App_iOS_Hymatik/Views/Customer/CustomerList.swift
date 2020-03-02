@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CustomerList: View {
+    @EnvironmentObject var datahandler: Datahandler
     
     @FetchRequest(
          entity: Customer.entity(),
@@ -20,6 +21,7 @@ struct CustomerList: View {
     
     
     var body: some View {
+        
         
         VStack {
             List {

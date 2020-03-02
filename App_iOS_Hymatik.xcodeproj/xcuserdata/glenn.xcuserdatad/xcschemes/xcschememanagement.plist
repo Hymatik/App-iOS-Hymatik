@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>App_iOS_Hymatik 1.xcscheme_^#shared#^_</key>
+		<key>App_iOS_Hymatik.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>App_iOS_Hymatik 3.xcscheme_^#shared#^_</key>
+		<key>Danish.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>App_iOS_Hymatik.xcscheme_^#shared#^_</key>
+		<key>English.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
