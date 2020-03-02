@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Barcode" representedClassName="Barcode" syncable="YES" codeGenerationType="class">
+    <entity name="Barcode" representedClassName="Barcode" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="String"/>
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="items" inverseEntity="Order"/>
     </entity>
-    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+    <entity name="Customer" representedClassName="Customer" syncable="YES">
         <attribute name="customerNumber" attributeType="String"/>
         <attribute name="cvr" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -16,7 +16,7 @@
         <attribute name="nameMiddle" optional="YES" attributeType="String"/>
         <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="customer" inverseEntity="Order"/>
     </entity>
-    <entity name="Order" representedClassName=".Order" syncable="YES" codeGenerationType="class">
+    <entity name="Order" representedClassName=".Order" syncable="YES">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="sendMail" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

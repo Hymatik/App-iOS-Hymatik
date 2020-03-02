@@ -58,10 +58,10 @@
 
 // MARK: ViewOrder
 "Current Order" = "Vælgt Ordre";
-"No Customer" = "Ingen Kunde vælgt";
+"No Customer" = "Vælge Kunde";
 "Customer: " = "Kunde: ";
 "Order: " = "Ordre: ";
-"No Order" = "Ingen Ordre vælgt";
+"No Order" = "Gem eller vælge ordre";
 
 "Add Product" = "Tilføj Produkt";
 

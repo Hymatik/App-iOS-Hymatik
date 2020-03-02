@@ -34,6 +34,12 @@
 		2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167819D2403CD99005C1C55 /* AddressDetail.swift */; };
 		216781F12404165D005C1C55 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F02404165D005C1C55 /* ProductDetail.swift */; };
 		216781F424041976005C1C55 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F324041976005C1C55 /* Binding+Extension.swift */; };
+		21AA3C10240D47CF00DA60A9 /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0A240D47CF00DA60A9 /* Order+CoreDataClass.swift */; };
+		21AA3C11240D47CF00DA60A9 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0B240D47CF00DA60A9 /* Order+CoreDataProperties.swift */; };
+		21AA3C12240D47CF00DA60A9 /* Barcode+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0C240D47CF00DA60A9 /* Barcode+CoreDataClass.swift */; };
+		21AA3C13240D47CF00DA60A9 /* Barcode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0D240D47CF00DA60A9 /* Barcode+CoreDataProperties.swift */; };
+		21AA3C14240D47CF00DA60A9 /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0E240D47CF00DA60A9 /* Customer+CoreDataClass.swift */; };
+		21AA3C15240D47CF00DA60A9 /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0F240D47CF00DA60A9 /* Customer+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,12 @@
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
+		21AA3C0A240D47CF00DA60A9 /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
+		21AA3C0B240D47CF00DA60A9 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		21AA3C0C240D47CF00DA60A9 /* Barcode+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Barcode+CoreDataClass.swift"; sourceTree = "<group>"; };
+		21AA3C0D240D47CF00DA60A9 /* Barcode+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Barcode+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		21AA3C0E240D47CF00DA60A9 /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		21AA3C0F240D47CF00DA60A9 /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +155,7 @@
 		21538C9B23FE8EEB00FDA748 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				21AA3C16240D481D00DA60A9 /* Core Data */,
 				2161A94C2408F51100DD0DF5 /* MailContent.swift */,
 				21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */,
 			);
@@ -212,6 +225,19 @@
 				216781F324041976005C1C55 /* Binding+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		21AA3C16240D481D00DA60A9 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				21AA3C0A240D47CF00DA60A9 /* Order+CoreDataClass.swift */,
+				21AA3C0B240D47CF00DA60A9 /* Order+CoreDataProperties.swift */,
+				21AA3C0C240D47CF00DA60A9 /* Barcode+CoreDataClass.swift */,
+				21AA3C0D240D47CF00DA60A9 /* Barcode+CoreDataProperties.swift */,
+				21AA3C0E240D47CF00DA60A9 /* Customer+CoreDataClass.swift */,
+				21AA3C0F240D47CF00DA60A9 /* Customer+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +317,7 @@
 				2120B51923FECF9D0013DD5C /* CustomerDetails.swift in Sources */,
 				2161A9452407E20600DD0DF5 /* CreateNewCustomer.swift in Sources */,
 				2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */,
+				21AA3C10240D47CF00DA60A9 /* Order+CoreDataClass.swift in Sources */,
 				2120B52B23FFCDF00013DD5C /* ShowWebsite.swift in Sources */,
 				21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */,
 				2161A94B2408F07400DD0DF5 /* SendMail.swift in Sources */,
@@ -299,10 +326,15 @@
 				21538CA023FE8FC100FDA748 /* SharedElements.swift in Sources */,
 				216781F424041976005C1C55 /* Binding+Extension.swift in Sources */,
 				21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */,
+				21AA3C14240D47CF00DA60A9 /* Customer+CoreDataClass.swift in Sources */,
 				21538CA323FE925700FDA748 /* ViewOrder.swift in Sources */,
+				21AA3C13240D47CF00DA60A9 /* Barcode+CoreDataProperties.swift in Sources */,
+				21AA3C15240D47CF00DA60A9 /* Customer+CoreDataProperties.swift in Sources */,
 				2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */,
 				2120B51D23FED5560013DD5C /* OrderList.swift in Sources */,
+				21AA3C12240D47CF00DA60A9 /* Barcode+CoreDataClass.swift in Sources */,
 				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
+				21AA3C11240D47CF00DA60A9 /* Order+CoreDataProperties.swift in Sources */,
 				2161A95324090B6300DD0DF5 /* GeneratePDF.swift in Sources */,
 				2161A94F2408F65600DD0DF5 /* ShowMail.swift in Sources */,
 				2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */,
