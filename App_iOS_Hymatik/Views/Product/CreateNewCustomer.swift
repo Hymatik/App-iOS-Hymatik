@@ -20,28 +20,28 @@ struct CreateNewProduct: View {
     
     var body: some View {
         VStack {
-            Text("Produkt information")
+            Text(NSLocalizedString("Product information", comment: ""))
             HStack {
-                Text("Stregcode: ")
+                Text(NSLocalizedString("Barcode: ", comment: ""))
                 Spacer()
-                TextField("Stregcode", text: $code)
+                TextField(NSLocalizedString("Barcode: ", comment: ""), text: $code)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
             }
             HStack {
-                Text("Antal: ")
+                Text(NSLocalizedString("Amount: ", comment: ""))
                 Spacer()
-                TextField("Antal", text: $amount)
+                TextField(NSLocalizedString("Amount: ", comment: ""), text: $amount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
             }
             HStack{
-                Button("Tilbage") {
+                Button(NSLocalizedString("Back", comment: "")) {
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Gem"){
+                Button(NSLocalizedString("Save", comment: "")){
                     self.datahandler.saveBarcode(code: self.code, amount: self.amount)
                     self.presentationMode.wrappedValue.dismiss()
                 }

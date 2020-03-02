@@ -9,11 +9,44 @@
 import SwiftUI
 
 struct CreateOrder: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var datahandler: Datahandler
+    @State var orderName = ""
+    
+    @Environment(\.managedObjectContext) var context
+
+    
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            TextField("Name your Order", text: $orderName)
+            
+            HStack {
+                Spacer()
+                Button(NSLocalizedString("Back", comment: "")) {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                Spacer()
+                Button(NSLocalizedString("Save", comment: "")) {
+                    
+                    self.saveOrder()
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                Spacer()
+                
+            }
         }
-    .navigationBarTitle(Text("Opret Ordre"))
+        .navigationBarTitle(Text(NSLocalizedString("Create Order", comment: "")))
+    }
+    
+    func saveOrder() {
+        let newOrder = Order(context: context)
+        newOrder.name = orderName
+        newOrder.id = UUID()
+        newOrder.sendMail = false
+        newOrder.items = []
+        newOrder.customer = datahandler.currentCustomer
+        
+        try? context.save()
     }
 }
 

@@ -14,6 +14,8 @@ import SwiftUI
 
 class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
+    // MARK: Displayed Text
+
     
     
     // Those types are the barcodes the video is checked for.
@@ -24,7 +26,8 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     //Saves found barcodes as products in the database.
     //Used in found()
-    @EnvironmentObject var datahandler: Datahandler
+   var datahandler = Datahandler()
+
     
     
     // MARK: View Handler
@@ -65,12 +68,20 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     // When a barcode is found, it will show a alert box so the user can choose to either save the product or not.
     func found(code: String) {
-        let alert = UIAlertController(title: "Barcode: \"\(code)\" fundet.", message: "Vil du tilføj produktet til din ordre?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ja, tak.", style: .default, handler: { (action) in
+        let barcodeFound1: String = NSLocalizedString("Barcode:", comment: "This tells the user that the app has found a Barcode")
+        
+        let barcodeFound2: String = NSLocalizedString(" found.", comment: "The whole Sentence is Barcode X found. This is the second part.")
+        
+        let addBarcodeToOrderlist: String = NSLocalizedString("Do you want to add this product to your current order?", comment: "Asking if the user wants to add the found barcode to the orderlist")
+        
+        
+        let alert = UIAlertController(title: barcodeFound1 + code + barcodeFound2, message: addBarcodeToOrderlist , preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Yes, please.", comment: ""), style: .default, handler: { (action) in
             self.datahandler.saveBarcode(code: code, amount: "1")
             self.captureSession.startRunning()
         }))
-        alert.addAction(UIAlertAction(title: "Nej, ikke tilføj den.", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("No, thank you.", comment: ""), style: .default, handler: { (action) in
             self.captureSession.startRunning()
         }))
         self.present(alert, animated: true, completion: nil)
@@ -78,8 +89,8 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     // When it failes to start the camera up
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        let ac = UIAlertController(title: NSLocalizedString("Scanning not supported", comment: ""), message: NSLocalizedString("Error: Couldn't scan", comment: ""), preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default))
         present(ac, animated: true)
         captureSession = nil
     }

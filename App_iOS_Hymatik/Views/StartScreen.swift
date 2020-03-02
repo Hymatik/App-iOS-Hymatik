@@ -12,58 +12,65 @@ struct StartScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-                Logo()
+                Logo_Hymatic()
+                    .padding(.trailing, 20)
+                    .padding(.leading, 20)
+                
         
                 List {
                     Section {
                     
                         NavigationLink(destination: ViewOrder()) {
-                            Text("Order")
+                            Text(NSLocalizedString("Order", comment: ""))
                         }
                     }
                     Section {
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/alle-produkter/g/3457")) {
-                            Text("Webshop")
+                                Text(NSLocalizedString("Webshop", comment: ""))
                         }
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/services")) {
-                            Text("Services")
+                                Text(NSLocalizedString("Services", comment: ""))
                         }
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/viden-data/produkter")) {
-                            Text("Produkter")
+                                Text(NSLocalizedString("Products", comment: ""))
                         }
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/viden-data/guides")) {
-                            Text("Guides")
+                                Text(NSLocalizedString("Guides", comment: ""))
                         }
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/viden-data/kataloger")) {
-                            Text("Kataloger")
+                                Text(NSLocalizedString("Catalogs", comment: ""))
                         }
                         NavigationLink(
                         destination: ShowWebsite(
                             urlString: "https://hymatik.com/om-os/om-hymatik")) {
-                            Text("Om Hymatik")
+                                Text(NSLocalizedString("About Hymatik", comment: ""))
                         }
                         NavigationLink(
                             destination: ShowWebsite(
                                 urlString: "https://hymatik.com/kontakt")) {
-                            Text("Kontakt os")
+                                    Text(NSLocalizedString("Contact us", comment: ""))
                         }
                         
                     }
-                
+
                 }
                 .listStyle(GroupedListStyle())
+                
+                
+                Logo_ParkerStore()
+                .frame(width: 200)
             }
-            .navigationBarTitle("Menu")
+            .navigationBarTitle(NSLocalizedString("Menu", comment: ""))
         }
     }
 }

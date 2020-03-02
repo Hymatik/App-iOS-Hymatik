@@ -24,28 +24,28 @@ struct CreateCustomer: View {
     
     var body: some View {
         VStack {
-            Text("Kunde information")
-            TextField("Kundenummer", text: $customerNumber)
+            Text(NSLocalizedString("Customer information", comment: ""))
+            TextField(NSLocalizedString("Customer number", comment: ""), text: $customerNumber)
                 .padding()
             VStack {
-                TextField("Firma navn", text: $nameCompany)
-                TextField("CVR nummer", text: $cvr)
+                TextField(NSLocalizedString("Company name", comment: ""), text: $nameCompany)
+                TextField(NSLocalizedString("CVR number", comment: ""), text: $cvr)
             }
             .padding()
             VStack {
-                TextField("Første navn", text: $nameFirst)
-                TextField("Mellem navn", text: $nameMiddle)
-                TextField("Familie navn", text: $nameLast)
+                TextField(NSLocalizedString("First name", comment: ""), text: $nameFirst)
+                TextField(NSLocalizedString("Middle name", comment: ""), text: $nameMiddle)
+                TextField(NSLocalizedString("Surname", comment: ""), text: $nameLast)
             }
             .padding()
             Spacer()
             HStack {
                 Spacer()
-                Button("Tilbage") {
+                Button(NSLocalizedString("Back", comment: "")) {
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("Gem") {
+                Button(NSLocalizedString("Save", comment: "")) {
                     self.saveCustomer()
                     self.presentationMode.wrappedValue.dismiss()
                 }
@@ -53,7 +53,7 @@ struct CreateCustomer: View {
                 
             }
         }
-        .navigationBarTitle(Text("Opret Kunde"))
+        .navigationBarTitle(Text(NSLocalizedString("Create new Customer", comment: "")))
     .padding()
     }
     

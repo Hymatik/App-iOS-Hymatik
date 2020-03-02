@@ -9,20 +9,60 @@
 import SwiftUI
 
 struct OrderList: View {
+    @EnvironmentObject var datahandler: Datahandler
+    @FetchRequest(
+        entity: Order.entity(),
+        sortDescriptors: []
+    ) var orders: FetchedResults<Order>
+    
+    @Environment(\.managedObjectContext) var context
+    
+    
     var body: some View {
         VStack {
             List {
-                Text("")
+                ForEach(orders, id: \.id) { order in
+                    OrderRow(order: order)
+                }
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        self.context.delete(self.orders[index])
+                        try? self.context.save()
+                    }
+                }
             }
             HStack {
                 NavigationLink(destination: CreateOrder()) {
-                    Text("Opret ny Ordre")
+                    Text(NSLocalizedString("Create new Order", comment: ""))
                 }
                 
             }
             
         }
-        .navigationBarTitle(Text("Ordre liste"))
+        .navigationBarTitle(Text(NSLocalizedString("Order list", comment: "")))
+    }
+}
+
+private struct OrderRow: View {
+    @EnvironmentObject var datahandler: Datahandler
+    @Environment(\.presentationMode) var presentationMode
+    
+    var order: Order
+    var body: some View {
+        HStack {
+            Button(action: {
+                self.datahandler.currentOrder = self.order
+                self.presentationMode.wrappedValue.dismiss()
+                
+            }, label: {
+                HStack {
+                    Text(NSLocalizedString("Choose", comment: "")).foregroundColor(.blue)
+                }
+            })
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(.horizontal, 20)
+            Text(order.name!)
+        }
     }
 }
 
@@ -31,3 +71,4 @@ struct OrderList_Previews: PreviewProvider {
         OrderList()
     }
 }
+

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CustomerList: View {
+    @EnvironmentObject var datahandler: Datahandler
     
     @FetchRequest(
          entity: Customer.entity(),
@@ -21,6 +22,7 @@ struct CustomerList: View {
     
     var body: some View {
         
+        
         VStack {
             List {
                 ForEach(customers, id: \.id) { customer in
@@ -29,13 +31,13 @@ struct CustomerList: View {
             }
             HStack {
                 NavigationLink(destination: CreateCustomer()) {
-                    Text("Opret ny kunde")
+                    Text(NSLocalizedString("Create new Customer", comment: ""))
                 }
                 
             }
             
         }
-        .navigationBarTitle(Text("Kunde liste"))
+        .navigationBarTitle(Text(NSLocalizedString("Customer list", comment: "")))
     }
 }
 
@@ -53,7 +55,7 @@ private struct CustomerRow: View {
                 
             }, label: {
                 HStack {
-                    Text("Vælge").foregroundColor(.blue)
+                    Text(NSLocalizedString("Choose", comment: "")).foregroundColor(.blue)
                 }
             })
                 .buttonStyle(BorderlessButtonStyle())
