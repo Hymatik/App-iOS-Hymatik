@@ -20,11 +20,17 @@ struct OrderList: View {
     
     var body: some View {
         VStack {
-//            List {
-//                ForEach(orders, id: \.self) { order in
-////                    OrderRow(order: order)
-//                }
-//            }
+            List {
+                ForEach(orders, id: \.id) { order in
+                    OrderRow(order: order)
+                }
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        self.context.delete(self.orders[index])
+                        try? self.context.save()
+                    }
+                }
+            }
             HStack {
                 NavigationLink(destination: CreateOrder()) {
                     Text(NSLocalizedString("Create new Order", comment: ""))
@@ -37,15 +43,32 @@ struct OrderList: View {
     }
 }
 
-//private struct OrderRow {
-//    @ObservedObject
-//    var body: some View {
-//        
-//    }
-//}
+private struct OrderRow: View {
+    @EnvironmentObject var datahandler: Datahandler
+    @Environment(\.presentationMode) var presentationMode
+    
+    var order: Order
+    var body: some View {
+        HStack {
+            Button(action: {
+                self.datahandler.currentOrder = self.order
+                self.presentationMode.wrappedValue.dismiss()
+                
+            }, label: {
+                HStack {
+                    Text(NSLocalizedString("Choose", comment: "")).foregroundColor(.blue)
+                }
+            })
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(.horizontal, 20)
+            Text(order.name!)
+        }
+    }
+}
 
 struct OrderList_Previews: PreviewProvider {
     static var previews: some View {
         OrderList()
     }
 }
+

@@ -16,7 +16,7 @@
         <attribute name="nameMiddle" optional="YES" attributeType="String"/>
         <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="customer" inverseEntity="Order"/>
     </entity>
-    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
+    <entity name="Order" representedClassName=".Order" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="sendMail" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

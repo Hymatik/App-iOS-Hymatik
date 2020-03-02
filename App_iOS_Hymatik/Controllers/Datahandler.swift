@@ -14,6 +14,7 @@ class Datahandler: ObservableObject {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @Published var currentCustomer: Customer?
+    @Published var currentOrder: Order?
     
     func saveOrder(order: Order) {
         let newOrder = Order(context: context)

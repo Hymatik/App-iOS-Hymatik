@@ -44,14 +44,13 @@ struct ViewOrder: View {
 
 private struct CustomerSelection: View {
     @EnvironmentObject var datahandler: Datahandler
-    private let noCustomer = NSLocalizedString("No Customer", comment: "")
     
     var body: some View {
         VStack {
             HStack {
                 Text(NSLocalizedString("Customer: ", comment: ""))
                 NavigationLink(destination: CustomerList()) {
-                    Text("\(datahandler.currentCustomer?.nameCompany ?? noCustomer)")
+                    Text("\(datahandler.currentCustomer?.nameCompany ?? NSLocalizedString("No Customer", comment: ""))")
                 }
             }
             .padding()
@@ -63,12 +62,14 @@ private struct CustomerSelection: View {
 //MARK: Sections of Main View
 
 private struct OrderSelection: View {
+    @EnvironmentObject var datahandler: Datahandler
+    
     var body: some View {
         VStack {
             HStack {
                 Text(NSLocalizedString("Order: ", comment: ""))
                 NavigationLink(destination: OrderList()) {
-                    Text(NSLocalizedString("No Order", comment: ""))
+                    Text("\(datahandler.currentOrder?.name ?? NSLocalizedString("No Order", comment: ""))")
                 }
             }
             .padding()
