@@ -6,7 +6,7 @@
   Copyright © 2020 Hymatik. All rights reserved.
 */
 
-//General Navigation and Buttons
+// MARK: General Navigation and Buttons
 "Back" = "Tilbage";
 "Save" = "Gem";
 "Choose" = "Vælge";
@@ -15,12 +15,12 @@
 "Delete" = "Slet";
 "Send" = "Send";
 
-// Error Handling
+// MARK: Error Handling
 "Hello, World!" = "Fejl: Ingen Text fundet!";
 "Error: Couldn't scan" = "Din maskine understøtter ikke scanning af stregkoder";
 "Scanning not supported" = "Scanning af stregkoder ikke understøttet";
 
-//StartScreen
+// MARK: StartScreen
 "Order" = "Ordre";
 "Webshop" = "Webshop";
 "Services" = "Services";
@@ -34,18 +34,18 @@
 
 
 
-//ProductDetail, CreateNewCustomer, AmountChooser, Create Customer
+// MARK: ProductDetail, CreateNewCustomer, AmountChooser, Create Customer
 "Product information" = "Produkt information";
 "Barcode: " = "Stregkode: ";
 "Amount: " = "Antal: ";
 
 
-//CustomerList
+// MARK: CustomerList
 "Create new Customer" = "Opret ny Kunde";
 "Customer list" = "Kunde liste";
 
 
-//CreateCustomer, CustomerDetails
+// MARK: CreateCustomer, CustomerDetails
 "Customer information" = "Kunde information";
 "Customer number" = "Kunde nummer";
 "Company name" = "Firme navn";
@@ -56,7 +56,7 @@
 "Surname" = "Familie navn";
 
 
-// ViewOrder
+// MARK: ViewOrder
 "Current Order" = "Vælgt Ordre";
 "No Customer" = "Ingen Kunde vælgt";
 "Customer: " = "Kunde: ";
@@ -66,25 +66,25 @@
 "Add Product" = "Tilføj Produkt";
 
 
-// Create Order
+// MARK: Create Order
 "Create Order" = "Opret Ordre";
 
-// Order List
+// MARK: Order List
 "Order list" = "Ordre liste";
 "Create new Order" = "Opret ny Ordre";
 
 
-// Show Scanner
+// MARK: Show Scanner
 "Scanner" = "Scanner";
 
-// ShowMail
+// MARK: ShowMail
 "Result: \(String(describing: result))" = "Resultat: \(String(describing: result))";
 "Error: Can't SendMail" = "Fejl: Denne maskine kan ikke sende emails. Sandsynlighvis har du ikke oprettet en mail account i indstillinger af din telefon";
 
-// ShowWebsite
+// MARK: ShowWebsite
 "https://hymatik.com" = "https://hymatik.com";
 
-//Scanner
+// MARK: Scanner
 "Barcode: \"\(code)\" found." = "Stregkode: \"\(code)\" fundet.";
 
 "Do you want to add this product to your current order?" = "Vil du tilføje dette product til din nuværende Ordre?";

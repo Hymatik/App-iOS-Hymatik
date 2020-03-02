@@ -10,7 +10,7 @@ import SwiftUI
 
 
 
-
+// MARK: Main View
 
 // Shows the current order with the current Customer, Order and all the items
 // The user can click on the customer to select or create a different user
@@ -59,6 +59,8 @@ private struct CustomerSelection: View {
         }
     }
 }
+
+//MARK: Sections of Main View
 
 private struct OrderSelection: View {
     var body: some View {
@@ -174,6 +176,8 @@ private struct OptionButtons: View {
         
     }
 }
+
+// MARK: Debug
 
 struct ViewOrder_Previews: PreviewProvider {
     static var previews: some View {

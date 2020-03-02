@@ -25,7 +25,8 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     //Saves found barcodes as products in the database.
     //Used in found()
-    @EnvironmentObject var datahandler: Datahandler
+   var datahandler = Datahandler()
+
     
     
     // MARK: View Handler

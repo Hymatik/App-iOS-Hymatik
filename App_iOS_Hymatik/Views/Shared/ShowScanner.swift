@@ -9,18 +9,19 @@
 import SwiftUI
 
 struct ShowScanner: View {
+    @EnvironmentObject var datahandler: Datahandler
     
     
     var body: some View {
         VStack {
-            ScannerToView()
+            ScannerToView().environmentObject(datahandler)
         }
     .navigationBarTitle(Text("Scanner"))
     }
 }
 
 private struct ScannerToView: UIViewControllerRepresentable {
-
+    //@EnvironmentObject var datahandler: Datahandler
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerToView>) -> Scanner {
         let scanner = Scanner()

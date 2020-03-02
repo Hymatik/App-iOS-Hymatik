@@ -6,7 +6,7 @@
   Copyright © 2020 Hymatik. All rights reserved.
 */
 
-//General Navigation and Buttons
+// MARK: General Navigation and Buttons
 "Back" = "Back";
 "Save" = "Save";
 "Choose" = "Choose";
@@ -15,12 +15,12 @@
 "Delete" = "Delete";
 "Send" = "Send";
 
-// Error Handling
+// MARK: Error Handling
 "Hello, World!" = "Error: No Text found!";
 "Error: Couldn't scan" = "Your device does not support scanning a code from an item. Please use a device with a camera.";
 "Scanning not supported" = "Scanning not supported";
 
-//StartScreen
+// MARK: StartScreen
 "Order" = "Order";
 "Webshop" = "Webshop";
 "Services" = "Services";
@@ -34,18 +34,18 @@
 
 
 
-//ProductDetail, CreateNewCustomer, AmountChooser, Create Customer
+// MARK: ProductDetail, CreateNewCustomer, AmountChooser, Create Customer
 "Product information" = "Product information";
 "Barcode: " = "Barcode: ";
 "Amount: " = "Amount: ";
 
 
-//CustomerList
+// MARK: CustomerList
 "Create new Customer" = "Create new Customer";
 "Customer list" = "Customer list";
 
 
-//CreateCustomer, CustomerDetails
+// MARK: CreateCustomer, CustomerDetails
 "Customer information" = "Customer information";
 "Customer number" = "Customer number";
 "Company name" = "Company name";
@@ -56,7 +56,7 @@
 "Surname" = "Surname";
 
 
-// ViewOrder
+// MARK: ViewOrder
 "Current Order" = "Current Order";
 "No Customer" = "No Customer";
 "Customer: " = "Customer: ";
@@ -65,28 +65,30 @@
 
 "Add Product" = "Add Product";
 
-// Create Order
+// MARK: Create Order
 "Create Order" = "Create Order";
 
-// Order List
+// MARK: Order List
 "Order list" = "Order list";
 "Create new Order" = "Create new Order";
 
 
-// Show Scanner
+// MARK: Show Scanner
 "Scanner" = "Scanner";
 
 // ShowMail
 "Result: \(String(describing: result))" = "Result: \(String(describing: result))";
 "Error: Can't SendMail" = "Error: Can't SendMail";
 
-// ShowWebsite
+// MARK: ShowWebsite
 "https://hymatik.com" = "https://hymatik.com";
 
-//Scanner
+// MARK: Scanner
 "Barcode: \"\(code)\" found." = "Barcode: \"\(code)\" found.";
 
 "Do you want to add this product to your current order?" = "Do you want to add this product to your current order?";
 
 "Yes, please." = "Yes, please.";
 "No, thank you." = "No, thank you.";
+
+
