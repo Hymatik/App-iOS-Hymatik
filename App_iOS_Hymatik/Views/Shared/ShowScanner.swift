@@ -14,8 +14,14 @@ struct ShowScanner: View {
     
     var body: some View {
         VStack {
+            Spacer()
+                .frame(height: 150)
+            SectionDivider()
             ScannerToView().environmentObject(datahandler)
+                
+            SectionDivider()
         }
+        .edgesIgnoringSafeArea(.top)
         .navigationBarTitle(Text(NSLocalizedString("Scanner", comment: "")))
     }
 }

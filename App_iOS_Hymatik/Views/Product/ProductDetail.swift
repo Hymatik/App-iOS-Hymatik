@@ -20,6 +20,8 @@ struct ProductDetail: View {
     var body: some View {
         VStack {
             SectionDivider()
+            Spacer()
+            
             HStack {
                 Text(NSLocalizedString("Barcode: ", comment: ""))
                 Spacer()

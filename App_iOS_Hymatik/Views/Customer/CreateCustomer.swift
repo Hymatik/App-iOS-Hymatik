@@ -26,7 +26,7 @@ struct CreateCustomer: View {
         VStack {
             SectionDivider()
             Spacer()
-            Text(NSLocalizedString("Customer information", comment: ""))
+            
             TextField(NSLocalizedString("Customer number", comment: ""), text: $customerNumber)
                 .padding()
             VStack {

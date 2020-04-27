@@ -16,11 +16,22 @@ struct SectionDivider: View {
     }
 }
 
+
 struct Logo_Hymatic: View {
+    @Environment(\.colorScheme) var colorScheme
+    
+    @ViewBuilder
     var body: some View {
-        Image("Hymatic-secondary-slogan-2500")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        
+        if (colorScheme == .dark) {
+            Image("Hymatic-secondary-slogan-hvid-2500")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        } else {
+            Image("Hymatic-secondary-slogan-2500")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            }
     }
 }
 

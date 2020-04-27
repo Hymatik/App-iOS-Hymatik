@@ -17,7 +17,6 @@ struct CustomerDetails: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
-            Text(NSLocalizedString("Customer information", comment: ""))
             TextField(NSLocalizedString("Customer number", comment: ""), text: Binding($customer.customerNumber, ""))
                 .padding()
             VStack {
