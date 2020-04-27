@@ -20,6 +20,9 @@ struct ShowMail: View {
 
     @EnvironmentObject var datahandler: Datahandler
     
+    var content: MailContent { createMailContent(barcodes: barcodes)
+    }
+    
     var body: some View {
         ZStack {
             VStack {
@@ -27,26 +30,39 @@ struct ShowMail: View {
                     Text("Result: " + String(describing: result))
                     .lineLimit(nil)
                 } else {
-//                    content = createMailContent(barcodes: barcodes)
-                    mailView(content: createMailContent(barcodes: barcodes))
+                    mailView(content: content)
                 }
             }
         }
     }
     
+    
     private func createMailContent(barcodes: FetchedResults<Barcode>) -> MailContent {
         
-        //let customer = datahandler.currentCustomer
-        let content = MailContent(barcodes: barcodes)
-        
-        
-        return content
+        if (checkIfCustomerAndOrderIsChoosen()) {
+            let content = MailContent(
+                       barcodes: barcodes,
+                       customer: datahandler.currentCustomer!,
+                       order: datahandler.currentOrder!)
+                   
+                   return content
+        } else {
+            //Make Alert!
+            return MailContent(barcodes: barcodes, customer: Customer(), order: Order())
+        }
+       
     }
 
     private func mailView(content: MailContent) -> some View {
         MFMailComposeViewController.canSendMail() ?
             AnyView(SendMail(content: content, isShowing: $isShowingMailView, result: $result)) :
             AnyView(Text(NSLocalizedString("Error: Can't SendMail", comment: "")))
+    }
+    
+    private func checkIfCustomerAndOrderIsChoosen() -> Bool {
+        
+        return false
+    
     }
 }
 

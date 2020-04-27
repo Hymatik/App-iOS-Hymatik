@@ -18,11 +18,8 @@ struct StartScreen: View {
                 
         
                 List {
-                    Section {
-                    
-                        NavigationLink(destination: ViewOrder()) {
-                            Text(NSLocalizedString("Order", comment: ""))
-                        }
+                    NavigationLink(destination: ViewOrder()) {
+                        Text(NSLocalizedString("Order", comment: ""))
                     }
                     Section {
                         NavigationLink(
@@ -32,36 +29,27 @@ struct StartScreen: View {
                         }
                         NavigationLink(
                         destination: ShowWebsite(
-                            urlString: "https://hymatik.com/services")) {
-                                Text(NSLocalizedString("Services", comment: ""))
-                        }
-                        NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/viden-data/produkter")) {
-                                Text(NSLocalizedString("Products", comment: ""))
-                        }
-                        NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/viden-data/guides")) {
-                                Text(NSLocalizedString("Guides", comment: ""))
-                        }
-                        NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/viden-data/kataloger")) {
-                                Text(NSLocalizedString("Catalogs", comment: ""))
-                        }
-                        NavigationLink(
-                        destination: ShowWebsite(
                             urlString: "https://hymatik.com/om-os/om-hymatik")) {
                                 Text(NSLocalizedString("About Hymatik", comment: ""))
                         }
                         NavigationLink(
-                            destination: ShowWebsite(
-                                urlString: "https://hymatik.com/kontakt")) {
-                                    Text(NSLocalizedString("Contact us", comment: ""))
+                        destination: ShowWebsite(
+                            urlString: "https://hymatik.com/kontakt")) {
+                                Text(NSLocalizedString("Contact and find us", comment: ""))
                         }
+                       
                         
                     }
+                    Section {
+                        NavigationLink(destination: Feedback()) {
+                            Text(NSLocalizedString("Feedback", comment: ""))
+                        }
+                        NavigationLink(destination: Settings()) {
+                            Text(NSLocalizedString("Settings", comment: ""))
+                        }
+                        Button(NSLocalizedString("Logout", comment: "")) {
+                            self.logout()
+                        }                    }
 
                 }
                 .listStyle(GroupedListStyle())
@@ -72,6 +60,10 @@ struct StartScreen: View {
             }
             .navigationBarTitle(NSLocalizedString("Menu", comment: ""))
         }
+    }
+    
+    func logout() {
+        //  TODO: Implement
     }
 }
 

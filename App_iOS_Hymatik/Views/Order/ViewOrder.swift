@@ -42,6 +42,8 @@ struct ViewOrder: View {
     }
 }
 
+//MARK: Sections of Main View
+
 private struct CustomerSelection: View {
     @EnvironmentObject var datahandler: Datahandler
     
@@ -59,7 +61,7 @@ private struct CustomerSelection: View {
     }
 }
 
-//MARK: Sections of Main View
+
 
 private struct OrderSelection: View {
     @EnvironmentObject var datahandler: Datahandler
@@ -69,7 +71,7 @@ private struct OrderSelection: View {
             HStack {
                 Text(NSLocalizedString("Order: ", comment: ""))
                 NavigationLink(destination: OrderList()) {
-                    Text("\(datahandler.currentOrder?.name ?? NSLocalizedString("No Order", comment: ""))")
+                    Text("\(datahandler.currentOrder?.name ?? NSLocalizedString("Not Saved", comment: ""))")
                 }
             }
             .padding()
@@ -116,10 +118,13 @@ private struct BarcodeRow: View {
     var body: some View {
         ZStack {
             if (isAmountChooserPresented) {
+                
                 HStack {
                     Spacer()
                     Button(NSLocalizedString("Back", comment: "")){
-                        self.isAmountChooserPresented.toggle()
+                        withAnimation {
+                            self.isAmountChooserPresented.toggle()
+                        }
                     }
                     .buttonStyle(BorderlessButtonStyle())
                     
@@ -132,23 +137,33 @@ private struct BarcodeRow: View {
                 
                     Button(NSLocalizedString("Save", comment: "")) {
                         self.datahandler.editBarcode(barcode: self.barcode)
-                        self.isAmountChooserPresented.toggle()
+                        withAnimation {
+                            self.isAmountChooserPresented.toggle()
+                        }
                     }
                 .buttonStyle(BorderlessButtonStyle())
                 }
-            } else {
+                .transition(.asymmetric(insertion: AnyTransition.opacity.combined(with: .move(edge: .trailing)), removal: .move(edge: .trailing)))
+            }
+            
+            
+            else {
                 NavigationLink(destination: ProductDetail(barcode: barcode)) {
                     Text(barcode.code ?? NSLocalizedString("Error: No Barcode found!", comment: ""))
                     Spacer()
                     ZStack {
                         Button(barcode.amount ?? "1") {
-                            self.isAmountChooserPresented.toggle()
+                            withAnimation{
+                                self.isAmountChooserPresented.toggle()
+                            }
                         }
                     }
                     .buttonStyle(BorderlessButtonStyle())
                 }
             }
         }
+
+
     }
 }
 

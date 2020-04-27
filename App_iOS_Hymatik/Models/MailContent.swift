@@ -12,17 +12,28 @@ import SwiftUI
 
 class MailContent {
     
+    init(barcodes: FetchedResults<Barcode>,
+         customer: Customer,
+         order: Order) {
+        self.barcodes = barcodes
+        self.customer = customer
+        self.order = order
+    }
+        
     let recipients = ["GlennD@me.com"]
-    let subject = "eMail Subject"
+    let subject = "App Order"
     var fileData: Data?
     
-    var body = "eMail Body"
+    let body = "eMail Body"
 
-    var barcodes: FetchedResults<Barcode>
+    let barcodes: FetchedResults<Barcode>
     
-    init(barcodes: FetchedResults<Barcode>) {
-        self.barcodes = barcodes
-    }
+    let customer: Customer
+    let order: Order
+    
+    
+        
+    
     
     func generateFileData() {
         

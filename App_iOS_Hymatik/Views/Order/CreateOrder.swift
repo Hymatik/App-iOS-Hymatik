@@ -35,6 +35,7 @@ struct CreateOrder: View {
                 
             }
         }
+        .padding()
         .navigationBarTitle(Text(NSLocalizedString("Create Order", comment: "")))
     }
     

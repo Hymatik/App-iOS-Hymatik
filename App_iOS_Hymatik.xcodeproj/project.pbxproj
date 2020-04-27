@@ -13,6 +13,7 @@
 		2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51A23FED5350013DD5C /* CreateOrder.swift */; };
 		2120B51D23FED5560013DD5C /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B51C23FED5560013DD5C /* OrderList.swift */; };
 		2120B52B23FFCDF00013DD5C /* ShowWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */; };
+		212C285C2456ACA8002CAE8D /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C285B2456ACA8002CAE8D /* Feedback.swift */; };
 		21538C8523FE895100FDA748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8423FE895100FDA748 /* AppDelegate.swift */; };
 		21538C8723FE895100FDA748 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8623FE895100FDA748 /* SceneDelegate.swift */; };
 		21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21538C8823FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 		2167819E2403CD99005C1C55 /* AddressDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167819D2403CD99005C1C55 /* AddressDetail.swift */; };
 		216781F12404165D005C1C55 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F02404165D005C1C55 /* ProductDetail.swift */; };
 		216781F424041976005C1C55 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216781F324041976005C1C55 /* Binding+Extension.swift */; };
+		2180460924242DF200079582 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180460824242DF200079582 /* Settings.swift */; };
 		21AA3C10240D47CF00DA60A9 /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0A240D47CF00DA60A9 /* Order+CoreDataClass.swift */; };
 		21AA3C11240D47CF00DA60A9 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0B240D47CF00DA60A9 /* Order+CoreDataProperties.swift */; };
 		21AA3C12240D47CF00DA60A9 /* Barcode+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA3C0C240D47CF00DA60A9 /* Barcode+CoreDataClass.swift */; };
@@ -49,6 +51,7 @@
 		2120B51A23FED5350013DD5C /* CreateOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrder.swift; sourceTree = "<group>"; };
 		2120B51C23FED5560013DD5C /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
 		2120B52A23FFCDF00013DD5C /* ShowWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWebsite.swift; sourceTree = "<group>"; };
+		212C285B2456ACA8002CAE8D /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		21538C8123FE895100FDA748 /* Hymatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21538C8423FE895100FDA748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21538C8623FE895100FDA748 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		2167819D2403CD99005C1C55 /* AddressDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetail.swift; sourceTree = "<group>"; };
 		216781F02404165D005C1C55 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		216781F324041976005C1C55 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
+		2180460824242DF200079582 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		21AA3C0A240D47CF00DA60A9 /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
 		21AA3C0B240D47CF00DA60A9 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		21AA3C0C240D47CF00DA60A9 /* Barcode+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Barcode+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -165,11 +169,12 @@
 		21538C9C23FE8EF500FDA748 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21538C8B23FE895100FDA748 /* StartScreen.swift */,
+				2180460724242DAE00079582 /* Account */,
 				2120B51E23FFB82B0013DD5C /* Product */,
 				2120B51323FECE800013DD5C /* Customer */,
 				21538CA123FE924A00FDA748 /* Order */,
 				21538C9E23FE8FA900FDA748 /* Shared */,
-				21538C8B23FE895100FDA748 /* StartScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +230,15 @@
 				216781F324041976005C1C55 /* Binding+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2180460724242DAE00079582 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2180460824242DF200079582 /* Settings.swift */,
+				212C285B2456ACA8002CAE8D /* Feedback.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		21AA3C16240D481D00DA60A9 /* Core Data */ = {
@@ -336,7 +350,9 @@
 				21538CAB23FE964F00FDA748 /* Datahandler.swift in Sources */,
 				21AA3C11240D47CF00DA60A9 /* Order+CoreDataProperties.swift in Sources */,
 				2161A95324090B6300DD0DF5 /* GeneratePDF.swift in Sources */,
+				212C285C2456ACA8002CAE8D /* Feedback.swift in Sources */,
 				2161A94F2408F65600DD0DF5 /* ShowMail.swift in Sources */,
+				2180460924242DF200079582 /* Settings.swift in Sources */,
 				2120B51523FECE9B0013DD5C /* CustomerList.swift in Sources */,
 				2161A94D2408F51100DD0DF5 /* MailContent.swift in Sources */,
 				21538C8C23FE895100FDA748 /* StartScreen.swift in Sources */,

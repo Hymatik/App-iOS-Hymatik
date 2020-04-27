@@ -12,6 +12,7 @@ import MessageUI
 
 struct SendMail: UIViewControllerRepresentable {
     let content: MailContent
+    
 
     @Binding var isShowing: Bool
     @Binding var result: Result<MFMailComposeResult, Error>?
@@ -50,15 +51,38 @@ struct SendMail: UIViewControllerRepresentable {
         let vc = MFMailComposeViewController()
         vc.setToRecipients(content.recipients)
         vc.setSubject(content.subject)
-        vc.setMessageBody(content.body, isHTML: true)
+        vc.setMessageBody(makeMailBody(content: content), isHTML: false)
         
         vc.mailComposeDelegate = context.coordinator
         return vc
     }
 
-    func updateUIViewController(_ uiViewController: MFMailComposeViewController,
-                                context: UIViewControllerRepresentableContext<SendMail>) {
+    func updateUIViewController(
+        _ uiViewController: MFMailComposeViewController,
+        context: UIViewControllerRepresentableContext<SendMail>) {
 
+    }
+    
+    func makeMailBody(content: MailContent) -> String {
+        
+        var body = ""
+        let languageUsed = Locale.preferredLanguages[0]
+        
+        if (languageUsed == "da") {
+            body.append(
+                NSLocalizedString("Hello ", comment: "Hello person,"))
+            
+//            body.append(content.customer.nameFirst ?? "")
+//            body.append(" ")
+//            body.append(content.customer.nameLast ?? "")
+            body.append(",\n\n")
+            body.append("Next line.")
+        } else {
+            body = "This is the english body"
+            print(languageUsed)
+        }
+        
+        return NSLocalizedString(body, comment: "")
     }
 }
 //struct SendMail_Previews: PreviewProvider {

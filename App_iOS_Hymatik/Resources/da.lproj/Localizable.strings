@@ -29,6 +29,10 @@
 "Catalogs" = "Kataloger";
 "About Hymatik" = "Om Hymatik";
 "Contact us" = "Kontakt os";
+"Contact and find us" = "Kontakt og find os";
+"Feedback" = "Feedback";
+"Settings" = "Indstillinger";
+"Logout" = "Log af";
 
 "Menu" = "Menu";
 
@@ -61,7 +65,7 @@
 "No Customer" = "Vælge Kunde";
 "Customer: " = "Kunde: ";
 "Order: " = "Ordre: ";
-"No Order" = "Gem eller vælge ordre";
+"Not Saved" = "Ikke gemt";
 
 "Add Product" = "Tilføj Produkt";
 

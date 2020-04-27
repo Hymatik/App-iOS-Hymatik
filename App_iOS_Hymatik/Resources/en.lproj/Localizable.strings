@@ -29,6 +29,11 @@
 "Catalogs" = "Catalogs";
 "About Hymatik" = "About Hymatik";
 "Contact us" = "Contact us";
+"Contact and find us" = "Contact and find us";
+"Feedback" = "Feedback";
+"Settings" = "Settings";
+"Logout" = "Logout";
+
 
 "Menu" = "Menu";
 
@@ -61,7 +66,7 @@
 "No Customer" = "No Customer";
 "Customer: " = "Customer: ";
 "Order: " = "Order: ";
-"No Order" = "No Order";
+"Not Saved" = "Not Saved";
 
 "Add Product" = "Add Product";
 
