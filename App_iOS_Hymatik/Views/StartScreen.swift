@@ -16,7 +16,7 @@ struct StartScreen: View {
                     .padding(.trailing, 20)
                     .padding(.leading, 20)
                 
-        
+                SectionDivider()
                 List {
                     NavigationLink(destination: ViewOrder()) {
                         Text(NSLocalizedString("Order", comment: ""))
@@ -54,7 +54,7 @@ struct StartScreen: View {
                 }
                 .listStyle(GroupedListStyle())
                 
-                
+                SectionDivider()
                 Logo_ParkerStore()
                 .frame(width: 200)
             }

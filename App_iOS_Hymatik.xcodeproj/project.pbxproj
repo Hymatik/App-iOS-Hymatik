@@ -139,8 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				21538C9C23FE8EF500FDA748 /* Views */,
-				216781F224041961005C1C55 /* Extension */,
 				21538CA723FE960000FDA748 /* Controllers */,
+				216781F224041961005C1C55 /* Extension */,
 				21538C9D23FE8F0200FDA748 /* Resources */,
 				21538C9B23FE8EEB00FDA748 /* Models */,
 				21538C8F23FE895100FDA748 /* Preview Content */,
@@ -170,10 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				21538C8B23FE895100FDA748 /* StartScreen.swift */,
-				2180460724242DAE00079582 /* Account */,
+				21538CA123FE924A00FDA748 /* Order */,
 				2120B51E23FFB82B0013DD5C /* Product */,
 				2120B51323FECE800013DD5C /* Customer */,
-				21538CA123FE924A00FDA748 /* Order */,
+				2180460724242DAE00079582 /* Account */,
 				21538C9E23FE8FA900FDA748 /* Shared */,
 			);
 			path = Views;

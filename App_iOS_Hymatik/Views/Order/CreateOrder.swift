@@ -18,8 +18,11 @@ struct CreateOrder: View {
     
     var body: some View {
         VStack {
+            SectionDivider()
+            Spacer()
             TextField("Name your Order", text: $orderName)
-            
+            Spacer()
+            SectionDivider()
             HStack {
                 Spacer()
                 Button(NSLocalizedString("Back", comment: "")) {

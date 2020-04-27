@@ -20,7 +20,7 @@ struct CreateNewProduct: View {
     
     var body: some View {
         VStack {
-            Text(NSLocalizedString("Product information", comment: ""))
+            SectionDivider()
             HStack {
                 Text(NSLocalizedString("Barcode: ", comment: ""))
                 Spacer()
@@ -36,6 +36,9 @@ struct CreateNewProduct: View {
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
             }
+            Spacer()
+            SectionDivider()
+            
             HStack{
                 Button(NSLocalizedString("Back", comment: "")) {
                     self.presentationMode.wrappedValue.dismiss()
@@ -46,10 +49,10 @@ struct CreateNewProduct: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
-        Spacer()
         .padding()
         }
     .padding()
+    .navigationBarTitle(Text(NSLocalizedString("Product information", comment: "")))
     }
     
     

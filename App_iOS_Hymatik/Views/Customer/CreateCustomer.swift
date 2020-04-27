@@ -24,6 +24,8 @@ struct CreateCustomer: View {
     
     var body: some View {
         VStack {
+            SectionDivider()
+            Spacer()
             Text(NSLocalizedString("Customer information", comment: ""))
             TextField(NSLocalizedString("Customer number", comment: ""), text: $customerNumber)
                 .padding()
@@ -39,6 +41,7 @@ struct CreateCustomer: View {
             }
             .padding()
             Spacer()
+            SectionDivider()
             HStack {
                 Spacer()
                 Button(NSLocalizedString("Back", comment: "")) {

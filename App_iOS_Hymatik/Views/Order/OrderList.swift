@@ -20,6 +20,7 @@ struct OrderList: View {
     
     var body: some View {
         VStack {
+            SectionDivider()
             List {
                 ForEach(orders, id: \.id) { order in
                     OrderRow(order: order)
@@ -31,6 +32,7 @@ struct OrderList: View {
                     }
                 }
             }
+            SectionDivider()
             HStack {
                 NavigationLink(destination: CreateOrder()) {
                     Text(NSLocalizedString("Create new Order", comment: ""))
@@ -67,8 +69,10 @@ private struct OrderRow: View {
 }
 
 struct OrderList_Previews: PreviewProvider {
+    @EnvironmentObject var datahandler: Datahandler
+    @Environment(\.presentationMode) var presentationMode
     static var previews: some View {
-        OrderList()
+        OrderList().environmentObject(Datahandler())
     }
 }
 

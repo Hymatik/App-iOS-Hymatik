@@ -24,18 +24,16 @@ struct CustomerList: View {
         
         
         VStack {
+            SectionDivider()
             List {
                 ForEach(customers, id: \.id) { customer in
                     CustomerRow(customer: customer)
                 }
             }
-            HStack {
-                NavigationLink(destination: CreateCustomer()) {
-                    Text(NSLocalizedString("Create new Customer", comment: ""))
-                }
-                
+            SectionDivider()
+            NavigationLink(destination: CreateCustomer()) {
+                Text(NSLocalizedString("Create new Customer", comment: ""))
             }
-            
         }
         .navigationBarTitle(Text(NSLocalizedString("Customer list", comment: "")))
     }
