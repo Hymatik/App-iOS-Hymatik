@@ -117,7 +117,9 @@ struct SendMail: UIViewControllerRepresentable {
         vc.setToRecipients(content.recipients)
         vc.setSubject(content.subject)
         vc.setMessageBody(content.body, isHTML: false)
-        
+        if (content.fileData != nil) {
+            vc.addAttachmentData(content.fileData!, mimeType: "application/pdf", fileName: "ordre.pdf")
+        }
         vc.mailComposeDelegate = context.coordinator
         return vc
     }

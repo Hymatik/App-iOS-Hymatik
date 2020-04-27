@@ -91,7 +91,7 @@
 "Mail Order Intro Alert Description" = "Thank you for your order inquiry. \nPlease make sure you press the send button so we can process your inquiry and send you a confirmation to your email. \nYou can add a comment in the mail.";
 
 "Mail Order Comment" = "You can add a comment below this line: \n";
-"Mail Order Description" = "The following order will be send to Hymatic and you will receive a order confirmation: ";
+"Mail Order Description" = "The following order will be send to Hymatik and you will receive a order confirmation: ";
 
 
 // MARK: ShowWebsite

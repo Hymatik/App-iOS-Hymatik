@@ -91,7 +91,7 @@
 "Mail Order Intro Alert Description" = "Mange tak for dit order forspørgelse. \nNår du sender denne mail bearbejder vi den hurtigst muligt og sender en order bekræftelse tilbage. \nDu kan tilføj en komentar i denne mail.";
 
 "Mail Order Comment" = "Du kan tilføje en kommentar efter denne linje: \n";
-"Mail Order Description" = "Følgende order bliver sendt til Hymatic og du vil modtage en order bekræftelse: ";
+"Mail Order Description" = "Følgende order bliver sendt til Hymatik og du vil modtage en order bekræftelse: ";
 
 // MARK: ShowWebsite
 "https://hymatik.com" = "https://hymatik.com";
