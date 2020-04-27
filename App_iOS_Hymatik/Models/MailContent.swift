@@ -18,13 +18,14 @@ class MailContent {
         self.barcodes = barcodes
         self.customer = customer
         self.order = order
+        self.body = generateBody()
     }
         
     let recipients = ["GlennD@me.com"]
-    let subject = "App Order"
+    let subject = NSLocalizedString("Order inquiry", comment: "")
     var fileData: Data?
     
-    let body = "eMail Body"
+    var body = ""
 
     let barcodes: FetchedResults<Barcode>
     
@@ -32,7 +33,37 @@ class MailContent {
     let order: Order
     
     
+    // Generate the full mail Body
+    private func generateBody() -> String {
+        var tempBody = [String]()
         
+        tempBody.append(NSLocalizedString("Mail Order Comment", comment: "") + "\n\n")
+        
+        tempBody.append(NSLocalizedString("Mail Order Description", comment: "") + "\n\n")
+        tempBody.append(coreDataToString())
+        
+        return tempBody.joined()
+    }
+    
+    
+    // Generates the Order list
+    private func coreDataToString() -> String {
+        var fullText = [String]()
+        
+        fullText.append(NSLocalizedString("Products", comment: ""))
+        fullText.append("\t \t : \t \t")
+        fullText.append(NSLocalizedString("Amount", comment: ""))
+        fullText.append("\n")
+            
+        
+        for barcode in barcodes {
+            fullText.append(barcode.code ?? "  ")
+            fullText.append("\t \t : \t \t")
+            fullText.append(barcode.amount ?? "  ")
+            fullText.append("\n")
+        }
+        return fullText.joined()
+    }
     
     
     func generateFileData() {

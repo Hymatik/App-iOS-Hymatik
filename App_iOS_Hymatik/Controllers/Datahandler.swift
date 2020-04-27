@@ -16,6 +16,9 @@ class Datahandler: ObservableObject {
     @Published var currentCustomer: Customer?
     @Published var currentOrder: Order?
     
+    
+    //MARK: Manipulate Orders
+    
     func saveOrder(order: Order) {
         let newOrder = Order(context: context)
         newOrder.name = order.name
@@ -46,6 +49,9 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
     
+    
+    //MARK: Manipulate Cusotmers
+    
     func editCustomer(customer: Customer) {
         context.insert(customer)
         try? context.save()
@@ -74,6 +80,8 @@ class Datahandler: ObservableObject {
         }
     }
     
+    //MARK: Delete lists and orders
+    
     func emptyCurrentOrder(){
         // Initialize Fetch Request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Barcode")
@@ -96,7 +104,7 @@ class Datahandler: ObservableObject {
         }
     }
     
-    func batchDelteEntities(entityName: String){
+    func batchDeletEntities(entityName: String){
         // Initialize Fetch Request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
 
@@ -110,6 +118,8 @@ class Datahandler: ObservableObject {
             print(error)
         }
     }
+    
+    
     
     
 }
