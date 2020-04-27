@@ -16,7 +16,7 @@
 "Send" = "Send";
 
 // MARK: Error Handling
-"Hello, World!" = "Error: No Text found!";
+"Hello, World!" = "Error: This part is not developed yet.";
 "Error: Couldn't scan" = "Your device does not support scanning a code from an item. Please use a device with a camera.";
 "Scanning not supported" = "Scanning not supported";
 
@@ -84,6 +84,15 @@
 // ShowMail
 "Result: \(String(describing: result))" = "Result: \(String(describing: result))";
 "Error: Can't SendMail" = "Error: Can't SendMail";
+"Order inquiry" = "Order inquiry";
+
+
+"Press send" = "Press send";
+"Mail Order Intro Alert Description" = "Thank you for your order inquiry. \nPlease make sure you press the send button so we can process your inquiry and send you a confirmation to your email. \nYou can add a comment in the mail.";
+
+"Mail Order Comment" = "You can add a comment below this line: \n";
+"Mail Order Description" = "The following order will be send to Hymatik and you will receive a order confirmation: ";
+
 
 // MARK: ShowWebsite
 "https://hymatik.com" = "https://hymatik.com";
