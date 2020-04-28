@@ -60,7 +60,7 @@ class MailContent {
         for barcode in barcodes {
             fullText.append(barcode.code ?? "  ")
             fullText.append("\t \t : \t \t")
-            fullText.append(barcode.amount ?? "  ")
+            fullText.append(String(barcode.amount) )
             fullText.append("\n")
         }
         return fullText.joined()

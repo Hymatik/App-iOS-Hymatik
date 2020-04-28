@@ -110,10 +110,10 @@ private struct ProductList: View {
 
 private struct BarcodeRow: View {
     @ObservedObject var barcode: Barcode
+    @State private var barcodeAmount = ""
     @State private var isAmountChooserPresented = false
     @State private var textfield = "Textfield"
     @EnvironmentObject var datahandler: Datahandler
-    
 
     var body: some View {
         ZStack {
@@ -128,14 +128,14 @@ private struct BarcodeRow: View {
                     }
                     .buttonStyle(BorderlessButtonStyle())
                     
-                    TextField(NSLocalizedString("Amount: ", comment: ""), text: Binding($barcode.amount, "1"))
-                    
+                    TextField(NSLocalizedString("Amount: ", comment: ""), text: $barcodeAmount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     .frame(width: CGFloat(100))
                         
                 
                     Button(NSLocalizedString("Save", comment: "")) {
+                        self.updateBarcode()
                         self.datahandler.editBarcode(barcode: self.barcode)
                         withAnimation {
                             self.isAmountChooserPresented.toggle()
@@ -144,6 +144,7 @@ private struct BarcodeRow: View {
                 .buttonStyle(BorderlessButtonStyle())
                 }
                 .transition(.asymmetric(insertion: AnyTransition.opacity.combined(with: .move(edge: .trailing)), removal: .move(edge: .trailing)))
+            .onAppear(perform: updateAmount)
             }
             
             
@@ -152,7 +153,7 @@ private struct BarcodeRow: View {
                     Text(barcode.code ?? NSLocalizedString("Error: No Barcode found!", comment: ""))
                     Spacer()
                     ZStack {
-                        Button(barcode.amount ?? "1") {
+                        Button( String(barcode.amount) ) {
                             withAnimation{
                                 self.isAmountChooserPresented.toggle()
                             }
@@ -162,8 +163,16 @@ private struct BarcodeRow: View {
                 }
             }
         }
-
-
+    }
+    
+    func updateAmount() {
+        if (barcodeAmount == ""){
+            barcodeAmount = String(barcode.amount)
+        }
+    }
+    
+    func updateBarcode() {
+        barcode.amount = Int64(barcodeAmount) ?? 1
     }
 }
 

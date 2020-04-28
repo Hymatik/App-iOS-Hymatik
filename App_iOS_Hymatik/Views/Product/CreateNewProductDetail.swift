@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CreateNewProduct: View {
     @State var code = ""
-    @State var amount = "1"
+    @State var amount = ""
         
     @Environment(\.presentationMode) var presentationMode
 
@@ -21,7 +21,6 @@ struct CreateNewProduct: View {
     var body: some View {
         VStack {
             SectionDivider()
-            Spacer()
             
             HStack {
                 Text(NSLocalizedString("Barcode: ", comment: ""))
@@ -38,8 +37,6 @@ struct CreateNewProduct: View {
                     .frame(width: 250, alignment: .trailing)
                     .keyboardType(.numberPad)
             }
-            Spacer()
-            SectionDivider()
             
             HStack{
                 Button(NSLocalizedString("Back", comment: "")) {
@@ -47,11 +44,12 @@ struct CreateNewProduct: View {
                 }
                 Spacer()
                 Button(NSLocalizedString("Save", comment: "")){
-                    self.datahandler.saveBarcode(code: self.code, amount: self.amount)
+                    self.datahandler.saveBarcode(code: self.code, amount: Int64(self.amount)!)
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
-        .padding()
+        Spacer()
+        SectionDivider()
         }
     .padding()
     .navigationBarTitle(Text(NSLocalizedString("Product information", comment: "")))

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ProductDetail: View {
     @ObservedObject var barcode: Barcode
+    @State private var barcodeAmount = ""
     
     @Environment(\.presentationMode) var presentationMode
 
@@ -20,8 +21,6 @@ struct ProductDetail: View {
     var body: some View {
         VStack {
             SectionDivider()
-            Spacer()
-            
             HStack {
                 Text(NSLocalizedString("Barcode: ", comment: ""))
                 Spacer()
@@ -33,14 +32,12 @@ struct ProductDetail: View {
             HStack {
                 Text(NSLocalizedString("Amount: ", comment: ""))
                 Spacer()
-                TextField(NSLocalizedString("Amount: ", comment: ""), text: Binding($barcode.amount, ""))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 250, alignment: .trailing)
-                    .keyboardType(.numberPad)
+                TextField(NSLocalizedString("Amount: ", comment: ""), text: $barcodeAmount)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 250, alignment: .trailing)
+                .keyboardType(.numberPad)
             }
             
-            Spacer()
-            SectionDivider()
             
             HStack{
                 Button(NSLocalizedString("Back", comment: "")) {
@@ -48,18 +45,28 @@ struct ProductDetail: View {
                 }
                 Spacer()
                 Button(NSLocalizedString("Save", comment: "")){
+                    self.updateBarcode()
                     self.datahandler.editBarcode(barcode: self.barcode)
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
-        .padding()
+            Spacer()
+            SectionDivider()
         }
     .padding()
     .navigationBarTitle(Text(NSLocalizedString("Product information", comment: "")))
+    .onAppear(perform: updateAmount)
     }
     
+    func updateAmount() {
+        if (barcodeAmount == ""){
+            barcodeAmount = String(barcode.amount)
+        }
+    }
     
-    
+    func updateBarcode() {
+        barcode.amount = Int64(barcodeAmount) ?? 1
+    }
 }
     
     

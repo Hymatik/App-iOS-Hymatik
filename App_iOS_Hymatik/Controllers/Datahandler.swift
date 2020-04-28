@@ -30,7 +30,7 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
     
-    func saveBarcode(code: String, amount: String) {
+    func saveBarcode(code: String, amount: Int64) {
         let newCode = Barcode(context: context)
         newCode.id = UUID()
         newCode.code = code

@@ -83,7 +83,8 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             if (count == "") {
                 count = "1"
             }
-            self.datahandler.saveBarcode(code: code, amount: count)
+            let newAmount = Int64(count)!
+            self.datahandler.saveBarcode(code: code, amount: newAmount)
             self.captureSession.startRunning()
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("No, thank you.", comment: ""), style: .default, handler: { (action) in
