@@ -10,7 +10,7 @@ import SwiftUI
 import WebKit
 
 /* USAGE:
- Show
+ ShowWebsite(model: WebViewModel(url: "https://hymatik.com/alle-produkter/g/3457"))
  
  */
 
