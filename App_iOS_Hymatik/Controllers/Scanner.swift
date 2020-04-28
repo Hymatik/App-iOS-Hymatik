@@ -74,11 +74,16 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         
         let addBarcodeToOrderlist: String = NSLocalizedString("Do you want to add this product to your current order?", comment: "Asking if the user wants to add the found barcode to the orderlist")
         
-        
         let alert = UIAlertController(title: barcodeFound1 + code + barcodeFound2, message: addBarcodeToOrderlist , preferredStyle: .alert)
-        
+        alert.addTextField() { textField in
+            textField.placeholder = NSLocalizedString("Amount: ", comment: "") + "1?"
+        }
         alert.addAction(UIAlertAction(title: NSLocalizedString("Yes, please.", comment: ""), style: .default, handler: { (action) in
-            self.datahandler.saveBarcode(code: code, amount: "1")
+            var count = alert.textFields![0].text!
+            if (count == "") {
+                count = "1"
+            }
+            self.datahandler.saveBarcode(code: code, amount: count)
             self.captureSession.startRunning()
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("No, thank you.", comment: ""), style: .default, handler: { (action) in

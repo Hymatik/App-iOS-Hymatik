@@ -34,7 +34,7 @@ class Datahandler: ObservableObject {
         let newCode = Barcode(context: context)
         newCode.id = UUID()
         newCode.code = code
-        newCode.amount = "1"
+        newCode.amount = amount
 
         do {
             try context.save()
