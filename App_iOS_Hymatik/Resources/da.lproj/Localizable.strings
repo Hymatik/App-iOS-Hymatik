@@ -19,6 +19,8 @@
 "Hello, World!" = "Fejl: Denne del af appen er ikke færdig udviklet.";
 "Error: Couldn't scan" = "Din maskine understøtter ikke scanning af stregkoder";
 "Scanning not supported" = "Scanning af stregkoder ikke understøttet";
+"Are you sure you want to delete this?" = "Er du sikker på at slette din Order?";
+"There is no undo" = "Det er ikke muligt at fortyd.";
 
 // MARK: StartScreen
 "Order" = "Ordre";

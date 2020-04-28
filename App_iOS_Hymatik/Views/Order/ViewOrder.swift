@@ -202,12 +202,18 @@ private struct lastProductRow: View {
 }
 
 private struct OptionButtons: View {
+    @State private var showingDeleteAlert = false
+    
     var body: some View {
         HStack {
             Button(NSLocalizedString("Delete", comment: "")) {
-                let datahandler = Datahandler()
-                datahandler.emptyCurrentOrder()
+                self.showingDeleteAlert = true
                 
+            }
+                .alert(isPresented: $showingDeleteAlert) {
+                Alert(title: Text("Are you sure you want to delete this?"), message: Text("There is no undo"), primaryButton: .destructive(Text(NSLocalizedString("Delete", comment: ""))) {
+                    self.deleteCurrentOrder()
+                }, secondaryButton: .cancel())
             }
             Spacer()
             Button(NSLocalizedString("Save", comment: "")) {
@@ -221,6 +227,11 @@ private struct OptionButtons: View {
             
         }
         .padding()
+    }
+    
+    private func deleteCurrentOrder() {
+        let datahandler = Datahandler()
+        datahandler.emptyCurrentOrder()
     }
     
     private func saveOrder() {
