@@ -99,10 +99,9 @@ private struct ProductList: View {
                     for index in indexSet {
                         self.context.delete(self.barcodes[index])
                         try? self.context.save()
+                    }
                 }
-                
-            }
-            }
+            }.modifier(AdaptsToSoftwareKeyboard())
             lastProductRow()
         }
     }
@@ -114,6 +113,8 @@ private struct BarcodeRow: View {
     @State private var isAmountChooserPresented = false
     @State private var textfield = "Textfield"
     @EnvironmentObject var datahandler: Datahandler
+    
+    
 
     var body: some View {
         ZStack {

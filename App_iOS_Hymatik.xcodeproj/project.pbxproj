@@ -41,6 +41,7 @@
 		21F81AF52458229E0006D345 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F81AEF2458229E0006D345 /* Order+CoreDataProperties.swift */; };
 		21F81AF62458229E0006D345 /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F81AF02458229E0006D345 /* Customer+CoreDataClass.swift */; };
 		21F81AF72458229E0006D345 /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F81AF12458229E0006D345 /* Customer+CoreDataProperties.swift */; };
+		21F81AFB245843150006D345 /* KeyboardAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F81AFA245843150006D345 /* KeyboardAvoidance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		21F81AEF2458229E0006D345 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Order+CoreDataProperties.swift"; path = "../../../../../Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		21F81AF02458229E0006D345 /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Customer+CoreDataClass.swift"; path = "../../../../../Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		21F81AF12458229E0006D345 /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Customer+CoreDataProperties.swift"; path = "../../../../../Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		21F81AFA245843150006D345 /* KeyboardAvoidance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAvoidance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				216781F324041976005C1C55 /* Binding+Extension.swift */,
+				21F81AFA245843150006D345 /* KeyboardAvoidance.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				21538C8A23FE895100FDA748 /* App_iOS_Hymatik.xcdatamodeld in Sources */,
 				21538CA323FE925700FDA748 /* ViewOrder.swift in Sources */,
 				21F81AF42458229E0006D345 /* Order+CoreDataClass.swift in Sources */,
+				21F81AFB245843150006D345 /* KeyboardAvoidance.swift in Sources */,
 				2120B51B23FED5350013DD5C /* CreateOrder.swift in Sources */,
 				21F81AF62458229E0006D345 /* Customer+CoreDataClass.swift in Sources */,
 				21F81AF52458229E0006D345 /* Order+CoreDataProperties.swift in Sources */,
