@@ -23,18 +23,15 @@ struct StartScreen: View {
                     }
                     Section {
                         NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/alle-produkter/g/3457")) {
+                        destination: ShowWebsite(model: WebViewModel(url: "https://hymatik.com/alle-produkter/g/3457"))) {
                                 Text(NSLocalizedString("Webshop", comment: ""))
                         }
                         NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/om-os/om-hymatik")) {
+                        destination: ShowWebsite(model: WebViewModel(url: "https://hymatik.com/om-os/om-hymatik"))) {
                                 Text(NSLocalizedString("About Hymatik", comment: ""))
                         }
                         NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/kontakt")) {
+                        destination: ShowWebsite(model: WebViewModel(url: "https://hymatik.com/kontakt"))) {
                                 Text(NSLocalizedString("Contact and find us", comment: ""))
                         }
                        
