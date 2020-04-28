@@ -33,20 +33,6 @@ struct ShowWebsite: View {
     }
 }
 
-//private struct WebView: UIViewRepresentable {
-//
-//        let request: URLRequest
-//
-//        func makeUIView(context: Context) -> WKWebView {
-//            return WKWebView()
-//        }
-//
-//        func updateUIView(_ uiView: WKWebView, context: Context) {
-//            uiView.load(request)
-//        }
-//
-//
-//    }
 
 // From: https://stackoverflow.com/questions/60051231/swiftui-how-can-i-add-an-activity-indicator-in-wkwebview
 
@@ -128,6 +114,6 @@ struct WebView: UIViewRepresentable {
 
 struct WebView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowWebsite()
+        ShowWebsite(model: WebViewModel(url: "https://hymatik.com"))
     }
 }
