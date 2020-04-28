@@ -77,6 +77,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         let alert = UIAlertController(title: barcodeFound1 + code + barcodeFound2, message: addBarcodeToOrderlist , preferredStyle: .alert)
         alert.addTextField() { textField in
             textField.placeholder = NSLocalizedString("Amount: ", comment: "") + "1?"
+            textField.keyboardType = UIKeyboardType.decimalPad
         }
         alert.addAction(UIAlertAction(title: NSLocalizedString("Yes, please.", comment: ""), style: .default, handler: { (action) in
             var count = alert.textFields![0].text!
