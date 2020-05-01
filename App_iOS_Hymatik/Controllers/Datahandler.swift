@@ -16,6 +16,12 @@ class Datahandler: ObservableObject {
     @Published var currentCustomer: Customer?
     @Published var currentOrder: Order?
     
+    init() {
+        if (currentOrder == nil) {
+            createCurrentOrder()
+        }
+    }
+    
     
     //MARK: Manipulate Orders
     
@@ -26,6 +32,8 @@ class Datahandler: ObservableObject {
         curr.status = "Current Order"
         
         try? context.save()
+        
+        currentOrder = curr
     }
     
     func saveOrder(order: Order) {

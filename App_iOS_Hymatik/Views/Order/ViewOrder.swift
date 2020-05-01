@@ -18,7 +18,7 @@ import SwiftUI
 // The user can click on "slet" to empty the list or swipe on items
 // The user can save the order or send it per mail
 struct ViewOrder: View {
-    
+    @EnvironmentObject var datahandler: Datahandler
     
     var body: some View {
         VStack {
@@ -33,7 +33,7 @@ struct ViewOrder: View {
             }
             
             SectionDivider()
-            ProductList()
+            ProductList(order: datahandler.currentOrder!)
             SectionDivider()
             
             OptionButtons()
@@ -81,24 +81,20 @@ private struct OrderSelection: View {
 }
 
 private struct ProductList: View {
+    var order: Order
     
-   @FetchRequest(
-        entity: Order.entity(),
-        sortDescriptors: [],
-        predicate: NSPredicate(format: "status == 'Current Order'")
-    ) var orders: FetchedResults<Order>
    
    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack {
             List {
-                ForEach(orders[0].getBarcodes() , id: \.id) {barcode in
+                ForEach(order.getBarcodes() , id: \.id) {barcode in
                     BarcodeRow(barcode: barcode)
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
-                        self.context.delete(self.orders[0].getBarcodes()[index])
+                        self.context.delete(self.order.getBarcodes()[index])
                         try? self.context.save()
                     }
                 }
