@@ -19,6 +19,15 @@ class Datahandler: ObservableObject {
     
     //MARK: Manipulate Orders
     
+    func createCurrentOrder() {
+        let curr = Order(context: context)
+        curr.id = UUID()
+        curr.name = "Current Order"
+        curr.status = "Current Order"
+        
+        try? context.save()
+    }
+    
     func saveOrder(order: Order) {
         let newOrder = Order(context: context)
         newOrder.name = order.name
@@ -35,6 +44,10 @@ class Datahandler: ObservableObject {
         newCode.id = UUID()
         newCode.code = code
         newCode.amount = amount
+        let newOrder = Order(context: context)
+        newOrder.status = "Current Order"
+        newOrder.name = "Current Order"
+        newOrder.addToItems(newCode)
 
         do {
             try context.save()
@@ -57,7 +70,7 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
  
-    func saveCustomer(
+    func newCustomer(
             customerNumber: String,
             CVR: String,
             nameCompany: String,

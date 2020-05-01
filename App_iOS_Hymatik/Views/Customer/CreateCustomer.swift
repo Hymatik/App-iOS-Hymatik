@@ -61,7 +61,7 @@ struct CreateCustomer: View {
     }
     
     private func saveCustomer() {
-        datahandler.saveCustomer(
+        datahandler.newCustomer(
             customerNumber: customerNumber,
             CVR: cvr,
             nameCompany: nameCompany,

@@ -83,21 +83,22 @@ private struct OrderSelection: View {
 private struct ProductList: View {
     
    @FetchRequest(
-        entity: Barcode.entity(),
-        sortDescriptors: []
-    ) var barcodes: FetchedResults<Barcode>
+        entity: Order.entity(),
+        sortDescriptors: [],
+        predicate: NSPredicate(format: "status == 'Current Order'")
+    ) var orders: FetchedResults<Order>
    
    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack {
             List {
-                ForEach(barcodes, id: \.id) {barcode in
+                ForEach(orders[0].getBarcodes() , id: \.id) {barcode in
                     BarcodeRow(barcode: barcode)
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
-                        self.context.delete(self.barcodes[index])
+                        self.context.delete(self.orders[0].getBarcodes()[index])
                         try? self.context.save()
                     }
                 }

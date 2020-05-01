@@ -12,5 +12,13 @@ import CoreData
 
 @objc(Order)
 public class Order: NSManagedObject {
-
+    
+    public var wrappedName: String {
+        name ?? "Error: No Name"
+    }
+    
+    func getBarcodes() -> [Barcode] {
+        return items?.array as! [Barcode]
+    }
+    
 }
