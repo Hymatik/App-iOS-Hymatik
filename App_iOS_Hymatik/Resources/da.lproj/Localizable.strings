@@ -36,6 +36,7 @@
 "Settings" = "Indstillinger";
 "Logout" = "Log af";
 
+
 "Menu" = "Menu";
 
 
@@ -70,7 +71,6 @@
 "Not Saved" = "Ikke gemt";
 
 "Add Product" = "Tilføj Produkt";
-
 
 // MARK: Create Order
 "Create Order" = "Opret Ordre";

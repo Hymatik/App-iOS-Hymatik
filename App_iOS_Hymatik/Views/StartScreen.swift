@@ -18,8 +18,10 @@ struct StartScreen: View {
                 
                 SectionDivider()
                 List {
-                    NavigationLink(destination: ViewOrder()) {
-                        Text(NSLocalizedString("Order", comment: ""))
+                    Section(header: Text("Menu")) {
+                        NavigationLink(destination: ViewOrder()) {
+                            Text(NSLocalizedString("Order", comment: ""))
+                        }
                     }
                     Section {
                         NavigationLink(
@@ -49,7 +51,7 @@ struct StartScreen: View {
                         }                    }
 
                 }
-                .listStyle(GroupedListStyle())
+                .listStyle(PlainListStyle())
                 
                 SectionDivider()
                 Logo_ParkerStore()

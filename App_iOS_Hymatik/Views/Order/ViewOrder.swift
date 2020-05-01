@@ -91,7 +91,7 @@ private struct ProductList: View {
     
     var body: some View {
         VStack {
-            List{
+            List {
                 ForEach(barcodes, id: \.id) {barcode in
                     BarcodeRow(barcode: barcode)
                 }
@@ -101,7 +101,9 @@ private struct ProductList: View {
                         try? self.context.save()
                     }
                 }
-            }.modifier(AdaptsToSoftwareKeyboard())
+            }
+            .listStyle(PlainListStyle())
+            .modifier(AdaptsToSoftwareKeyboard())
             lastProductRow()
         }
     }
