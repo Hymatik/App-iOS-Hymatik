@@ -15,25 +15,77 @@ class Datahandler: ObservableObject {
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @Published var currentCustomer: Customer?
     @Published var currentOrder: Order?
+    @Published var selectedOrder: Order?
     
     init() {
-        if (currentOrder == nil) {
-            createCurrentOrder()
-        }
+        self.currentOrder = getCurrentOrder()
+        self.selectedOrder = getSelectedOrder()
+        
     }
     
     
     //MARK: Manipulate Orders
     
+    func setSelectedOrder(order: Order) {
+        let id = order.id?.uuidString
+        UserDefaults.standard.set(id, forKey: "Selected Order")
+        
+        selectedOrder = getOrderByUUID(uuidString: id!)
+    }
+    
+    func getSelectedOrder() -> Order {
+        guard let uuidString = UserDefaults.standard.string(forKey: "Selected Order") else {
+            selectedOrder = getCurrentOrder()
+            return selectedOrder!
+        }
+        return getOrderByUUID(uuidString: uuidString) ?? getCurrentOrder()
+    }
+    
     func createCurrentOrder() {
-        let curr = Order(context: context)
-        curr.id = UUID()
-        curr.name = "Current Order"
-        curr.status = "Current Order"
+//        print(UserDefaults.standard.string(forKey: "current Order"))
+        if (UserDefaults.standard.string(forKey: "Current Order") == nil) {
+            let curr = Order(context: context)
+            curr.id = UUID()
+            curr.name = NSLocalizedString("Not Saved", comment: "")
+            curr.status = "Current Order"
+            
+            try? context.save()
+            
+            let ud = UserDefaults.standard
+            ud.set(curr.id?.uuidString, forKey: "Current Order")
+        }
         
-        try? context.save()
+    }
+    
+    func getCurrentOrder() -> Order {
+        createCurrentOrder()
+//        if (UserDefaults.standard.string(forKey: "Current Order") == nil) {
+//            createCurrentOrder()
+//        }
         
-        currentOrder = curr
+        return getOrderByUUID(uuidString: UserDefaults.standard.string(forKey: "Current Order")!)!
+    }
+    
+    func getOrderByUUID(uuidString: String) -> Order? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
+        fetchRequest.predicate = NSPredicate(format: "id = %@", uuidString)
+
+        do {
+            let orders = try context.fetch(fetchRequest)
+            assert(orders.count < 2) // we shouldn't have any duplicates in CD
+
+            if let order = orders.first as? Order {
+                return order
+            } else {
+                print("Error: Could not get order or got multiple orders")
+                
+            }
+        } catch {
+            // handle error
+        }
+        
+        return nil
+        
     }
     
     func saveOrder(order: Order) {
@@ -52,10 +104,10 @@ class Datahandler: ObservableObject {
         newCode.id = UUID()
         newCode.code = code
         newCode.amount = amount
-        let newOrder = Order(context: context)
-        newOrder.status = "Current Order"
-        newOrder.name = "Current Order"
-        newOrder.addToItems(newCode)
+//        let newOrder = Order(context: context)
+//        newOrder.status = "Current Order"
+//        newOrder.name = "Current Order"
+        newCode.order = getOrderByUUID(uuidString: UserDefaults.standard.string(forKey: "Current Order")!)
 
         do {
             try context.save()

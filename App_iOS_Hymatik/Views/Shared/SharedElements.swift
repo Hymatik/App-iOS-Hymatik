@@ -9,10 +9,19 @@
 import SwiftUI
 
 struct SectionDivider: View {
+    @Environment(\.colorScheme) var colorScheme
+    
+    @ViewBuilder
     var body: some View {
-        Image("hymatik-5element-farve")
-            .resizable()
-            .scaledToFit()
+        if (colorScheme == .dark) {
+            Image("hymatik-5element-hvid")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        } else {
+            Image("hymatik-5element-farve")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
     }
 }
 

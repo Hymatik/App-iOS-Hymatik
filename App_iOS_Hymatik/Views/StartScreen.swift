@@ -9,17 +9,19 @@
 import SwiftUI
 
 struct StartScreen: View {
+    @EnvironmentObject var datahandler: Datahandler
+    
+    
     var body: some View {
         NavigationView {
             VStack {
                 Logo_Hymatic()
-                    .padding(.trailing, 20)
-                    .padding(.leading, 20)
+                    .padding()
                 
                 SectionDivider()
                 List {
                     Section(header: Text("Menu")) {
-                        NavigationLink(destination: ViewOrder()) {
+                        NavigationLink(destination: ViewOrder(selectedOrder: datahandler.selectedOrder!)) {
                             Text(NSLocalizedString("Order", comment: ""))
                         }
                     }
@@ -58,6 +60,7 @@ struct StartScreen: View {
                 .frame(width: 200)
             }
             .navigationBarTitle(NSLocalizedString("Menu", comment: ""))
+        .navigationBarHidden(true)
         }
     }
     

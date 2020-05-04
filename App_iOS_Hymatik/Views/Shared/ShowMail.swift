@@ -52,7 +52,7 @@ struct ShowMail: View {
             let content = MailContent(
                        barcodes: barcodes,
                        customer: datahandler.currentCustomer!,
-                       order: datahandler.currentOrder!)
+                       order: datahandler.getCurrentOrder())
                    
                    return content
         } else {

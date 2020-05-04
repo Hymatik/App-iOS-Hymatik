@@ -21,6 +21,11 @@ struct OrderList: View {
     var body: some View {
         VStack {
             SectionDivider()
+            HStack {
+                Text(NSLocalizedString("Currently Selected Order", comment: "") + ": ")
+                Text($datahandler.currentOrder.wrappedValue?.wrappedName ?? "")
+            }
+            
             List {
                 ForEach(orders, id: \.id) { order in
                     OrderRow(order: order)
@@ -53,7 +58,7 @@ private struct OrderRow: View {
     var body: some View {
         HStack {
             Button(action: {
-                self.datahandler.currentOrder = self.order
+                self.datahandler.setSelectedOrder(order: self.order)
                 self.presentationMode.wrappedValue.dismiss()
                 
             }, label: {

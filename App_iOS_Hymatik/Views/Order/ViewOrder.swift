@@ -20,26 +20,26 @@ import SwiftUI
 struct ViewOrder: View {
     @EnvironmentObject var datahandler: Datahandler
     
+    @State var selectedOrder: Order
+    
     var body: some View {
         VStack {
-            Logo_Hymatic()
-            .padding(.trailing, 20)
-            .padding(.leading, 20)
+//            Logo_Hymatic()
+//            .padding()
             
             HStack {
-                CustomerSelection()
+//                CustomerSelection()
                 Spacer()
                 OrderSelection()
             }
             
             SectionDivider()
-            ProductList(order: datahandler.currentOrder!)
+            ProductList(order: datahandler.selectedOrder!)
             SectionDivider()
             
             OptionButtons()
         }
-        .navigationBarTitle(Text(NSLocalizedString("Current Order", comment: "")))
-    }
+        .navigationBarTitle(Text(NSLocalizedString("Current Order", comment: "")))    }
 }
 
 //MARK: Sections of Main View
@@ -71,7 +71,7 @@ private struct OrderSelection: View {
             HStack {
                 Text(NSLocalizedString("Order: ", comment: ""))
                 NavigationLink(destination: OrderList()) {
-                    Text("\(datahandler.currentOrder?.name ?? NSLocalizedString("Not Saved", comment: ""))")
+                    Text(datahandler.selectedOrder!.wrappedName)
                 }
             }
             .padding()
@@ -98,10 +98,12 @@ private struct ProductList: View {
                         try? self.context.save()
                     }
                 }
+                
             }
             .listStyle(PlainListStyle())
             .modifier(AdaptsToSoftwareKeyboard())
-            lastProductRow()
+            
+            lastProductRow().padding()
         }
     }
 }
@@ -177,26 +179,32 @@ private struct BarcodeRow: View {
 }
 
 private struct lastProductRow: View {
+    @State var showingScanner = false
+    @State var showingAddProduct = false
+    @EnvironmentObject var datahandler: Datahandler
+    
     
     var body: some View {
         HStack {
             Spacer()
-            NavigationLink(
-                destination: CreateNewProduct()) {
-                    
-                    Text(NSLocalizedString("Add Product", comment: ""))
-                    .foregroundColor(.accentColor)
-            }
-            Spacer()
-
-            NavigationLink(
-                destination: ShowScanner()) {
-                    Text(NSLocalizedString("Scan", comment: ""))
-                    .foregroundColor(.accentColor)
-            }
+            
+            Button(NSLocalizedString("Add Product", comment: "")) {
+                self.showingAddProduct = true
+            }.foregroundColor(.accentColor)
+                .sheet(isPresented: $showingAddProduct, content: {
+                    CreateNewProduct().environmentObject(self.datahandler)})
+            
             Spacer()
             
-        }
+            Button(NSLocalizedString("Scan", comment: "")) {
+                self.showingScanner = true
+            }.foregroundColor(.accentColor)
+                .sheet(isPresented: $showingScanner, content: {
+                    ShowScanner().environmentObject(self.datahandler)})
+            
+            Spacer()
+            
+        }.buttonStyle(BorderlessButtonStyle())
     }
 }
 
@@ -240,8 +248,9 @@ private struct OptionButtons: View {
 
 // MARK: Debug
 
-struct ViewOrder_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewOrder()
-    }
-}
+//struct ViewOrder_Previews: PreviewProvider {
+//    @EnvironmentObject var datahandler: Datahandler
+//    static var previews: some View {
+//        ViewOrder(selectedOrder: data)
+//    }
+//}

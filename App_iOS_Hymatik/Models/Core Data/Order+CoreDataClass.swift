@@ -18,7 +18,7 @@ public class Order: NSManagedObject {
     }
     
     func getBarcodes() -> [Barcode] {
-        return items?.array as! [Barcode]
+        return items?.array as? [Barcode] ?? [Barcode]()
     }
     
 }
