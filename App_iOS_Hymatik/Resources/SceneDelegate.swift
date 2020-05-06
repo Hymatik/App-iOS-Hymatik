@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         let startScreen = StartScreen().environment(\.managedObjectContext, context)
         
-        let datahandler = Datahandler()
+        let datahandler = Datahandler.shared
         
         
         

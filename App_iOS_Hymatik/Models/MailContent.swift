@@ -14,10 +14,9 @@ import PDFKit
 class MailContent {
     
     init(barcodes: FetchedResults<Barcode>,
-         customer: Customer,
          order: Order) {
         self.barcodes = barcodes
-        self.customer = customer
+//        self.customer = customer
         self.order = order
         self.body = generateBody()
         self.fileData = createPDF()
@@ -31,7 +30,7 @@ class MailContent {
 
     let barcodes: FetchedResults<Barcode>
     
-    let customer: Customer
+//    let customer: Customer
     let order: Order
     
     

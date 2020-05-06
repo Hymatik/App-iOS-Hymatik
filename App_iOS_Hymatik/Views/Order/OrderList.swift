@@ -21,10 +21,6 @@ struct OrderList: View {
     var body: some View {
         VStack {
             SectionDivider()
-            HStack {
-                Text(NSLocalizedString("Currently Selected Order", comment: "") + ": ")
-                Text($datahandler.currentOrder.wrappedValue?.wrappedName ?? "")
-            }
             
             List {
                 ForEach(orders, id: \.id) { order in
@@ -77,7 +73,7 @@ struct OrderList_Previews: PreviewProvider {
     @EnvironmentObject var datahandler: Datahandler
     @Environment(\.presentationMode) var presentationMode
     static var previews: some View {
-        OrderList().environmentObject(Datahandler())
+        OrderList().environmentObject(Datahandler.shared)
     }
 }
 

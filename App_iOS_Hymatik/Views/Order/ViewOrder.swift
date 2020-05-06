@@ -34,7 +34,12 @@ struct ViewOrder: View {
             }
             
             SectionDivider()
-            ProductList(order: datahandler.selectedOrder!)
+            ProductList()
+            
+            
+            lastProductRow()
+                .padding()
+            
             SectionDivider()
             
             OptionButtons()
@@ -81,21 +86,20 @@ private struct OrderSelection: View {
 }
 
 private struct ProductList: View {
-    var order: Order
     
-   
-   @Environment(\.managedObjectContext) var context
+   @EnvironmentObject var datahandler: Datahandler
     
     var body: some View {
         VStack {
             List {
-                ForEach(order.getBarcodes() , id: \.id) {barcode in
+                ForEach(datahandler.selectedOrder!.getBarcodes() , id: \.id) {barcode in
                     BarcodeRow(barcode: barcode)
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
-                        self.context.delete(self.order.getBarcodes()[index])
-                        try? self.context.save()
+                        
+                        self.datahandler.removeBarcodefromSelectedOrder(
+                            barcode: self.datahandler.selectedOrder!.getBarcodes()[index])
                     }
                 }
                 
@@ -103,7 +107,7 @@ private struct ProductList: View {
             .listStyle(PlainListStyle())
             .modifier(AdaptsToSoftwareKeyboard())
             
-            lastProductRow().padding()
+            
         }
     }
 }
@@ -237,8 +241,7 @@ private struct OptionButtons: View {
     }
     
     private func deleteCurrentOrder() {
-        let datahandler = Datahandler()
-        datahandler.emptyCurrentOrder()
+        Datahandler.shared.emptyCurrentOrder()
     }
     
     private func saveOrder() {

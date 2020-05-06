@@ -51,13 +51,12 @@ struct ShowMail: View {
         if (checkIfCustomerAndOrderIsChoosen()) {
             let content = MailContent(
                        barcodes: barcodes,
-                       customer: datahandler.currentCustomer!,
-                       order: datahandler.getCurrentOrder())
+                       order: datahandler.getSelectedOrder())
                    
                    return content
         } else {
             //Make Alert!
-            return MailContent(barcodes: barcodes, customer: Customer(), order: Order())
+            return MailContent(barcodes: barcodes, order: datahandler.getSelectedOrder())
         }
        
     }

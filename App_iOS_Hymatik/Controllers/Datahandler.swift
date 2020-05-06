@@ -10,14 +10,17 @@ import SwiftUI
 import CoreData
 
 
-class Datahandler: ObservableObject {
+final class Datahandler: ObservableObject {
+    
+    static let shared = Datahandler()
+    
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @Published var currentCustomer: Customer?
     @Published var currentOrder: Order?
     @Published var selectedOrder: Order?
     
-    init() {
+    private init() {
         self.currentOrder = getCurrentOrder()
         self.selectedOrder = getSelectedOrder()
         
@@ -122,6 +125,13 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
     
+    func removeBarcodefromSelectedOrder(barcode: Barcode) {
+        selectedOrder!.removeFromItems(barcode)
+        context.insert(selectedOrder!)
+        context.insert(barcode)
+        try? context.save()
+    }
+    
     
     //MARK: Manipulate Cusotmers
     
@@ -158,7 +168,6 @@ class Datahandler: ObservableObject {
     func emptyCurrentOrder(){
         // Initialize Fetch Request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Barcode")
-
         // Configure Fetch Request
         fetchRequest.includesPropertyValues = false
 

@@ -24,9 +24,6 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var captureSession: AVCaptureSession!
     
-    //Saves found barcodes as products in the database.
-    //Used in found()
-   var datahandler = Datahandler()
 
     
     
@@ -85,7 +82,7 @@ class Scanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 count = "1"
             }
             let newAmount = Int64(count)!
-            self.datahandler.saveBarcode(code: code, amount: newAmount)
+            Datahandler.shared.saveBarcode(code: code, amount: newAmount)
             self.captureSession.startRunning()
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("No, thank you.", comment: ""), style: .default, handler: { (action) in
