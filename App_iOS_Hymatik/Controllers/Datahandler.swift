@@ -8,6 +8,7 @@
 
 import SwiftUI
 import CoreData
+import Combine
 
 
 final class Datahandler: ObservableObject {
@@ -18,11 +19,16 @@ final class Datahandler: ObservableObject {
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @Published var currentCustomer: Customer?
     @Published var currentOrder: Order?
-    @Published var selectedOrder: Order?
+    @Published var selectedOrder: Order? {didSet {print("It Changed!")}}
+    
+    var anyCancellable: AnyCancellable? = nil
     
     private init() {
         self.currentOrder = getCurrentOrder()
         self.selectedOrder = getSelectedOrder()
+        anyCancellable = selectedOrder?.objectWillChange.sink { (_) in
+            self.objectWillChange.send()
+        }
         
     }
     

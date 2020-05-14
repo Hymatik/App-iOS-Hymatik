@@ -85,10 +85,10 @@ private struct OrderSelection: View {
     }
 }
 
-private struct ProductList: View {
-    
+struct ProductList: View {
+
    @EnvironmentObject var datahandler: Datahandler
-    
+
     var body: some View {
         VStack {
             List {
@@ -102,15 +102,47 @@ private struct ProductList: View {
                             barcode: self.datahandler.selectedOrder!.getBarcodes()[index])
                     }
                 }
-                
+
             }
             .listStyle(PlainListStyle())
             .modifier(AdaptsToSoftwareKeyboard())
-            
-            
         }
     }
 }
+
+
+//struct ProductList: View {
+//
+//   @EnvironmentObject var datahandler: Datahandler
+//
+//    @FetchRequest(entity: Order.entity(),
+//                  sortDescriptors: [],
+//                  predicate: NSPredicate(format: "id == %@", Datahandler.shared.selectedOrder!.id!.uuidString)
+//    ) var orders: FetchedResults<Order>
+//
+//    var body: some View {
+//        VStack {
+//            List {
+//                ForEach(orders, id: \.id) { order in
+//                    ForEach(order.getBarcodes(), id: \.id) { barcode in
+//                        BarcodeRow(barcode: barcode)
+//                    }
+//                }
+//            }
+////                .onDelete { indexSet in
+////                    for index in indexSet {
+////                        print("call \(index) in \(indexSet)")
+////                        self.datahandler.removeBarcodefromSelectedOrder(
+////                            barcode: self.datahandler.selectedOrder!.getBarcodes()[index])
+////                    }
+//////                }
+////
+////            }
+//            .listStyle(PlainListStyle())
+//            .modifier(AdaptsToSoftwareKeyboard())
+//        }
+//    }
+//}
 
 private struct BarcodeRow: View {
     @ObservedObject var barcode: Barcode

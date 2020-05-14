@@ -2,7 +2,7 @@
 //  Order+CoreDataProperties.swift
 //  App_iOS_Hymatik
 //
-//  Created by Glenn Drescher on 01/05/2020.
+//  Created by Glenn Drescher on 14/05/2020.
 //  Copyright © 2020 Hymatik. All rights reserved.
 //
 //

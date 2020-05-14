@@ -44,6 +44,9 @@ struct CreateNewProduct: View {
                 }
                 Spacer()
                 Button(NSLocalizedString("Save", comment: "")){
+                    if (self.amount == "") {
+                        self.amount = "1"
+                    }
                     self.datahandler.saveBarcode(code: self.code, amount: Int64(self.amount)!)
                     self.presentationMode.wrappedValue.dismiss()
                 }
