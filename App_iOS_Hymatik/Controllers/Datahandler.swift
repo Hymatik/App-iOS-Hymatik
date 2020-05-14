@@ -110,8 +110,10 @@ final class Datahandler: ObservableObject {
 //        let newOrder = Order(context: context)
 //        newOrder.status = "Current Order"
 //        newOrder.name = "Current Order"
-        newCode.order = getOrderByUUID(uuidString: UserDefaults.standard.string(forKey: "Current Order")!)
-
+//        newCode.order = getOrderByUUID(uuidString: UserDefaults.standard.string(forKey: "Current Order")!)
+        selectedOrder?.addToItems(newCode)
+        
+        
         do {
             try context.save()
         } catch {

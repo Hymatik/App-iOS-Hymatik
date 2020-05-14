@@ -97,7 +97,7 @@ private struct ProductList: View {
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
-                        
+                        print("call \(index) in \(indexSet)")
                         self.datahandler.removeBarcodefromSelectedOrder(
                             barcode: self.datahandler.selectedOrder!.getBarcodes()[index])
                     }
