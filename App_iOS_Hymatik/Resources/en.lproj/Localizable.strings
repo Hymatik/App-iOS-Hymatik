@@ -19,6 +19,8 @@
 "Hello, World!" = "Error: This part is not developed yet.";
 "Error: Couldn't scan" = "Your device does not support scanning a code from an item. Please use a device with a camera.";
 "Scanning not supported" = "Scanning not supported";
+"Are you sure you want to delete this?" = "Are you sure you want to delete this?";
+"There is no undo" = "There is no undo";
 
 // MARK: StartScreen
 "Order" = "Order";

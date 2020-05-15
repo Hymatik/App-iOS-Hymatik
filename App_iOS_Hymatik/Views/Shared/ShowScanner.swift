@@ -10,18 +10,20 @@ import SwiftUI
 
 struct ShowScanner: View {
     @EnvironmentObject var datahandler: Datahandler
-    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
-            Spacer()
-                .frame(height: 150)
+            Button(NSLocalizedString("Back", comment: "")) {
+                self.presentationMode.wrappedValue.dismiss()
+            }.padding()
+            
             SectionDivider()
             ScannerToView().environmentObject(datahandler)
                 
             SectionDivider()
         }
-        .edgesIgnoringSafeArea(.top)
+//        .edgesIgnoringSafeArea(.all)
         .navigationBarTitle(Text(NSLocalizedString("Scanner", comment: "")))
     }
 }

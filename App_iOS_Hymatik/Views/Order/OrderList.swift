@@ -21,6 +21,7 @@ struct OrderList: View {
     var body: some View {
         VStack {
             SectionDivider()
+            
             List {
                 ForEach(orders, id: \.id) { order in
                     OrderRow(order: order)
@@ -53,7 +54,7 @@ private struct OrderRow: View {
     var body: some View {
         HStack {
             Button(action: {
-                self.datahandler.currentOrder = self.order
+                self.datahandler.setSelectedOrder(order: self.order)
                 self.presentationMode.wrappedValue.dismiss()
                 
             }, label: {
@@ -72,7 +73,7 @@ struct OrderList_Previews: PreviewProvider {
     @EnvironmentObject var datahandler: Datahandler
     @Environment(\.presentationMode) var presentationMode
     static var previews: some View {
-        OrderList().environmentObject(Datahandler())
+        OrderList().environmentObject(Datahandler.shared)
     }
 }
 

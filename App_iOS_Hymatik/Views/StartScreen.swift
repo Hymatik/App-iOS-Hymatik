@@ -9,32 +9,33 @@
 import SwiftUI
 
 struct StartScreen: View {
+    @EnvironmentObject var datahandler: Datahandler
+    
+    
     var body: some View {
         NavigationView {
             VStack {
                 Logo_Hymatic()
-                    .padding(.trailing, 20)
-                    .padding(.leading, 20)
+                    .padding()
                 
                 SectionDivider()
                 List {
-                    NavigationLink(destination: ViewOrder()) {
-                        Text(NSLocalizedString("Order", comment: ""))
+                    Section(header: Text("Menu")) {
+                        NavigationLink(destination: ViewOrder(selectedOrder: datahandler.selectedOrder!)) {
+                            Text(NSLocalizedString("Order", comment: ""))
+                        }
                     }
                     Section {
                         NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/alle-produkter/g/3457")) {
+                        destination: ShowWebsite(model: WebViewModel(url: "https://hymatik.com/alle-produkter/g/3457"))) {
                                 Text(NSLocalizedString("Webshop", comment: ""))
                         }
                         NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/om-os/om-hymatik")) {
+                        destination: ShowWebsite(model: WebViewModel(url: "https://hymatik.com/om-os/om-hymatik"))) {
                                 Text(NSLocalizedString("About Hymatik", comment: ""))
                         }
                         NavigationLink(
-                        destination: ShowWebsite(
-                            urlString: "https://hymatik.com/kontakt")) {
+                        destination: ShowWebsite(model: WebViewModel(url: "https://hymatik.com/kontakt"))) {
                                 Text(NSLocalizedString("Contact and find us", comment: ""))
                         }
                        
@@ -52,13 +53,14 @@ struct StartScreen: View {
                         }                    }
 
                 }
-                .listStyle(GroupedListStyle())
+                .listStyle(PlainListStyle())
                 
                 SectionDivider()
                 Logo_ParkerStore()
                 .frame(width: 200)
             }
             .navigationBarTitle(NSLocalizedString("Menu", comment: ""))
+        .navigationBarHidden(true)
         }
     }
     

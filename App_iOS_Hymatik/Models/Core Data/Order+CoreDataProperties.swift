@@ -2,7 +2,7 @@
 //  Order+CoreDataProperties.swift
 //  App_iOS_Hymatik
 //
-//  Created by Glenn Drescher on 02/03/2020.
+//  Created by Glenn Drescher on 14/05/2020.
 //  Copyright © 2020 Hymatik. All rights reserved.
 //
 //
@@ -20,6 +20,7 @@ extension Order {
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var sendMail: Bool
+    @NSManaged public var status: String?
     @NSManaged public var customer: Customer?
     @NSManaged public var items: NSOrderedSet?
 

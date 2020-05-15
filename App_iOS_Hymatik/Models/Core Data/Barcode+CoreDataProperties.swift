@@ -2,7 +2,7 @@
 //  Barcode+CoreDataProperties.swift
 //  App_iOS_Hymatik
 //
-//  Created by Glenn Drescher on 02/03/2020.
+//  Created by Glenn Drescher on 14/05/2020.
 //  Copyright © 2020 Hymatik. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@ extension Barcode {
         return NSFetchRequest<Barcode>(entityName: "Barcode")
     }
 
-    @NSManaged public var amount: String?
+    @NSManaged public var amount: Int64
     @NSManaged public var code: String?
     @NSManaged public var id: UUID?
     @NSManaged public var order: Order?

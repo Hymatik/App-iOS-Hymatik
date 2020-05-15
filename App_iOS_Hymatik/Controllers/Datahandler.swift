@@ -8,16 +8,94 @@
 
 import SwiftUI
 import CoreData
+import Combine
 
 
-class Datahandler: ObservableObject {
+final class Datahandler: ObservableObject {
+    
+    static let shared = Datahandler()
+    
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @Published var currentCustomer: Customer?
     @Published var currentOrder: Order?
+    @Published var selectedOrder: Order? {didSet {print("It Changed!")}}
+    
+    var anyCancellable: AnyCancellable? = nil
+    
+    private init() {
+        self.currentOrder = getCurrentOrder()
+        self.selectedOrder = getSelectedOrder()
+        anyCancellable = selectedOrder?.objectWillChange.sink { (_) in
+            self.objectWillChange.send()
+        }
+        
+    }
     
     
     //MARK: Manipulate Orders
+    
+    func setSelectedOrder(order: Order) {
+        let id = order.id?.uuidString
+        UserDefaults.standard.set(id, forKey: "Selected Order")
+        
+        selectedOrder = getOrderByUUID(uuidString: id!)
+    }
+    
+    func getSelectedOrder() -> Order {
+        guard let uuidString = UserDefaults.standard.string(forKey: "Selected Order") else {
+            selectedOrder = getCurrentOrder()
+            return selectedOrder!
+        }
+        return getOrderByUUID(uuidString: uuidString) ?? getCurrentOrder()
+    }
+    
+    func createCurrentOrder() {
+//        print(UserDefaults.standard.string(forKey: "current Order"))
+        if (UserDefaults.standard.string(forKey: "Current Order") == nil) {
+            let curr = Order(context: context)
+            curr.id = UUID()
+            curr.name = NSLocalizedString("Not Saved", comment: "")
+            curr.status = "Current Order"
+            
+            try? context.save()
+            
+            let ud = UserDefaults.standard
+            ud.set(curr.id?.uuidString, forKey: "Current Order")
+        }
+        
+    }
+    
+    func getCurrentOrder() -> Order {
+        createCurrentOrder()
+//        if (UserDefaults.standard.string(forKey: "Current Order") == nil) {
+//            createCurrentOrder()
+//        }
+        
+        return getOrderByUUID(uuidString: UserDefaults.standard.string(forKey: "Current Order")!)!
+    }
+    
+    func getOrderByUUID(uuidString: String) -> Order? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
+        fetchRequest.predicate = NSPredicate(format: "id = %@", uuidString)
+
+        do {
+            let orders = try context.fetch(fetchRequest)
+            assert(orders.count < 2) // we shouldn't have any duplicates in CD
+
+            if let order = orders.first as? Order {
+                return order
+            } else {
+                print("Error: Could not get order or got multiple orders")
+                
+            }
+        } catch {
+            // handle error
+        }
+        
+        return nil
+        
+    }
     
     func saveOrder(order: Order) {
         let newOrder = Order(context: context)
@@ -30,12 +108,18 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
     
-    func saveBarcode(code: String, amount: String) {
+    func saveBarcode(code: String, amount: Int64) {
         let newCode = Barcode(context: context)
         newCode.id = UUID()
         newCode.code = code
-        newCode.amount = "1"
-
+        newCode.amount = amount
+//        let newOrder = Order(context: context)
+//        newOrder.status = "Current Order"
+//        newOrder.name = "Current Order"
+//        newCode.order = getOrderByUUID(uuidString: UserDefaults.standard.string(forKey: "Current Order")!)
+        selectedOrder?.addToItems(newCode)
+        
+        
         do {
             try context.save()
         } catch {
@@ -49,6 +133,13 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
     
+    func removeBarcodefromSelectedOrder(barcode: Barcode) {
+        selectedOrder!.removeFromItems(barcode)
+        context.insert(selectedOrder!)
+        context.insert(barcode)
+        try? context.save()
+    }
+    
     
     //MARK: Manipulate Cusotmers
     
@@ -57,7 +148,7 @@ class Datahandler: ObservableObject {
         try? context.save()
     }
  
-    func saveCustomer(
+    func newCustomer(
             customerNumber: String,
             CVR: String,
             nameCompany: String,
@@ -85,7 +176,6 @@ class Datahandler: ObservableObject {
     func emptyCurrentOrder(){
         // Initialize Fetch Request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Barcode")
-
         // Configure Fetch Request
         fetchRequest.includesPropertyValues = false
 
